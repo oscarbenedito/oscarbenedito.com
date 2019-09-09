@@ -1,8 +1,12 @@
 baseURL = "https://obenedito.org/"
 languageCode = "en-us"
 title = "Oscar Benedito"
-paginate = 1
+author = "Oscar Benedito"
+paginate = 5
 summaryLength = 15
+
+[params]
+	blog_title = "Oscar's Blog"
 
 [taxonomies]
 	category = "categories"
@@ -10,8 +14,8 @@ summaryLength = 15
 
 [permalinks]
   blog = "/blog/:year/:month/:slug/"
-	categories = "/blog/category/:slug/"
-	tags = "/blog/tag/:slug/"
+	categories = "/blog/categories/:slug/"
+	tags = "/blog/tags/:slug/"
 
 [frontmatter]
 	date  = [":filename", ":default"]

@@ -2,7 +2,7 @@
 <header class="hero is-primary">
 	<div class="hero-body">
 		<div class="section container has-text-centered">
-			<h1 class="title is-1 has-text-centered">Oscar's Blog</h1>
+			<h1 class="title is-1 has-text-centered">{{ .Site.Params.blog_title }}</h1>
 			<h2 class="subtitle is-4 has-text-centered">{{ .Params.categories | title }} entry</h2>
 		</div>
 	</div>
@@ -13,13 +13,13 @@
   <div class="columns">
     <div class="column is-8 is-offset-2">
 			<h1 class="title">{{ .Title }}</h1>
-			<p class="has-text-grey is-size-6 subtitle">{{ with .Params.categories }}<a class="has-text-grey" href="{{ "blog/category/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}{{ .Date.Format "January 2, 2006" }}{{ if .Lastmod }} (last modified on {{ .Lastmod.Format "January 2, 2006" }}){{ end }}</p>
+			<p class="has-text-grey is-size-6 subtitle">{{ with .Params.categories }}<a class="has-text-grey" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}{{ .Date.Format "January 2, 2006" }}{{ if .Lastmod }} (last modified on {{ .Lastmod.Format "January 2, 2006" }}){{ end }}</p>
 
 			{{ .Content }}
 
 			{{ if .Params.tags }}
 			<div class="tags">
-				{{ range sort .Params.tags }}<a class="tag is-primary" href="{{ "blog/tag/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+				{{ range sort .Params.tags }}<a class="tag is-primary" href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
 			</div>
 			{{ end }}
 
