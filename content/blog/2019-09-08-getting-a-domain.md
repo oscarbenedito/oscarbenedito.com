@@ -3,7 +3,7 @@ title: "Getting my own domain name"
 categories: personal
 tags: ["Personal domain", "DNS Record"]
 ---
-After thinking about getting my own domain name for a while and letting the thought<!---more---> rest for a couple of months, I finally bought one. It is a very easy and inexpensive process, and I am happy I did it. The original idea was to set up my email with it, so I could change my email provider without changing the address (I am in the process of changing my provider, and it takes a lot of effort), but having a domain name opens a world of opportunities.
+After thinking about getting my own domain name for a while and letting the thought rest for a couple of months, I finally bought one. It is a very easy and inexpensive process, and I am happy I did it. The original idea was to set up my email with it, so I could change my email provider without changing the address (I am in the process of changing my provider, and it takes a lot of effort), but having a domain name opens a world of opportunities.
 
 ***
 
