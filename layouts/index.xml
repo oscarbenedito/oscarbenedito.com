@@ -1,1 +1,4 @@
 {{ partial "main.html" . }}
+{{ $options := (dict "targetPath" "dark.css" "outputStyle" "compressed") }}
+{{ $dark := resources.Get "dark.scss" | resources.ToCSS $options }}
+<p style="display:none;">{{ $dark.RelPermalink }}</p>
