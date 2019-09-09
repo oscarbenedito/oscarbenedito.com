@@ -1,0 +1,26 @@
+@charset "utf-8";
+$family-sans-serif: "FreeSans",sans-serif;
+$primary: #7EC27B;
+$secondary: #18BC9C;
+// Previous primary blue: #005B96, new: 4C8EB8
+// Nice primary green: #81C386,
+
+$text: #0A0A0A;
+$link: #128F76;
+$strong-color: #004C00;
+$content-heading-color: $strong-color;
+$body-font-size: 1.1rem;
+@import "node_modules/bulma/sass/utilities/_all.sass";
+@import "node_modules/bulma/sass/base/_all.sass";
+@import "node_modules/bulma/sass/components/card.sass";
+@import "node_modules/bulma/sass/components/navbar.sass";
+@import "node_modules/bulma/sass/components/pagination.sass";
+@import "node_modules/bulma/sass/elements/button.sass";
+@import "node_modules/bulma/sass/elements/container.sass";
+@import "node_modules/bulma/sass/elements/content.sass";
+@import "node_modules/bulma/sass/elements/table.sass";
+@import "node_modules/bulma/sass/elements/tag.sass";
+@import "node_modules/bulma/sass/elements/title.sass";
+@import "node_modules/bulma/sass/form/_all.sass";
+@import "node_modules/bulma/sass/grid/_all.sass";
+@import "node_modules/bulma/sass/layout/_all.sass";

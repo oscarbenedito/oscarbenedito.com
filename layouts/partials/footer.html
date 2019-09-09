@@ -1,0 +1,39 @@
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-4">
+        <div class="content">
+          <h4 class="bd-footer-title"><strong>Links</strong></h4>
+          <div class="bd-footer-tsp is-size-6">
+            <p class="bd-footer-link-title"><a href="/">Home</a></p>
+            <p class="bd-footer-link-title"><a href="/blog/">Blog</a></p>
+            <p class="bd-footer-link-title"><a href="/jsweblabels/" data-jslicense="1">JavaScript Web Labels</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="content">
+          <h4 class="bd-footer-title"><strong>Privacy</strong></h4>
+          <div class="bd-footer-iframe is-size-6" style="text-align: justify;">
+            <p>This site contains no ads, analytics or cross-site references. However, I do not have control over what my host (GitLab) does with your data.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="content">
+          <h4 class="bd-footer-title"><strong>License</strong></h4>
+          <div class="bd-footer-tsp is-size-6">
+            {{ if eq .Params.headtitle "GPLv3" }}
+            <p>Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</p>
+            {{ end }}
+            {{ if eq .Params.headtitle "CC BY 4.0" }}
+            <p>See the <a href="https://wiki.creativecommons.org/wiki/Modifying_the_CC_licenses">License Modification Policy</a>.</p>
+            {{ end }}
+            <p>{{ if eq .Params.title "License" }}Any other part of this page{{ else }}This work{{ end }} is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+            <p><a href="/licenses/cc-by-4.0/">Local copy of the license</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

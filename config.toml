@@ -1,0 +1,17 @@
+baseURL = "https://obenedito.org/"
+languageCode = "en-us"
+title = "Oscar Benedito"
+paginate = 1
+summaryLength = 15
+
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"
+	categories = "/blog/category/:slug/"
+	tags = "/blog/tag/:slug/"
+
+[frontmatter]
+	date  = [":filename", ":default"]

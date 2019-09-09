@@ -1,0 +1,2 @@
+{{ $readTime := math.Round (div (countwords .Content) 140.0) }}
+{{ if eq $readTime 1 }}1 minute{{ else }}{{ $readTime }} minutes{{ end }}
