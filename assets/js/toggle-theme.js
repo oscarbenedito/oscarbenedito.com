@@ -17,7 +17,10 @@ function setTheme() {
 
     var e = document.getElementsByClassName((light ? "has-text-grey" : "has-text-dark"));
     for (var i = 0; i < e.length; i++) {
-      e[i].className = (light ? "has-text-dark" : "has-text-grey");
+      if (!e[i].classList.contains("is-size-6")) {
+        e[i].classList.add((light ? "has-text-dark" : "has-text-grey"));
+        e[i].classList.remove((light ? "has-text-grey" : "has-text-dark"));
+      }
     }
   }
 }
