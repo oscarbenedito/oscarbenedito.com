@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
+categories:
+tags:
+draft: true # Remember to state the date in file name before commiting!
 ---
-

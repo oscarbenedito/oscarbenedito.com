@@ -18,6 +18,10 @@ $card-background-color: $footer-background-color;
 $table-background-color: $footer-background-color;
 $table-color: $background;
 
+$button-color: $text;
+$button-border-color: $text;
+$button-background-color: $body-background-color;
+
 @import "node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "node_modules/bulma/sass/utilities/functions.sass";
 @import "function_override.sass";
