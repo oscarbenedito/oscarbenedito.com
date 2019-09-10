@@ -1,7 +1,8 @@
 <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/"><img id="nav-logo" src="/img/logo-white.svg"></a>
+      {{ $logo := resources.Get "img/logo-white.svg" | resources.Minify }}
+      <a class="navbar-item" href="/"><img id="nav-logo" src="{{ $logo.RelPermalink }}"></a>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navContent">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>

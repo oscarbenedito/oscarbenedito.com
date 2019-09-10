@@ -12,8 +12,8 @@ function setTheme() {
   if (localStorage) {
     var light = localStorage.getItem("theme") === "default";
 
-    document.getElementById("theme").setAttribute("href", "/" + (light ? "light" : "dark") + ".css");
-    document.getElementById("nav-logo").setAttribute("src", "/img/logo-" + (light ? "white" : "grey") + ".svg");
+    document.getElementById("theme").setAttribute("href", "/css/" + (light ? "light" : "dark") + ".css");
+    document.getElementById("nav-logo").setAttribute("src", "/img/logo-" + (light ? "white" : "grey") + ".min.svg");
 
     var e = document.getElementsByClassName((light ? "has-text-grey" : "has-text-dark"));
     for (var i = 0; i < e.length; i++) {
