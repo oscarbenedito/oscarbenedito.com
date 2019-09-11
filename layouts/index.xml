@@ -1,9 +1,6 @@
 {{ partial "main.html" . }}
-{{ $options := (dict "targetPath" "css/light.css" "outputStyle" "compressed") }}
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
 {{ $light := resources.Get "css/light.scss" | resources.ToCSS $options }}
 <p style="display:none;">{{ $light.RelPermalink }}</p>
-{{ $options := (dict "targetPath" "css/dark.css" "outputStyle" "compressed") }}
-{{ $dark := resources.Get "css/dark.scss" | resources.ToCSS $options }}
-<p style="display:none;">{{ $dark.RelPermalink }}</p>
 {{ $logo := resources.Get "img/logo-grey.svg" | resources.Minify }}
 <p style="display:none;">{{ $logo.RelPermalink }}</p>

@@ -12,8 +12,16 @@
     <div id="navContent" class="navbar-menu">
       <div class="navbar-start"></div>
       <div class="navbar-end">
-        <a class="navbar-item" href="/blog/">Blog</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/blog/">Blog</a>
+          <div class="navbar-dropdown is-boxed is-right">
+            {{ range .Site.Taxonomies.categories }}
+            <a class="navbar-item" href="{{ .Page.RelPermalink }}">{{ .Page.Title | title }}</a>
+            {{ end }}
+          </div>
+        </div>
         {{/*
+        <a class="navbar-item" href="/blog/">Blog</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <div class="navbar-link">More</div>
           <div class="navbar-dropdown is-boxed is-right">
@@ -22,11 +30,11 @@
             <a class="navbar-item" href="/jsweblabels/" data-jslicense="1">JavaScript Web Labels</a>
           </div>
         </div>
-      */}}
         <div class="navbar-item">
           <a class="button is-primary is-inverted is-outlined is-hidden-touch" onclick="toggleTheme();">Toggle theme</a>
           <a class="button is-primary is-hidden-desktop" onclick="toggleTheme();">Toggle theme</a>
         </div>
+      */}}
       </div>
     </div>
   </div>

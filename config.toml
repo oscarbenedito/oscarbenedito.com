@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Oscar Benedito"
 author = "Oscar Benedito"
 paginate = 5
-summaryLength = 15
 
 [params]
   blog_title = "Oscar's Blog"

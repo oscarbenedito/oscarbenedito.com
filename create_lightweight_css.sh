@@ -8,7 +8,6 @@ sed -i 's/<script type="text\/javascript" src="\/js\/toggle-theme.min.js"><\/scr
 sed -i '0,/<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navContent">/{s/<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navContent">/<a role="button" class="navbar-burger burger is-active" aria-label="menu" aria-expanded="false" data-target="navContent">/}' public/temp
 sed -i '0,/<div id="navContent" class="navbar-menu">/{s/<div id="navContent" class="navbar-menu">/<div id="navContent" class="navbar-menu is-active">/}' public/temp
 mkdir static/css
-uncss --stylesheets css/light.css public/temp > static/css/light.min.css
-sed -i 's/"has-text-dark"/"has-text-grey"/g' public/temp
-uncss --stylesheets css/dark.css public/temp > static/css/dark.min.css
-
+uncss --stylesheets css/style.css public/temp > static/css/style.min.css
+# sed -i 's/"has-text-dark"/"has-text-grey"/g' public/temp
+# uncss --stylesheets css/dark.css public/temp > static/css/dark.min.css
