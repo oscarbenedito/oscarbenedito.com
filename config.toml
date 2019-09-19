@@ -1,11 +1,11 @@
 baseURL = "https://obenedito.org/"
 languageCode = "en-us"
 title = "Oscar Benedito"
-author = "Oscar Benedito"
 paginate = 5
 
 [params]
   blog_title = "Personal blog"
+  Author = "Oscar Benedito"
 
 [taxonomies]
   category = "categories"
