@@ -5,7 +5,7 @@ author = "Oscar Benedito"
 paginate = 5
 
 [params]
-  blog_title = "Oscar's Blog"
+  blog_title = "Personal blog"
 
 [taxonomies]
   category = "categories"

@@ -1,4 +1,2 @@
-{{ $hamburger := resources.Get "js/navbar-hamburger.js" | resources.Minify }}
-<script type="text/javascript" src="{{ $hamburger.RelPermalink }}"></script>
-{{ $toggle := resources.Get "js/toggle-theme.js" | resources.Minify }}
-{{/*<script type="text/javascript" src="{{ $toggle.RelPermalink }}"></script>*/}}
+{{ $js := resources.Get "js/main.js" | resources.Minify }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}"></script>

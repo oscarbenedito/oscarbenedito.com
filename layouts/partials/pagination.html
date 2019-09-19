@@ -1,14 +1,11 @@
 {{ $paginator := .Paginator }}
 {{ if or $paginator.HasPrev $paginator.HasNext }}
-<div class="columns">
-  <div class="column is-8 is-offset-2">
-    {{ if $paginator.HasPrev }}
-    <a class="button" style="float: left;" href="{{ $paginator.Prev.URL }}">&larr; Newer Posts</a>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-    <a class="button" style="float: right;" href="{{ $paginator.Next.URL }}">Older Posts &rarr;</a>
-    {{ end }}
-    <br/>
-  </div>
+<div class="pagination">
+  {{ if $paginator.HasPrev }}
+  <a class="button" href="{{ $paginator.Prev.URL }}">&larr; Newer Posts</a>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+  <a class="button right" href="{{ $paginator.Next.URL }}">Older Posts &rarr;</a>
+  {{ end }}
 </div>
 {{ end }}

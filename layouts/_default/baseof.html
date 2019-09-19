@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top" lang="en-US">
+<html lang="en-US">
   {{ partial "head.html" . }}
-  <body class="page-layout">
+  <body>
     {{ partial "navbar.html" . }}
-    {{ block "hero-header" . }}{{ partial "hero-header.html" . }}{{ end }}
-    <section class="section">
-      <div class="container">
-        <div class="content" style="text-align: justify;">
-          {{ block "main" . }}{{ .Content }}{{ end }}
-        </div>
-      </div>
-    </section>
+    {{ block "main" . }}
+    <main>
+      {{ .Content }}
+    </main>
+    {{ end }}
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>

@@ -1,4 +1,7 @@
 {{ define "main" }}
-{{ partial "list.html" . }}
-{{ partial "pagination.html" . }}
+{{ partial "header.html" . }}
+<main class="list">
+	{{ partial "list.html" . }}
+	{{ partial "pagination.html" . }}
+</main>
 {{ end }}

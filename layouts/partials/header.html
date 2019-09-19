@@ -1,0 +1,14 @@
+<header class="page-header">
+  {{ if eq .Kind "taxonomy" }}
+  <h1>{{ .Title | title }}</h1>
+  {{ else }}
+  <h1>{{ .Title }}</h1>
+  {{ end }}
+  {{ if eq .Kind "taxonomy" }}
+  <h2>{{ .Data.Singular | title }}</h2>
+  {{ else }}
+  {{ with .Params.subtitle }}
+  <h2>{{ . }}</h2>
+  {{ end }}
+  {{ end }}
+</header>

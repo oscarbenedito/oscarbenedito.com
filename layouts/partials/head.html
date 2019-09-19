@@ -1,11 +1,13 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{{/* {{ if .Site.Params.description }}<meta name="description" content="{{ site.description }}">{% endif %} */}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{/* {{ if .Site.Params.description }}<meta name="description" content="{{ site.description }}">{% endif %} */}}
   <meta name="author" content="{{ .Site.Author }}">
   {{ $logo := resources.Get "img/favicon.svg" | resources.Minify }}
   <link rel="icon" href="{{ $logo.RelPermalink }}">
   <title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "taxonomy" }}{{ .Title | title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Params.blog_title }}" href=/blog/index.xml>
-  <link id="theme" rel="stylesheet" type="text/css" href="/css/style.min.css">
+  <link rel="alternate" type="application/atom+xml" title="{{ .Site.Params.blog_title }}" href=/blog/index.xml>
+  {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "css/style.scss" | resources.ToCSS $options }}
+  <link id="theme" rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
 </head>
