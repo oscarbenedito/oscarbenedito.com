@@ -2,8 +2,9 @@
 title: "Upgrading to privacy-respecting providers"
 categories: technology
 tags: ["Decentralization", "Encryption", "Privacy"]
+lastmod: 2019-09-24
 ---
-I have been reading a lot about decentralization and not depending too much in one company in the past six months and I realized how much I relied on Google: my email, all my files, contacts, calendars, pictures... All my data was basically stored on their servers. This was inconvenient for three reasons: (1) if something was to happen to Google or my account, I would loose a lot of data, (2) Google doesn't use end-to-end encryption, which means that they (and anyone with access to their servers) can see all my files, emails, etc. and (3) Google already uses all this data to better know my personality.
+I have been reading a lot about decentralization and not depending too much in one company in the past six months and I realized how much I relied on Google: my email, all my files, contacts, calendars, pictures... Most of my data was stored on their servers. This was inconvenient for three reasons: (1) if something was to happen to Google or my account, I would loose a lot of data, (2) Google doesn't use end-to-end encryption, which means that they (and anyone with access to their servers) can see all my files, emails, etc. and (3) Google already uses all this data to better know my personality.
 
 Some people might think that the main three problems I have with Google aren't that important. In fact, I have used Google for many years because that was my opinion for a long time. However, the more I read about the issue, the more I realize they aren't minor problems. I realized that for me it is worth it to pay $12 or $24 a year in exchange for privacy. So, although I loved Google for a long time, it was time to let it go.
 
@@ -45,11 +46,11 @@ I created an account in a Nextcloud instance for my calendar and contacts. Nextc
 
 #### Search
 
-I thought the search engine would be the hardest service to substitute, however, there are a lot of good alternatives. The one I went for is [DuckDuckGo](https://duckduckgo.com/) which works pretty well and also works if you are connecting to the internet through the [Tor network](https://www.torproject.org/).
+I thought the search engine would be the hardest service to substitute, however, there are a lot of good alternatives. The one I went for is [DuckDuckGo](https://duckduckgo.com/) which works pretty well and also works if you are connected to the internet through the [Tor network](https://www.torproject.org/).
 
 #### Others
 
-I never had to substitute the web browser since I already used [Firefox](https://www.mozilla.org/firefox/), and as for the photo hosting service, I just don't upload them online anymore and I use the [Simple Galley](https://simplemobiletools.com/) app (you can install it for free from [F-Droid](https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)). I also substituted Android's custom ROM, but I will talk about that some other time.
+I never had to substitute the web browser since I already used [Firefox](https://www.mozilla.org/firefox/), and as for the photo hosting service, I just don't upload them online anymore and I use the [Simple Gallery](https://simplemobiletools.com/) app (you can install it for free from [F-Droid](https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)). I also substituted Android's custom ROM, but I will talk about that some other time.
 
 #### Temporarily not replaced
 
@@ -61,4 +62,4 @@ When looking for all the new services in order to get end-to-end encryption, I a
 
 ## Conclusion
 
-It took me some time to make all these changes, specially my phone's operative system and my email address (which I still use the old one with a lot of people, I am progressively updating it). Some of the services are hard to replace and it takes time to get used to the new providers. However, if you are interested in getting privacy when sending personal emails or saving files online, it is worth the change.
+It took me some time to make all these changes, specially my phone's operative system and my email address—I still use the old one with a lot of people, I am progressively updating it. Some of the services are hard to replace and it takes time to get used to the new providers. However, if you are interested in getting privacy when sending personal emails or saving files online, it is worth the change.
