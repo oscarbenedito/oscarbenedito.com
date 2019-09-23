@@ -611,9 +611,10 @@ article {
   }
   .post-tags li {
     display: inline-block;
+    margin-bottom: 8px;
   }
-  .post-tags li + li {
-    margin-left: 8px;
+  .post-tags li:not(:last-child) {
+    margin-right: 8px;
   }
   .post-tags a {
     display: block;
