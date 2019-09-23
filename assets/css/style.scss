@@ -42,7 +42,7 @@ permission notice:
 -------------------------------------------------- */
 @mixin lightcolors {
   --text-color: rgba(0, 0, 0, 0.88);
-  --text-strong: rgb(0, 76, 0);
+  --text-strong: rgba(0, 0, 0, 0.90);//rgb(0, 76, 0);
   --secondary-text-color: rgba(0, 0, 0, 0.56);
   --tertiary: rgba(0, 0, 0, 0.06);
   --button-color: rgba(0, 0, 0, 0.26);
