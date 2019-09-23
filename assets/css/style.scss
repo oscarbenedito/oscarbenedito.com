@@ -55,7 +55,7 @@ permission notice:
   --background: #fff;
   --hljs-bg: #1c1d21;
   --code-bg: #f5f5f5;
-  --border: #eee;
+  --border: #ddd;
 }
 @mixin darkcolors {
   --text-color: #a0a0a0;
@@ -72,7 +72,7 @@ permission notice:
   --background: #101010;
   --hljs-bg: #1c1d21;
   --code-bg: #1c1c1c;
-  --border: #eee;
+  --border: #333;
 }
 :root {
   --gap: 24px;
@@ -444,12 +444,15 @@ article {
     margin-top: 32px;
     margin-bottom: 24px;
   }
-  .post-content h3,
+  .post-content h3 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
   .post-content h4,
   .post-content h5,
   .post-content h6 {
     margin-top: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .post-content h1 {
     font-size: 40px;
@@ -461,13 +464,13 @@ article {
     font-size: 24px;
   }
   .post-content h4 {
-    font-size: 16px;
+    font-size: 19px;
   }
   .post-content h5 {
-    font-size: 14px;
+    font-size: 18px;
   }
   .post-content h6 {
-    font-size: 12px;
+    font-size: 16px;
   }
   .post-content a code {
     margin-left: 0;
