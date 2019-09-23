@@ -14,7 +14,7 @@
     {{ if .Params.tags }}
     <footer>
       <ul class="post-tags">
-        {{ range .Params.tags }}<li><a href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+        {{ range .Params.tags | sort }}<li><a href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
       </ul>
     </footer>
     {{ end }}
