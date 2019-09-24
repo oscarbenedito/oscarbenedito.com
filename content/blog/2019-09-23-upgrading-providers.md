@@ -1,5 +1,5 @@
 ---
-title: "Upgrading to privacy-respecting providers"
+title: "Upgrading to privacy-conscious providers"
 categories: technology
 tags: ["Decentralization", "Encryption", "Privacy"]
 lastmod: 2019-09-24
@@ -26,7 +26,7 @@ Selecting all the different services I wanted to export from one page instead of
 
 In order to encrypt my content, I needed to find an alternative to a lot of services that Google was offering me (or use tools such as [Cryptomator](https://cryptomator.org/), which was discarded because of problem number 3). And so the search began[^note].
 
-[^note]: I will eventually publish a list of resources that helped me a lot with this, but right now, my final choices will have to do.
+[^note]: You can find some of the resources that I found useful [here](/resources/).
 
 #### Email
 
