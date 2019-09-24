@@ -4,9 +4,9 @@ categories: technology
 tags: ["Decentralization", "Encryption", "Privacy"]
 lastmod: 2019-09-24
 ---
-I have been reading a lot about decentralization and not depending too much in one company in the past six months and I realized how much I relied on Google: my email, all my files, contacts, calendars, pictures... Most of my data was stored on their servers. This was inconvenient for three reasons: (1) if something was to happen to Google or my account, I would loose a lot of data, (2) Google doesn't use end-to-end encryption, which means that they (and anyone with access to their servers) can see all my files, emails, etc. and (3) Google already uses all this data to better know my personality.
+I have been reading a lot about decentralization and not depending too much in one company in the past six months and I realized how much I relied on Google: my email, all my files, contacts, calendars, pictures... Most of my data was stored on their servers. This was inconvenient for three reasons: (1) if something was to happen to Google or my account, I would loose a lot of data, (2) Google doesn't use end-to-end encryption, which means that they (and anyone with access to their servers) can see all my files, emails, etc. and (3) Google already uses all this data (and other it collects) to better know my personality.
 
-Some people might think that the main three problems I have with Google aren't that important. In fact, I have used Google for many years because that was my opinion for a long time. However, the more I read about the issue, the more I realize they aren't minor problems. I realized that for me it is worth it to pay $12 or $24 a year in exchange for privacy. So, although I loved Google for a long time, it was time to let it go.
+Some people might think that the main three problems I have with Google aren't that important. In fact, I have used Google for many years because that was my opinion for a long time. However, the more I read about the issue, the more I realize they aren't minor problems. I realized that for me it is worth it to pay $12 or $24 a year in exchange for privacy. If you are still doubting, [this post](https://www.gnu.org/proprietary/malware-google.html) might change your mind.
 
 ***
 
