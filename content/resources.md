@@ -26,6 +26,7 @@ Blogs I have found interesting, alphabetically sorted.
  - [InfoSec Handbook](https://infosec-handbook.eu/blog/) — [RSS feed](https://infosec-handbook.eu/blog/index.xml)
  - [Jan-Lukas Else](https://jlelse.blog/) — [RSS feed](https://jlelse.blog/index.xml)
  - [Justin Vollmer](https://www.justinvollmer.com/) — [RSS feed](https://www.justinvollmer.com/feed/)
+ - [Kev Quirk](https://kevq.uk/) — [RSS feed](https://kevq.uk/feed)
  - [Matthias Ott](https://matthiasott.com/articles/) — [RSS feed](https://matthiasott.com/articles/rss)
  - [Mike Babb](https://mikebabb.com/blog/) — [RSS feed](https://mikebabb.com/feed.xml)
  - NCSC Guidance Feed — [RSS feed](https://www.ncsc.gov.uk/feeds/guidance.xml)
