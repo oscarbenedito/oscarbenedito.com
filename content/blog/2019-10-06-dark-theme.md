@@ -2,7 +2,6 @@
 title: "Creating a dark theme"
 categories: technology
 tags: ["CSS", "Website"]
-#draft: true # Remember to state the date in file name before commiting!
 ---
 The first contact I had with HTML and CSS was about two years ago, when I created my first website along with a friend who already had some experience with them, as well as with JavaScript. We used a premade theme (based on [Bootstrap](https://getbootstrap.com/)), so I didn't really learn much CSS, but I started understanding what was HTML and how it worked. One year later, I wanted to design my own website and I decided to build my own theme. I looked up many CSS frameworks and ended up using [Bulma](https://bulma.io/) because of how simple it is (I didn't need many features for a personal website). It worked pretty well and I had a first contact with CSS and SASS, but when I finally finished my page and released it under my domain, I soon wanted another feature: the possibility to change to a dark theme.
 

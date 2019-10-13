@@ -590,9 +590,9 @@ article {
     border-radius: 0;
   }
   .post-content blockquote {
-    margin: 0 0 0 calc(var(--gap) * -1);
     padding: 0 0 0 21px;
-    border-left: 3px solid var(--text-color);
+    border-left: 3px solid var(--secondary-text-color);
+    color: var(--secondary-text-color);
   }
   .post-content hr {
     height: 2px;
