@@ -4,17 +4,17 @@
   <h2>{{ .Params.categories | title }} entry</h2>
 </header>
 <main>
-  <article>
+  <article class="h-entry">
     <header>
-      <h1 class="post-title">{{ .Title }}</h1>
-      <div class="post-meta">{{ with .Params.categories }}<a style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}{{ .Date.Format "January 2, 2006" }}{{ if .Lastmod }} (last modified on {{ .Lastmod.Format "January 2, 2006" }}){{ end }}
+      <h1 class="post-title p-name">{{ .Title }}</h1>
+      <div class="post-meta">{{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}<data class="dt-published">{{ .Date.Format "January 2, 2006" }}</data>{{ if .Lastmod }} (last modified on <data class="dt-updated">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
       </div>
     </header>
-    <div class="post-content">{{ .Content }}</div>
+    <div class="post-content e-content">{{ .Content }}</div>
     {{ if .Params.tags }}
     <footer>
       <ul class="post-tags">
-        {{ range .Params.tags | sort }}<li><a href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+        {{ range .Params.tags | sort }}<li><a class="p-category" href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
       </ul>
     </footer>
     {{ end }}

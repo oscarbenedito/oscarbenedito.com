@@ -1,7 +1,50 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
+<header class="page-header">
+  {{ if eq .Kind "taxonomy" }}
+  <h1>{{ .Title | title }}</h1>
+  {{ else }}
+  <h1>{{ .Title }}</h1>
+  {{ end }}
+  {{ if eq .Kind "taxonomy" }}
+  <h2>{{ .Data.Singular | title }}</h2>
+  {{ else }}
+  {{ with .Params.subtitle }}
+  <h2>{{ . }}</h2>
+  {{ end }}
+  {{ end }}
+</header>
+
 <main class="list">
-	{{ partial "list.html" . }}
-	{{ partial "pagination.html" . }}
+	{{ $paginator := .Paginator }}
+	{{ range $paginator.Pages }}
+		<div class="card h-entry">
+		  <header>
+		    <h2 class="p-name">{{ .Title }}</h2>
+		  </header>
+		  <section class="content">
+		    {{ if .Params.subtitle }}
+		    <p class="p-summary">{{ .Params.subtitle }}</p>
+		    {{ else }}
+		    <p class="p-summary">{{ .Content | truncate 200 }}</p>
+		    {{ end }}
+		  </section>
+		  <footer>
+		    {{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}<data class="dt-published">{{ .Date.Format "January 2, 2006" }}</data> &middot; {{ partial "read-time.html" . }}
+		  </footer>
+		  <a class="card-link u-url" href="{{ .RelPermalink }}"></a>
+		</div>
+	{{ end }}
+
+	{{ $paginator := .Paginator }}
+	{{ if or $paginator.HasPrev $paginator.HasNext }}
+		<div class="pagination">
+		  {{ if $paginator.HasPrev }}
+		  	<a class="button" href="{{ $paginator.Prev.URL }}">&larr; Newer Posts</a>
+		  {{ end }}
+		  {{ if $paginator.HasNext }}
+		  	<a class="button right" href="{{ $paginator.Next.URL }}">Older Posts &rarr;</a>
+		  {{ end }}
+		</div>
+	{{ end }}
 </main>
 {{ end }}
