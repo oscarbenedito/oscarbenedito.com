@@ -29,7 +29,7 @@
 		    {{ end }}
 		  </section>
 		  <footer>
-		    {{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}<data class="dt-published">{{ .Date.Format "January 2, 2006" }}</data> &middot; {{ partial "read-time.html" . }}
+		    {{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}<data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data> &middot; {{ partial "read-time.html" . }}
 		  </footer>
 		  <a class="card-link u-url" href="{{ .RelPermalink }}"></a>
 		</div>
