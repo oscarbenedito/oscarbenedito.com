@@ -4,7 +4,7 @@ categories: technology
 tags: ["Decentralization", "Encryption", "Privacy"]
 lastmod: 2019-09-24
 ---
-I have been reading a lot about decentralization and not depending too much in one company in the past six months and I realized how much I relied on Google: my email, all my files, contacts, calendars, pictures... Most of my data was stored on their servers. This was inconvenient for three reasons: (1) if something was to happen to Google or my account, I would loose a lot of data, (2) Google doesn't use end-to-end encryption, which means that they (and anyone with access to their servers) can see all my files, emails, etc. and (3) Google already uses all this data (and other it collects) to better know my personality.
+I have been reading a lot about decentralization and not depending too much in one company in the past six months and I realized how much I relied on Google: my email, all my files, contacts, calendars, pictures... Most of my data was stored on their servers. This was inconvenient for three reasons: (1) if something was to happen to Google or my account, I would lose a lot of data, (2) Google doesn't use end-to-end encryption, which means that they (and anyone with access to their servers) can see all my files, emails, etc. and (3) Google already uses all this data (and other it collects) to better know my personality.
 
 Some people might think that the main three problems I have with Google aren't that important. In fact, I have used Google for many years because that was my opinion for a long time. However, the more I read about the issue, the more I realize they aren't minor problems. I realized that for me it is worth it to pay $12 or $24 a year in exchange for privacy. If you are still doubting, [this post](https://www.gnu.org/proprietary/malware-google.html) might change your mind.
 
@@ -38,7 +38,7 @@ Most of my files in the cloud were old and not usually needed, they were just on
 
 As for the few files I actually needed online (the ones I use both at home and at college), I now use a USB stick to have them wherever I go, as well as backing them up every once in a while. No need to have them online, and it is faster to plug in a USB stick than log in to Google Drive and download the files (which was what I was doing on all computers running GNU/Linux).
 
-There is one type of file I haven't replaced yet: anything that was shared is still on my Drive (even if other services offer it, for now I am fine with using Google).
+There is one type of file I haven't replaced yet: anything that was shared is still on my Drive (even if other services offer it, for now, I am fine with using Google).
 
 #### Calendar and contacts
 
@@ -62,4 +62,4 @@ When looking for all the new services in order to get end-to-end encryption, I a
 
 ## Conclusion
 
-It took me some time to make all these changes, specially my phone's operative system and my email address—I still use the old one with a lot of people, I am progressively updating it. Some of the services are hard to replace and it takes time to get used to the new providers. However, if you are interested in getting privacy when sending personal emails or saving files online, it is worth the change.
+It took me some time to make all these changes, especially my phone's operative system and my email address—I still use the old one with a lot of people, I am progressively updating it. Some of the services are hard to replace and it takes time to get used to the new providers. However, if you are interested in getting privacy when sending personal emails or saving files online, it is worth the change.
