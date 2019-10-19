@@ -1,7 +1,7 @@
 ---
 title: "Switching to a password manager"
 categories: technology
-tags: ["CSS", "Website"]
+tags: ["Privacy", "Security"]
 ---
 Before I learned about password managers, less than a year ago, having all my passwords on the same place sounded like a really bad idea—if someone managed to get access to "that place", they could log in to all my accounts, to my *online identity*.
 
