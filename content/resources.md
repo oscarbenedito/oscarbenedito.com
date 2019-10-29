@@ -17,6 +17,7 @@ I have also found [AlternativeTo](https://alternativeto.net/) to be really usefu
 
 Blogs I have found interesting, alphabetically sorted.
 
+ - [Alireza Hayati](https://ealireza.com/) — [RSS feed](https://ealireza.com/feed.xml)
  - [Brendan Abolivier](https://brendan.abolivier.bzh/) — [RSS feed](https://brendan.abolivier.bzh/index.xml)
  - [Codesections](https://www.codesections.com/blog/) — [RSS feed](https://www.codesections.com/rss.xml)
  - [Ctrl blog](https://www.ctrl.blog/) — [RSS feed](https://feed.ctrl.blog/latest.atom)
@@ -28,7 +29,9 @@ Blogs I have found interesting, alphabetically sorted.
  - [Justin Vollmer](https://www.justinvollmer.com/) — [RSS feed](https://www.justinvollmer.com/feed/)
  - [Kev Quirk](https://kevq.uk/) — [RSS feed](https://kevq.uk/feed)
  - [Matthias Ott](https://matthiasott.com/articles/) — [RSS feed](https://matthiasott.com/articles/rss)
+ - [mcol](https://mcol.xyz/) — [RSS feed](https://mcol.xyz/rss.xml)
  - [Mike Babb](https://mikebabb.com/blog/) — [RSS feed](https://mikebabb.com/feed.xml)
  - NCSC Guidance Feed — [RSS feed](https://www.ncsc.gov.uk/feeds/guidance.xml)
+ - [PapaTutuWawa](https://blog.polynom.me/) — [RSS feed](https://blog.polynom.me/atom.xml)
  - [privacytools.io](https://blog.privacytools.io/) — [RSS feed](https://blog.privacytools.io/feed.xml)
  - [Uncertain Jatan](https://jatan.blog/) — [RSS feed](https://jatan.blog/feed/)
