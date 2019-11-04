@@ -537,11 +537,12 @@ article {
   }
   .post-content .highlight,
   .post-content pre {
-    margin-left: calc(var(--gap) * -1);
-    margin-right: calc(var(--gap) * -1);
     margin-bottom: 32px;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius);
+  }
+  .post-content pre {
+    overflow-x: auto;
   }
   .post-content .highlight pre {
     margin-left: 0;
