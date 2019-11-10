@@ -538,7 +538,6 @@ article {
   .post-content .highlight,
   .post-content pre {
     margin-bottom: 32px;
-    background: var(--hljs-bg) !important;
     border-radius: var(--radius);
   }
   .post-content pre {
@@ -575,10 +574,9 @@ article {
     margin-left: 4px;
     margin-right: 4px;
     padding: 4px 6px;
-    font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+    font-family: monospace;
     font-size: 0.78em;
     line-height: 1.5;
-    background: var(--code-bg);
     border-radius: 2px;
   }
   .post-content pre code {
@@ -586,8 +584,6 @@ article {
     margin-left: 0;
     margin-right: 0;
     padding: var(--gap);
-    color: rgba(255, 255, 255, 0.8);
-    background: transparent;
     border-radius: 0;
   }
   .post-content blockquote {

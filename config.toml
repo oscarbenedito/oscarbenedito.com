@@ -2,6 +2,7 @@ baseURL = "https://obenedito.org/"
 languageCode = "en-us"
 title = "Oscar Benedito"
 paginate = 5
+pygmentsStyle = "solarized-dark256"
 
 [params]
   blog_title = "Personal blog"
