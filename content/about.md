@@ -16,7 +16,7 @@ This site is powered by free software. The software is published under the [GNU 
 
 The content of the site is published under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) unless otherwise stated.
 
-I am hosting local copies in of the licenses: [GPLv3](/licenses/gpl-v3/), [CC-BY-4.0](/licenses/cc-by-4.0/).
+I am hosting local copies of the licenses: [GPLv3](/licenses/gpl-v3/), [CC-BY-4.0](/licenses/cc-by-4.0/).
 
 ## Source code
 
