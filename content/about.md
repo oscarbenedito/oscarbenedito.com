@@ -4,7 +4,7 @@ type: page
 ---
 ## Contact
 
-You can contact me sending me an email at [oscar@obenedito.org](mailto:oscar@obenedito.org).
+You can contact me sending me an email to [oscar@obenedito.org](mailto:oscar@obenedito.org).
 
 ## Privacy
 
