@@ -2,18 +2,19 @@
 title: "Switching to LineageOS with microG"
 categories: technology
 tags: ["LineageOS", "microG", "FOSS", "Software", "Privacy"]
+lastmod: 2019-11-22
 ---
 One of the things I wanted to do when switching to more privacy-respecting providers was getting rid of Google Services on my phone. According to multiple articles, your Android phone gathers a lot of data and sends it to Google. It is true that my daily routine isn't a big secret, and any friend who asked me could probably get my location, but giving it away without my (explicit) consent is a completely different thing.
 
 ## First attempt
 
-I first installed LineageOS on my phone in January 2019. I tried installing it with Google Apps, but I then realized I was back with Google, so I decided to go with [microG](https://microg.org/) (a free/libre re-implementation of Google’s proprietary Android user space apps and libraries). But for some reason—unknown to me back then—, microG didn't work. As a result, the apps that required those libraries didn't work either. Apps that I wasn't willing to stop using, so I switched back to Android's custom ROM[^note].
+I first installed LineageOS on my phone in January 2019. I tried installing it with Google Apps, but I then realized I was back with Google, so I decided to go with [microG](https://microg.org/) (a free/libre re-implementation of Google’s proprietary Android user space apps and libraries). But for some reason—unknown to me back then—, microG didn't work. As a result, the apps that required those libraries didn't work either. Apps that I wasn't willing to stop using, so I switched back to Android's stock ROM[^note].
 
-[^note]: It wasn't actually that quick. I tried to reinstall LineageOS with Gapps once again, but, for some reason, it wouldn't work and the phone stopped working (it was stuck on the boot screen, I left it for hours). I finally got help from an acquaintance (we had to go into Emergency Download Mode using the test point) and I was finally able to go back to Android's custom ROM.
+[^note]: It wasn't actually that quick. I tried to reinstall LineageOS with Gapps once again, but, for some reason, it wouldn't work and the phone stopped working (it was stuck on the boot screen, I left it for hours). I finally got help from an acquaintance (we had to go into Emergency Download Mode using the test point) and I was finally able to go back to Android's stock ROM.
 
 ## Finding the problem
 
-For some time I used Android's custom ROM, when, by chance, I read the following:
+For some time I used Android's stock ROM, when, by chance, I read the following:
 
 > MicroG requires a patch called "signature spoofing", which allows the microG's apps to spoof themselves as Google Apps. LineageOS' developers refused (multiple times) to include the patch, forcing us to fork their project.
 
