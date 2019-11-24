@@ -571,6 +571,8 @@ article {
   }
 
   .post-content code {
+    border: 1px solid var(--border);
+    background-color: var(--code-bg);
     margin-left: 4px;
     margin-right: 4px;
     padding: 4px 6px;
