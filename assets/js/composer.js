@@ -19,6 +19,7 @@ source code at <https://github.com/writeas/writefreely>
 */
 var $composer = document.getElementById('composer');
 var $wordcount = document.getElementById('word-count');
+var key;
 var typingTimer;
 var typingInterval = 200;
 function updateWordCount() {
@@ -27,16 +28,22 @@ function updateWordCount() {
   if (content != '') {
     words = content.replace(/\s+/gi, ' ').split(' ').length;
   }
-  $wordcount.textContent = words + " word" + (words != 1 ? "s" : "");
+  minutes = Math.floor(words/140);
+  $wordcount.textContent = words + " word" + (words != 1 ? "s" : "") + " · " + minutes + " minute" + (minutes != 1 ? "s" : "");
 }
 function loadContents() {
-	var content = localStorage.getItem('content');
+	var content = localStorage.getItem(key);
 	if (content != null) {
 		$composer.value = content;
 	}
 }
 var updateContents = function() {
-  localStorage.setItem('content', $composer.value);
+  if ($composer.value == '') {
+    localStorage.removeItem(key);
+  }
+  else {
+    localStorage.setItem(key, $composer.value);
+  }
   updateWordCount();
 }
 var resetTimer = function() {
@@ -44,11 +51,11 @@ var resetTimer = function() {
   typingTimer = setTimeout(updateContents, typingInterval);
 }
 function downloadData(filename, text) {
-  var text = localStorage.getItem('content');
+  var text = localStorage.getItem(key);
   if (text != null && text != '') {
     var tmpElement = document.createElement('a');
     tmpElement.setAttribute('href', 'data:text/markdown;charset=utf-8,' + encodeURIComponent(text));
-    tmpElement.setAttribute('download', 'contents.md');
+    tmpElement.setAttribute('download', key + '.md');
     tmpElement.style.display = 'none';
 
     document.body.appendChild(tmpElement);
@@ -56,19 +63,23 @@ function downloadData(filename, text) {
     document.body.removeChild(tmpElement);
   }
 }
-var saveOrResetTimer = function(event) {
+var saveEvent = function(event) {
   if (event.keyCode == 83 && (event.metaKey || event.ctrlKey)) {
+    clearTimeout(typingTimer);
     event.preventDefault();
     updateContents();
     downloadData();
   }
-  clearTimeout(typingTimer);
-  typingTimer = setTimeout(updateContents, typingInterval);
 }
 
+key = (new URLSearchParams(window.location.search)).get('key');
+if (key == '' || key == null) {
+  key = 'content';
+}
 $composer.addEventListener('keyup input', resetTimer);
-$composer.addEventListener('keydown', saveOrResetTimer);
+$composer.addEventListener('keydown', resetTimer);
 $composer.addEventListener('input', resetTimer);
 window.addEventListener('beforeunload', updateContents);
+window.addEventListener('keydown', saveEvent);
 loadContents();
 updateWordCount();
