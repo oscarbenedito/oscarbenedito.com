@@ -43,9 +43,31 @@ var resetTimer = function() {
   clearTimeout(typingTimer);
   typingTimer = setTimeout(updateContents, typingInterval);
 }
+function downloadData(filename, text) {
+  var text = localStorage.getItem('content');
+  if (text != null && text != '') {
+    var tmpElement = document.createElement('a');
+    tmpElement.setAttribute('href', 'data:text/markdown;charset=utf-8,' + encodeURIComponent(text));
+    tmpElement.setAttribute('download', 'contents.md');
+    tmpElement.style.display = 'none';
+
+    document.body.appendChild(tmpElement);
+    tmpElement.click();
+    document.body.removeChild(tmpElement);
+  }
+}
+var saveOrResetTimer = function(event) {
+  if (event.keyCode == 83 && (event.metaKey || event.ctrlKey)) {
+    event.preventDefault();
+    updateContents();
+    downloadData();
+  }
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(updateContents, typingInterval);
+}
 
 $composer.addEventListener('keyup input', resetTimer);
-$composer.addEventListener('keydown', resetTimer);
+$composer.addEventListener('keydown', saveOrResetTimer);
 $composer.addEventListener('input', resetTimer);
 window.addEventListener('beforeunload', updateContents);
 loadContents();
