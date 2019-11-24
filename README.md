@@ -1,6 +1,9 @@
 # Personal website
 This repository is the source code for my [personal website](https://obenedito.org).
 
+## Personal notes
+The font used for the logo is "Libre Baskerville" in bold.
+
 ## License
 The contents of this repositories are licensed under the [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html) or (at your option) any later version.
 

@@ -71,10 +71,28 @@ var saveEvent = function(event) {
     downloadData();
   }
 }
+function toggleTheme() {
+  if (localStorage && localStorage.getItem("theme") == "dark") {
+    localStorage.setItem("theme", "default");
+  } else if (localStorage) {
+    localStorage.setItem("theme", "dark");
+  }
+  setTheme();
+}
+function setTheme() {
+  if (localStorage) {
+    var light = localStorage.getItem("theme") == "default";
+    document.documentElement.classList.toggle("dark");
+  }
+}
 
 key = (new URLSearchParams(window.location.search)).get('key');
 if (key == '' || key == null) {
-  key = 'content';
+  key = 'null';
+}
+key = 'k-' + key;
+if (localStorage && localStorage.getItem("theme") == "dark") {
+  setTheme();
 }
 $composer.addEventListener('keyup input', resetTimer);
 $composer.addEventListener('keydown', resetTimer);
