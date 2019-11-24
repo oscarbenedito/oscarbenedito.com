@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partial "head.html" . }}
+  <head>
+    {{ partial "head-base.html" . }}
+    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Params.blog_title }}" href=/blog/index.xml>
+    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+    {{ $style := resources.Get "css/style.scss" | resources.ToCSS $options }}
+    <link id="theme" rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
+  </head>
   <body>
     {{ partial "navbar.html" . }}
     {{ block "main" . }}

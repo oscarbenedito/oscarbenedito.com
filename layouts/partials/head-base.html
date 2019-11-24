@@ -1,0 +1,7 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{/* {{ if .Site.Params.description }}<meta name="description" content="{{ site.description }}">{% endif %} */}}
+<meta name="author" content="{{ .Site.Params.Author }}">
+{{ $favicon := resources.Get "img/favicon.min.svg" }}
+<link rel="icon" href="{{ $favicon.RelPermalink }}">
+<title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "taxonomy" }}{{ .Title | title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
