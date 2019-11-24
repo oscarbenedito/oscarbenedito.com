@@ -13,6 +13,9 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+This file is based on code from the writeFreely project. You can find the
+source code at <https://github.com/writeas/writefreely>
 */
 var $composer = document.getElementById('composer');
 var $wordcount = document.getElementById('word-count');
