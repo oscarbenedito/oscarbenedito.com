@@ -68,7 +68,8 @@ var saveEvent = function(event) {
     clearTimeout(typingTimer);
     event.preventDefault();
     updateContents();
-    downloadData();
+    if (event.shiftKey)
+      downloadData();
   }
 }
 function toggleTheme() {
