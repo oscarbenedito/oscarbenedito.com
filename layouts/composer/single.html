@@ -13,6 +13,6 @@
   <textarea id="composer" placeholder="Start writing..." autofocus></textarea>
   {{ $js := resources.Get "js/composer.js" | resources.Minify }}
   <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
-  <a href="/jsweblabels/" data-jslicense="1" style="display: none;">JavaScript Web Labels</a>
+  <a href="/jsweblabels/" rel="jslicense" style="display: none;">JavaScript Web Labels</a>
   </body>
 </html>
