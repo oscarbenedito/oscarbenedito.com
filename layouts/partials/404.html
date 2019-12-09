@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Oscar Benedito's website">
+    <meta name="author" content="{{ .Site.Author }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>404 Error | Oscar Benedito</title>
+    {{ $favicon := resources.Get "img/favicon.min.svg" }}
+    <link rel="icon" href="{{ $favicon.RelPermalink }}">
+    {{- $style := resources.Get "css/landing.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  </head>
+  <body>
+    <div class="content">
+      <h1 style="font-size: 20vw; margin: 0;">404</h1>
+    </div>
+  </body>
+</html>
