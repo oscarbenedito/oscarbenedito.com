@@ -8,6 +8,7 @@
     <title>Oscar Benedito</title>
     {{ $favicon := resources.Get "img/favicon.min.svg" }}
     <link rel="icon" href="{{ $favicon.RelPermalink }}">
+    <link rel="shortcut icon" href="/favicon.ico">
     {{- $style := resources.Get "css/landing.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>

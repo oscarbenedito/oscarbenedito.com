@@ -4,4 +4,5 @@
 <meta name="author" content="{{ .Site.Params.Author }}">
 {{ $favicon := resources.Get "img/favicon.min.svg" }}
 <link rel="icon" href="{{ $favicon.RelPermalink }}">
+<link rel="shortcut icon" href="/favicon.ico">
 <title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "taxonomy" }}{{ .Title | title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
