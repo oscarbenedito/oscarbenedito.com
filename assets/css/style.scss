@@ -105,7 +105,6 @@ body {
   font-family: 'FreeSans', sans-serif;
   font-size: 18px;
   line-height: 1.7;
-  text-align: justify;
   word-break: break-word;
   background: var(--background);
 }
@@ -136,6 +135,10 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+p,
+li {
+  text-align: justify;
 }
 strong,
 b {
