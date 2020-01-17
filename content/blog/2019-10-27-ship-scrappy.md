@@ -1,6 +1,6 @@
 ---
 title: "Ship scrappy"
-categories: personal
+categories: incidental
 subtitle: "I just wanted to post this interesting reflexion, as I tend to make sure everything is 100% perfect before “shipping it”. In some scenarios, this can be good, since you don't want what you are …"
 ---
 > The only choice is to launch before you’re ready.\
