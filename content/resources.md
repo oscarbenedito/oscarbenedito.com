@@ -17,7 +17,8 @@ I have also found [AlternativeTo](https://alternativeto.net/) to be really usefu
 
 Blogs I have found interesting, alphabetically sorted.
 
- - [Alireza Hayati](https://ealireza.com/) — [RSS feed](https://ealireza.com/feed.xml)
+ - [Ali Reza Hayati](https://hayati.noblogs.org) — [RSS feed](https://hayati.noblogs.org/feed)
+ - [blacklight447](https://write.privacytools.io/my-thoughts-on-security/) — [RSS feed](https://write.privacytools.io/my-thoughts-on-security/feed/)
  - [Brendan Abolivier](https://brendan.abolivier.bzh/) — [RSS feed](https://brendan.abolivier.bzh/index.xml)
  - [Codesections](https://www.codesections.com/blog/) — [RSS feed](https://www.codesections.com/rss.xml)
  - [Ctrl blog](https://www.ctrl.blog/) — [RSS feed](https://feed.ctrl.blog/latest.atom)
@@ -28,10 +29,13 @@ Blogs I have found interesting, alphabetically sorted.
  - [Jan-Lukas Else](https://jlelse.blog/) — [RSS feed](https://jlelse.blog/index.xml)
  - [Justin Vollmer](https://www.justinvollmer.com/) — [RSS feed](https://www.justinvollmer.com/feed/)
  - [Kev Quirk](https://kevq.uk/) — [RSS feed](https://kevq.uk/feed)
- - [Matthias Ott](https://matthiasott.com/articles/) — [RSS feed](https://matthiasott.com/articles/rss)
+ - [Marko Saric](https://markosaric.com/blog/) — [RSS feed](https://markosaric.com/blog/feed/)
+ - [Matthias Ott](https://matthiasott.com/) — [RSS feed](https://matthiasott.com/rss)
  - [mcol](https://mcol.xyz/) — [RSS feed](https://mcol.xyz/rss.xml)
  - [Mike Babb](https://mikebabb.com/blog/) — [RSS feed](https://mikebabb.com/feed.xml)
  - NCSC Guidance Feed — [RSS feed](https://www.ncsc.gov.uk/feeds/guidance.xml)
  - [PapaTutuWawa](https://blog.polynom.me/) — [RSS feed](https://blog.polynom.me/atom.xml)
+ - [PINE64](https://www.pine64.org/blog/) — [RSS feed](https://www.pine64.org/feed/)
  - [privacytools.io](https://blog.privacytools.io/) — [RSS feed](https://blog.privacytools.io/feed.xml)
- - [Uncertain Jatan](https://jatan.blog/) — [RSS feed](https://jatan.blog/feed/)
+ - [The New Oil](https://write.as/thenewoil/) — [RSS feed](https://write.as/thenewoil/feed/)
+ - [Tutanota](https://tutanota.com/blog/) — [RSS feed](https://tutanota.com/blog/feed.xml)
