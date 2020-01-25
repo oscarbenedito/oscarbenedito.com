@@ -8,6 +8,7 @@ disableKinds = "taxonomyTerm"
 [params]
   blog_title = "Personal blog"
   Author = "Oscar Benedito"
+  active_years = ["2020", "2019"]
 
 [taxonomies]
   category = "categories"
@@ -17,6 +18,7 @@ disableKinds = "taxonomyTerm"
   blog = "/blog/:year/:month/:slug/"
   categories = "/blog/categories/:slug/"
   tags = "/blog/tags/:slug/"
+  blog_archive = "/blog/archive/"
 
 [frontmatter]
   date  = [":filename", ":default"]

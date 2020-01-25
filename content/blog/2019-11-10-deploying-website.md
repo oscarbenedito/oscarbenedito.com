@@ -1,7 +1,7 @@
 ---
 title: "Deploying a website using the WebDAV protocol"
 categories: technology
-tags: ["WebDAV", "Scripts", "rsync", "davfs2", "Autistici/Inventati"]
+tags: ["WebDAV", "Scripts", "rsync", "File synchronization", "davfs2", "Autistici/Inventati"]
 ---
 Now that my website is [hosted by Autistici/Inventati]({{< ref "/blog/2019-11-04-new-host.md" >}}), I can no longer deploy it by just pushing my git repository's changes to GitLab, as I used to. In order to deploy my website, I need to access the server using the WebDAV protocol. To do so, I use [davfs2](https://savannah.nongnu.org/projects/davfs2)—which mounts the WebDAV resource—so I can access it like any other folder in the filesystem.
 

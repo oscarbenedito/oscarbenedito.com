@@ -1,0 +1,38 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.subtitle }}
+  <h2>{{ . }}</h2>
+  {{ end }}
+</header>
+<main>
+  <article>
+    <div class="post-content">
+      <h2>Posts</h2>
+      {{ range .Site.Params.active_years }}
+        {{ $y := . }}
+        <h4>{{ . }}</h4>
+        <ul>
+          {{ range $.Site.Pages }}
+            {{ if and (eq .Dir "blog/") (.IsPage) (eq $y (.Date.Format "2006")) }}
+              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "January 2" }})</li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      {{ end }}
+      <h2>Categories</h2>
+      <ul>
+        {{ range .Site.Taxonomies.categories }}
+          <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title | title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
+        {{ end }}
+      </ul>
+      <h2>Tags</h2>
+      <ul>
+        {{ range .Site.Taxonomies.tags }}
+          <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
+        {{ end }}
+      </ul>
+    </div>
+  </article>
+</main>
+{{ end }}
