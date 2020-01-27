@@ -1,12 +1,12 @@
 @mixin lightcolors {
 --text-color: #000;
 --bg-color: #fff;
---nav-color: #767676;
+--nav-color: hsl(0, 0%, 46%);
 }
 @mixin darkcolors {
---text-color: #eee;
---bg-color: #222;
---nav-color: #8f8f8f;
+--text-color: hsl(0, 0%, 93%);
+--bg-color: hsl(0, 0%, 13%);
+--nav-color: hsl(0, 0%, 56%);
 }
 :root {
   --font-family: serif;

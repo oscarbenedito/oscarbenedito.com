@@ -41,11 +41,11 @@ permission notice:
 /* Variables
 -------------------------------------------------- */
 @mixin lightcolors {
-  --text-color: rgba(0, 0, 0, 0.88);
-  --text-strong: rgba(0, 0, 0, 0.90);//rgb(0, 76, 0);
-  --secondary-text-color: rgba(0, 0, 0, 0.56);
-  --tertiary: rgba(0, 0, 0, 0.06);
-  --button-color: rgba(0, 0, 0, 0.26);
+  --text-color: hsl(0, 0%, 12%);
+  --text-strong: hsl(0, 0%, 10%);
+  --secondary-text-color: hsl(0, 0%, 44%);
+  --tertiary: hsl(0, 0%, 94%);
+  --button-color: hsl(0, 0%, 74%);
   --card-background-color: #fff;
 
   --primary-color: #7ec27b;
@@ -54,25 +54,25 @@ permission notice:
   --links: #4b8c44;
   --background: #fff;
   --hljs-bg: #1c1d21;
-  --code-bg: #f5f5f5;
-  --border: #ddd;
+  --code-bg: hsl(0, 0%, 96%);
+  --border: hsl(0, 0%, 88%);
 }
 @mixin darkcolors {
-  --text-color: #a0a0a0;
-  --text-strong: hsl(0, 0%, 60%);
-  --secondary-text-color: #808080;
-  --tertiary: #1c1c1c;
-  --button-color: #808080;
-  --card-background-color: #1c1c1c;
+  --text-color: hsl(0, 0%, 80%);
+  --text-strong: hsl(0, 0%, 80%);
+  --secondary-text-color: hsl(0, 0%, 55%);
+  --tertiary: hsl(0, 0%, 15%);
+  --button-color: hsl(0, 0%, 70%);
+  --card-background-color: hsl(0, 0%, 15%);
 
   --primary-color: #233951;
-  --primary-invert-color: #e0e0e0;
+  --primary-invert-color: hsl(0, 0%, 80%);
   --primary-color-darken: #1b2c3f;
-  --links: rgb(55, 90, 127);
-  --background: #101010;
+  --links: hsl(210, 40%, 50%);
+  --background: hsl(0, 0%, 11%);
   --hljs-bg: #1c1d21;
-  --code-bg: #1c1c1c;
-  --border: #333;
+  --code-bg: hsl(0, 0%, 11%);
+  --border: hsl(0, 0%, 20%);
 }
 :root {
   --gap: 24px;

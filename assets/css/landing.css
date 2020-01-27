@@ -1,6 +1,6 @@
 html {
-  background-color: #F0F0F0;
-  color: #777777;
+  background-color: hsl(0, 0%, 94%);
+  color: hsl(0, 0%, 47%);
   font-family: sans-serif;
 }
 h1 {
@@ -29,11 +29,11 @@ a.icon {
   text-align: center;
 }
 .icon {
-   fill: #777777;
+   fill: hsl(0, 0%, 47%);
    width: 30px;
 }
 .icon:hover {
-  fill: #AAAAAA;
+  fill: hsl(0, 0%, 67%);
 }
 .big-icon {
   width:100px;
