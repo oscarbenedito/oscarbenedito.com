@@ -51,6 +51,6 @@ Thanks to Hugo, it is very easy to add content to a website, and the source code
 
 [^minify]: On top of that, you can always find the source code well indented in the repository, by clicking on *Inspect element* or by using a prettifier.
 
-# Conclusion
+## Conclusion
 
 Since my recent exit from multiple services because of privacy terms concerns, I realized having a personal website can substitute social networks. I get to share anything I want on my own terms (and with my own theme!), ensuring privacy to anybody who wants to read, and I get to keep the copyright over my content. I now have my corner of the Internet, where everyone can find me, contact me and read what I have to share.
