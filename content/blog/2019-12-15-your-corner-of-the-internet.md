@@ -1,7 +1,7 @@
 ---
 title: "Your corner of the Internet"
 categories: technology
-tags: ["Personal domain", "Decentralization", "DIY", "Website", "Hugo"]
+tags: ["Personal domain", "Personal website", "Decentralization", "DIY", "Website", "Hugo"]
 lastmod: 2019-12-06
 ---
 We tend to have online accounts across different social networks and services. We upload our projects in some sites, we post on different ones and we follow different people on all of them. Our online identities—along with everything we share—are all over the place, but there is a way to solve this (and many other problems): personal websites.

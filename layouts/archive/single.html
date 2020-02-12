@@ -8,7 +8,7 @@
 <main>
   <article>
     <div class="post-content">
-      <h2>Posts</h2>
+      <h2>Posts ({{ len (where (where .Site.Pages "Dir" "==" "blog/") "IsPage" true) }})</h2>
       {{ range .Site.Params.active_years }}
         {{ $y := . }}
         <h4>{{ . }}</h4>
@@ -20,13 +20,13 @@
           {{ end }}
         </ul>
       {{ end }}
-      <h2>Categories</h2>
+      <h2>Categories ({{ len .Site.Taxonomies.categories }})</h2>
       <ul>
         {{ range .Site.Taxonomies.categories }}
           <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title | title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
         {{ end }}
       </ul>
-      <h2>Tags</h2>
+      <h2>Tags ({{ len .Site.Taxonomies.tags }})</h2>
       <ul>
         {{ range .Site.Taxonomies.tags }}
           <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
