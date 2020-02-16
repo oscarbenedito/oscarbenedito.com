@@ -10,9 +10,9 @@
     <nav>
       <span id="word-count">0 words &middot; 0 minutes</span> &middot; <a onclick="toggleTheme()">Toggle theme</a>
     </nav>
-  <textarea id="composer" placeholder="Start writing..." autofocus></textarea>
-  {{ $js := resources.Get "js/composer.js" | resources.Minify }}
-  <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
-  <a href="/jsweblabels/" rel="jslicense" style="display: none;">JavaScript Web Labels</a>
+    <textarea id="composer" placeholder="Start writing..." autofocus></textarea>
+    {{ $js := resources.Get "js/composer.js" | resources.Minify }}
+    <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+    <a href="/jsweblabels/" rel="jslicense" style="display: none;">JavaScript Web Labels</a>
   </body>
 </html>

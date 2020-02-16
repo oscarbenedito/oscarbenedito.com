@@ -5,9 +5,11 @@ paginate = 5
 pygmentsStyle = "solarized-dark256"
 disableKinds = "taxonomyTerm"
 
+[Author]
+  name = "Oscar Benedito"
+
 [params]
   blog_title = "Personal blog"
-  Author = "Oscar Benedito"
   active_years = ["2020", "2019"]
 
 [taxonomies]
