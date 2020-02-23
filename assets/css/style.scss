@@ -687,6 +687,10 @@ article {
 
 /* Others
 -------------------------------------------------- */
-.x-overflow-container {
+.table-container {
   overflow-x: auto;
+}
+.mathjax-container {
+  overflow-x: auto;
+  margin-top: -21.5px;
 }
