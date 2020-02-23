@@ -1,0 +1,3 @@
+[submodule "mathjax"]
+	path = static/js/mathjax
+	url = https://git.oscarbenedito.com/mathjax-bin
