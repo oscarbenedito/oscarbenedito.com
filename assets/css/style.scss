@@ -550,6 +550,8 @@ article {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+    border: 1px solid var(--border);
+    background-color: var(--code-bg) !important;
   }
   /* table */
   .post-content .highlighttable {
@@ -589,7 +591,8 @@ article {
     margin-left: 0;
     margin-right: 0;
     padding: var(--gap);
-    border-radius: 0;
+    border: none;
+    background: none;
   }
   .post-content blockquote {
     padding: 0 0 0 21px;
