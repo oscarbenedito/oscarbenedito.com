@@ -8,13 +8,13 @@
 <main>
   <article>
     <div class="post-content">
-      <h2>Posts ({{ len (where (where .Site.Pages "Dir" "==" "blog/") "IsPage" true) }})</h2>
+      <h2>Posts ({{ len (where (where .Site.Pages "File.Dir" "==" "blog/") "IsPage" true) }})</h2>
       {{ range .Site.Params.active_years }}
         {{ $y := . }}
         <h4>{{ . }}</h4>
         <ul>
           {{ range $.Site.Pages }}
-            {{ if and (eq .Dir "blog/") (.IsPage) (eq $y (.Date.Format "2006")) }}
+            {{ if and (eq .File.Dir "blog/") (.IsPage) (eq $y (.Date.Format "2006")) }}
               <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "January 2" }})</li>
             {{ end }}
           {{ end }}

@@ -1,5 +1,7 @@
 {{ $js := resources.Get "js/main.js" | resources.Minify -}}
 <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
-{{- if eq .File.Ext "pdc" }}
+{{- with .File }}
+{{- if eq .Ext "pdc" }}
 <script id="MathJax-script" async src="/js/mathjax/tex-chtml.js"></script>
+{{- end }}
 {{- end }}
