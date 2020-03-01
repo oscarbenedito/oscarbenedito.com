@@ -20,6 +20,6 @@ I am hosting local copies of the licenses: [GPLv3](/licenses/gpl-v3/), [CC-BY-4.
 
 ## Source code
 
-You can find the site's source code on [this repository](https://gitlab.com/oscarbenedito/obenedito.org/).
+You can find the site's source code on [this repository](https://gitlab.com/oscarbenedito/oscarbenedito.com/).
 
 You can find all the JavaScript run on the site along with the licenses and source code in the [JavaScript Web Labels page](/jsweblabels/).

@@ -1,5 +1,5 @@
 # Personal website
-This repository is the source code for my [personal website](https://obenedito.org).
+This repository is the source code for my [personal website](https://oscarbenedito.com).
 
 ## Personal notes
 The font used for the logo is "Libre Baskerville" in bold.

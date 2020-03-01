@@ -216,7 +216,7 @@ nav {
     padding: 11px 12px;
     max-height: 50px;
     svg {
-      height: 28px;
+      height: 22.5px;
       display: block;
       max-width: 100%;
       fill: var(--primary-invert-color);
@@ -239,7 +239,7 @@ nav {
   #bars-icon {
     width: 17.5px;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 645px) {
     .menu {
       margin-left: 0px;
       margin-right: 0px;
@@ -262,7 +262,7 @@ nav {
       margin-right: 0px;
     }
   }
-  @media screen and (max-width: 310px) {
+  @media screen and (max-width: 340px) {
     .bars {
       margin-right: 0px;
     }
