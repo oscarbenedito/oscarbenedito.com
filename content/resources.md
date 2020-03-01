@@ -25,7 +25,7 @@ Blogs I have found interesting, alphabetically sorted.
  - [davd.io](https://www.davd.io/) — [RSS feed](https://www.davd.io/index.xml)
  - [Dave Lane](https://davelane.nz/blog) — [RSS feed](https://davelane.nz/rss.xml)
  - [Emanuel Pina](https://emanuelpina.pt/) — [RSS feed](https://emanuelpina.pt/index.xml)
- - [Henrique Dias](https://hacdias.com/blog/) - [RSS feed](https://hacdias.com/blog/feed.xml)
+ - [Henrique Dias](https://hacdias.com/blog/) — [RSS feed](https://hacdias.com/blog/feed.xml)
  - [InfoSec Handbook](https://infosec-handbook.eu/blog/) — [RSS feed](https://infosec-handbook.eu/blog/index.xml)
  - [Jan-Lukas Else](https://jlelse.blog/) — [RSS feed](https://jlelse.blog/index.xml)
  - [Justin Vollmer](https://www.justinvollmer.com/) — [RSS feed](https://www.justinvollmer.com/feed/)
