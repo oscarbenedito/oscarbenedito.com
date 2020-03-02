@@ -1,6 +1,6 @@
 ---
 title: "Securing communications"
-categories: technology
+categories: knowledge base
 tags: ["Cryptography", "Software", "Privacy", "Security", "Encryption"]
 ---
 We use cryptographic techniques daily without really knowing how they work, so I'm going to try and explain some basic concepts. Let's start with Wikipedia's current definition:
