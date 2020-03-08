@@ -12,10 +12,10 @@
   --font-family: serif;
   --nav-height: 3em;
 
-	@include lightcolors;
-	@media (prefers-color-scheme: dark) {
-		@include darkcolors;
-	}
+  @include lightcolors;
+  @media (prefers-color-scheme: dark) {
+    @include darkcolors;
+  }
 }
 .dark {
   @include darkcolors;

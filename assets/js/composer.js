@@ -32,10 +32,10 @@ function updateWordCount() {
   $wordcount.textContent = words + " word" + (words != 1 ? "s" : "") + " · " + minutes + " minute" + (minutes != 1 ? "s" : "");
 }
 function loadContents() {
-	var content = localStorage.getItem(key);
-	if (content != null) {
-		$composer.value = content;
-	}
+  var content = localStorage.getItem(key);
+  if (content != null) {
+    $composer.value = content;
+  }
 }
 var updateContents = function() {
   if ($composer.value == '') {

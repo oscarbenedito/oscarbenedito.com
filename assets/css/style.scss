@@ -84,10 +84,10 @@ permission notice:
   --footer-height: 60px;
   --radius: 8px;
 
-	@include lightcolors;
-	@media (prefers-color-scheme: dark) {
-		@include darkcolors;
-	}
+  @include lightcolors;
+  @media (prefers-color-scheme: dark) {
+    @include darkcolors;
+  }
 }
 .dark {
   @include darkcolors;
