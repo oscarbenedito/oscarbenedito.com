@@ -17,7 +17,6 @@ I have also found [AlternativeTo](https://alternativeto.net/) to be really usefu
 
 Blogs I have found interesting, alphabetically sorted.
 
- - [Ali Reza Hayati](https://hayati.noblogs.org) — [RSS feed](https://hayati.noblogs.org/feed)
  - [blacklight447](https://write.privacytools.io/my-thoughts-on-security/) — [RSS feed](https://write.privacytools.io/my-thoughts-on-security/feed/)
  - [Brendan Abolivier](https://brendan.abolivier.bzh/) — [RSS feed](https://brendan.abolivier.bzh/index.xml)
  - [Codesections](https://www.codesections.com/blog/) — [RSS feed](https://www.codesections.com/rss.xml)
@@ -37,6 +36,7 @@ Blogs I have found interesting, alphabetically sorted.
  - NCSC Guidance Feed — [RSS feed](https://www.ncsc.gov.uk/feeds/guidance.xml)
  - [PapaTutuWawa](https://blog.polynom.me/) — [RSS feed](https://blog.polynom.me/atom.xml)
  - [PINE64](https://www.pine64.org/blog/) — [RSS feed](https://www.pine64.org/feed/)
- - [privacytools.io](https://blog.privacytools.io/) — [RSS feed](https://blog.privacytools.io/feed.xml)
+ - [privacytools.io](https://blog.privacytools.io/) — [RSS feed](https://blog.privacytools.io/rss/)
+ - [Sheogorath](https://shivering-isles.com/#blog) — [RSS feed](https://shivering-isles.com/feed.xml)
  - [The New Oil](https://write.as/thenewoil/) — [RSS feed](https://write.as/thenewoil/feed/)
  - [Tutanota](https://tutanota.com/blog/) — [RSS feed](https://tutanota.com/blog/feed.xml)
