@@ -11,24 +11,26 @@
       </div>
     </header>
     <div class="post-content e-content">{{ .Content }}</div>
-    {{ if .Params.tags }}
+    {{- if .Params.tags }}
     <footer>
       <ul class="post-tags">
-        {{ range .Params.tags | sort }}<li><a class="p-category" href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+        {{- range .Params.tags | sort }}
+        <li><a class="p-category" href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{- end }}
       </ul>
     </footer>
-    {{ end }}
+    {{- end }}
   </article>
 
-  {{ if or .NextInSection .PrevInSection }}
+  {{- if or .NextInSection .PrevInSection }}
   <nav class="pagination transparent">
-    {{ if .NextInSection }}
+    {{- if .NextInSection }}
     <a class="button" href="{{ .NextInSection.RelPermalink }}" title="{{ .NextInSection.Title }}">&larr; Newer Post</a>
-    {{ end }}
-    {{ if .PrevInSection }}
+    {{- end }}
+    {{- if .PrevInSection }}
     <a class="button right" href="{{ .PrevInSection.RelPermalink }}" title="{{ .PrevInSection.Title }}">Previous Post &rarr;</a>
-    {{ end }}
+    {{- end }}
   </nav>
-  {{ end }}
+  {{- end }}
 </main>
-{{ end }}
+{{- end }}

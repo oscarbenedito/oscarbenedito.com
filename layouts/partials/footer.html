@@ -14,12 +14,12 @@
     </div>
     <div class="column right">
       <h3>License</h3>
-      {{ if eq .Params.headtitle "GPLv3" }}
+      {{- if or (eq .Params.headtitle "GPLv3") (eq .Params.headtitle "AGPLv3") }}
       <p>Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</p>
-      {{ end }}
-      {{ if eq .Params.headtitle "CC BY 4.0" }}
+      {{- end }}
+      {{- if eq .Params.headtitle "CC BY 4.0" }}
       <p>See the <a href="https://wiki.creativecommons.org/wiki/Modifying_the_CC_licenses">License Modification Policy</a>.</p>
-      {{ end }}
+      {{- end }}
       <p>{{ if eq .Params.title "License" }}Any other part of this page{{ else }}This work{{ end }} is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
       <p><a href="/licenses/cc-by-4.0/">Local copy of the license</a>.</p>
     </div>

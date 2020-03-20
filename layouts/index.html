@@ -6,7 +6,7 @@
     <meta name="author" content="{{ .Site.Author.name }}">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>Oscar Benedito</title>
-    {{ $favicon := resources.Get "img/favicon.min.svg" }}
+    {{- $favicon := resources.Get "img/favicon.min.svg" }}
     <link rel="icon" href="{{ $favicon.RelPermalink }}">
     <link rel="shortcut icon" href="/favicon.ico">
     {{- $style := resources.Get "css/landing.css" | resources.Minify }}
