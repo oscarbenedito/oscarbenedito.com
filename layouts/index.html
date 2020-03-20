@@ -6,10 +6,10 @@
     <meta name="author" content="{{ .Site.Author.name }}">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>Oscar Benedito</title>
-    {{- $favicon := resources.Get "img/favicon.min.svg" }}
+    {{- $favicon := resources.Get "img/favicon.min.svg" | fingerprint }}
     <link rel="icon" href="{{ $favicon.RelPermalink }}">
     <link rel="shortcut icon" href="/favicon.ico">
-    {{- $style := resources.Get "css/landing.css" | resources.Minify }}
+    {{- $style := resources.Get "css/landing.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <link rel="me" href="https://fosstodon.org/@ob">
     <link rel="me" href="https://github.com/oscarbenedito">

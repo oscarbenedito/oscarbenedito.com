@@ -3,8 +3,7 @@
   <head>
     {{ partial "head-base.html" . -}}
     <link rel="alternate" type="application/atom+xml" title="{{ .Site.Params.blog_title }}" href=/blog/index.xml>
-    {{- $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
-    {{- $style := resources.Get "css/style.scss" | resources.ToCSS $options }}
+    {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
     <link id="theme" rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
   </head>
   <body>

@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     {{ partial "head-base.html" . }}
-    {{- $options := (dict "targetPath" "css/composer.css" "outputStyle" "compressed") }}
-    {{- $style := resources.Get "css/composer.scss" | resources.ToCSS $options }}
+    {{- $style := resources.Get "css/composer.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
   </head>
   <body>
@@ -11,7 +10,7 @@
       <span id="word-count">0 words &middot; 0 minutes</span> &middot; <a onclick="toggleTheme()">Toggle theme</a>
     </nav>
     <textarea id="composer" placeholder="Start writing..." autofocus></textarea>
-    {{- $js := resources.Get "js/composer.js" | resources.Minify }}
+    {{- $js := resources.Get "js/composer.js" | minify | fingerprint }}
     <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
     <a href="/jsweblabels/" rel="jslicense" style="display: none;">JavaScript Web Labels</a>
   </body>
