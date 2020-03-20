@@ -194,6 +194,12 @@ img {
   display: block;
   max-width: 100%;
 }
+svg.basic-svg {
+  display: inline-block;
+  fill: var(--text-color);
+  stroke: var(--text-color);
+  max-width: 400px;
+}
 /* Header
 -------------------------------------------------- */
 nav {
