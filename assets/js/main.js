@@ -16,25 +16,18 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 'use strict';
 function toggleTheme() {
-  if (localStorage && localStorage.getItem("theme") === "dark") {
-    localStorage.setItem("theme", "default");
+  if (localStorage && localStorage.getItem('theme') === 'dark') {
+    localStorage.removeItem('theme');
   } else if (localStorage) {
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem('theme', 'dark');
   }
-  setTheme();
+  document.body.classList.toggle('dark');
 }
 
-function setTheme() {
-  if (localStorage) {
-    var light = localStorage.getItem("theme") === "default";
-    document.body.classList.toggle("dark");
-  }
-}
-
-if (localStorage && localStorage.getItem("theme") === "dark") {
-  setTheme();
+if (localStorage && localStorage.getItem('theme') === 'dark') {
+  document.body.classList.toggle('dark');
 }
 
 function openMenu() {
-  document.getElementById("navbar").classList.toggle("show");
+  document.getElementById('navbar').classList.toggle('show');
 }

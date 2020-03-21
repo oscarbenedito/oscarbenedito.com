@@ -29,7 +29,7 @@ function updateWordCount() {
     words = content.replace(/\s+/gi, ' ').split(' ').length;
   }
   minutes = Math.floor(words/140);
-  $wordcount.textContent = words + " word" + (words != 1 ? "s" : "") + " · " + minutes + " minute" + (minutes != 1 ? "s" : "");
+  $wordcount.textContent = words + ' word' + (words != 1 ? 's' : '') + ' · ' + minutes + ' minute' + (minutes != 1 ? 's' : '');
 }
 function loadContents() {
   var content = localStorage.getItem(key);
@@ -73,18 +73,20 @@ var saveEvent = function(event) {
   }
 }
 function toggleTheme() {
-  if (localStorage && localStorage.getItem("theme") == "dark") {
-    localStorage.setItem("theme", "default");
+  if (localStorage && localStorage.getItem('theme') == 'dark') {
+    localStorage.removeItem('theme');
   } else if (localStorage) {
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem('theme', 'dark');
   }
-  setTheme();
+  document.documentElement.classList.toggle('dark');
 }
-function setTheme() {
-  if (localStorage) {
-    var light = localStorage.getItem("theme") == "default";
-    document.documentElement.classList.toggle("dark");
+function toggleFont() {
+  if (localStorage && localStorage.getItem('font') == 'mono') {
+    localStorage.removeItem('font');
+  } else if (localStorage) {
+    localStorage.setItem('font', 'mono');
   }
+  document.documentElement.classList.toggle('mono');
 }
 
 key = (new URLSearchParams(window.location.search)).get('key');
@@ -92,8 +94,11 @@ if (key == '' || key == null) {
   key = 'null';
 }
 key = 'k-' + key;
-if (localStorage && localStorage.getItem("theme") == "dark") {
-  setTheme();
+if (localStorage && localStorage.getItem('theme') == 'dark') {
+  document.documentElement.classList.toggle('dark');
+}
+if (localStorage && localStorage.getItem('font') == 'mono') {
+  document.documentElement.classList.toggle('mono');
 }
 $composer.addEventListener('keyup input', resetTimer);
 $composer.addEventListener('keydown', resetTimer);
