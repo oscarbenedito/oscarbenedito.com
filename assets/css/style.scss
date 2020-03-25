@@ -89,8 +89,11 @@ permission notice:
     @include darkcolors;
   }
 }
-.dark {
+.toggled {
   @include darkcolors;
+  @media (prefers-color-scheme: dark) {
+    @include lightcolors;
+  }
 }
 /* Reset
 -------------------------------------------------- */

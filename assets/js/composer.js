@@ -73,12 +73,12 @@ var saveEvent = function(event) {
   }
 }
 function toggleTheme() {
-  if (localStorage && localStorage.getItem('theme') == 'dark') {
+  if (localStorage && localStorage.getItem('theme') == 'toggled') {
     localStorage.removeItem('theme');
   } else if (localStorage) {
-    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('theme', 'toggled');
   }
-  document.documentElement.classList.toggle('dark');
+  document.documentElement.classList.toggle('toggled');
 }
 function toggleFont() {
   if (localStorage && localStorage.getItem('font') == 'mono') {
@@ -94,8 +94,8 @@ if (key == '' || key == null) {
   key = 'null';
 }
 key = 'k-' + key;
-if (localStorage && localStorage.getItem('theme') == 'dark') {
-  document.documentElement.classList.toggle('dark');
+if (localStorage && localStorage.getItem('theme') == 'toggled') {
+  document.documentElement.classList.toggle('toggled');
 }
 if (localStorage && localStorage.getItem('font') == 'mono') {
   document.documentElement.classList.toggle('mono');

@@ -16,16 +16,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 'use strict';
 function toggleTheme() {
-  if (localStorage && localStorage.getItem('theme') === 'dark') {
+  if (localStorage && localStorage.getItem('theme') === 'toggled') {
     localStorage.removeItem('theme');
   } else if (localStorage) {
-    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('theme', 'toggled');
   }
-  document.body.classList.toggle('dark');
+  document.body.classList.toggle('toggled');
 }
 
-if (localStorage && localStorage.getItem('theme') === 'dark') {
-  document.body.classList.toggle('dark');
+if (localStorage && localStorage.getItem('theme') === 'toggled') {
+  document.body.classList.toggle('toggled');
 }
 
 function openMenu() {

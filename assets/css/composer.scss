@@ -33,8 +33,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     @include darkcolors;
   }
 }
-.dark {
+.toggled {
   @include darkcolors;
+  @media (prefers-color-scheme: dark) {
+    @include lightcolors;
+  }
 }
 .mono {
   --font-family: 'mono';
