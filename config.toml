@@ -7,6 +7,7 @@ disableKinds = "taxonomyTerm"
 
 [Author]
   name = "Oscar Benedito"
+  email = "oscar@oscarbenedito.com"
 
 [params]
   blog_title = "Personal blog"
