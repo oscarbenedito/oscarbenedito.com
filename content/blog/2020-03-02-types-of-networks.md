@@ -9,9 +9,7 @@ When we are trying to understand a communications network, having an approximate
 
 When all the nodes on a network are connected to one unique node, we call it a centralized network. All communications happen through that one "master" node. An example of a centralized network is the one created by most instant messengers, for example [Signal](https://signal.org/). Every time we send a message, it goes to Signal's servers and it is then sent to its destination. This creates a network similar to the following, where everyone is connected to one server (or cluster of servers).
 
-{{< raw-html >}}
 <p style="text-align: center"><svg class="basic-svg" viewBox="0 0 633.9 523.77"><use xlink:href="/img/blog/2020/03/types-of-networks/centralized-network.svg#l"></use></svg></p>
-{{< /raw-html >}}
 
 Having everything go through the same computer has its pros and cons. On the one hand, it makes deployment easier and faster, data consistency is easy to maintain and it is an efficient network (if, for instance, you need to gather data, it is all in one server). On the other hand, it creates a single point of failure for the whole network (which also facilitates censorship) and it makes it easier to abuse users (as the central server has a monopoly over the network)[^common]. This type of network also makes escalation much harder, as the resources are provided by one sole party.
 
@@ -21,9 +19,7 @@ Having everything go through the same computer has its pros and cons. On the one
 
 Decentralized networks don't have one central node, but multiple of them, which are connected between themselves. When clients connect to the network, their communications go through their "master" node, to the destination's "master" node, and finally to the destination. An example of a decentralized network is [e-mail](https://en.wikipedia.org/wiki/Email). When Alice (`alice@example.com`) wants to send an e-mail to Bob (`bob@example.org`), Alice's computer sends the message to `example.com`'s server. From there, it is sent to `example.org`, and finally `example.org` sends it to Bob's computer. A decentralized network looks similar to the following network.
 
-{{< raw-html >}}
 <p style="text-align: center"><svg class="basic-svg" viewBox="0 0 633.9 523.77"><use xlink:href="/img/blog/2020/03/types-of-networks/decentralized-network.svg#l"></use></svg></p>
-{{< /raw-html >}}
 
 Decentralized networks solve some of the centralization problems: no entity has control over the whole network anymore, allowing users to choose between different providers and switch servers (or self-host) if one starts abusing its power. If a server is down, others can still communicate ordinarily, which also makes censorship more difficult. Decentralized networks are also easier to escalate. Nonetheless, this type of network requires more infrastructure and can become less efficient for certain operations (like global tasks). It is also harder to deploy updates, as servers might update at different times, when each administrator decides to do so.
 
@@ -31,9 +27,7 @@ Decentralized networks solve some of the centralization problems: no entity has 
 
 Distributed networks only have one type of node, and they are connected with each other (although not necessarily all with all). This creates a very robust network where all nodes are client and server at the same time. The [BitTorrent protocol](https://en.wikipedia.org/wiki/BitTorrent) is an example of a protocol that works with a distributed network. The following image shows what a distributed network looks like.
 
-{{< raw-html >}}
 <p style="text-align: center"><svg class="basic-svg" viewBox="0 0 633.9 523.77"><use xlink:href="/img/blog/2020/03/types-of-networks/distributed-network.svg#l"></use></svg></p>
-{{< /raw-html >}}
 
 Because there are no central servers, distributed networks easily circumvent censorship and are practically immune to denial-of-service attacks. Since every user is client and server at the same time, these networks are highly scalable without the need for additional central resources. However, distributed networks make deployment a lot harder.
 

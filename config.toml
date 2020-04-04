@@ -24,3 +24,6 @@ disableKinds = "taxonomyTerm"
 
 [frontmatter]
   date  = [":filename", ":default"]
+
+[markup.goldmark.renderer]
+  unsafe = true  # This just allows HTML on Markdown, unsafe here just means that if everyone could edit your Markdown, someone could put malicious JS on it.
