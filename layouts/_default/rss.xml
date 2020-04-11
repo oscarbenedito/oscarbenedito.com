@@ -14,9 +14,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ .Site.Title }}{{ end }}</title>
   <link href="{{ .Permalink }}index.xml" rel="self"/>
-  <link href="{{ $.Site.BaseURL }}"/>{{ if not .Date.IsZero }}
+  <link href="{{ .Permalink }}" rel="alternate"/>{{ if not .Date.IsZero }}
   <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
-  <id>{{ $.Site.BaseURL }}</id>{{ with $.Site.Author.name }}
+  <id>tag:{{ $.Site.Params.domain }},{{ .RelPermalink }}</id>{{ with $.Site.Author.name }}
   <author>
     <name>{{ . }}</name>{{ with $.Site.Author.email }}
     <email>{{ . }}</email>{{ end }}
@@ -25,7 +25,7 @@
   <entry>
     <title>{{ .Title }}</title>
     <link href="{{ .Permalink }}"/>
-    <id>{{ .Permalink }}</id>{{ with $.Site.Author.name }}
+    <id>tag:{{ $.Site.Params.domain }},{{ .Date.Format "2006-01-02" | safeHTML }}:{{ .RelPermalink }}</id>{{ with $.Site.Author.name }}
     <author>
       <name>{{ . }}</name>{{ with $.Site.Author.email }}
       <email>{{ . }}</email>{{ end }}

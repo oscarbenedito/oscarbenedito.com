@@ -10,6 +10,7 @@ disableKinds = "taxonomyTerm"
   email = "oscar@oscarbenedito.com"
 
 [params]
+  domain = "oscarbenedito.com"
   blog_title = "Personal blog"
   active_years = ["2020", "2019"]
 
