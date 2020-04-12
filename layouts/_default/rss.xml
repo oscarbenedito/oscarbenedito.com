@@ -16,7 +16,7 @@
   <link href="{{ .Permalink }}index.xml" rel="self"/>
   <link href="{{ .Permalink }}" rel="alternate"/>{{ if not .Date.IsZero }}
   <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
-  <id>tag:{{ $.Site.Params.domain }},{{ .RelPermalink }}</id>{{ with $.Site.Author.name }}
+  <id>tag:{{ $.Site.Params.domain }},2020-04-13:{{ .RelPermalink }}</id>{{ with $.Site.Author.name }}
   <author>
     <name>{{ . }}</name>{{ with $.Site.Author.email }}
     <email>{{ . }}</email>{{ end }}
