@@ -1,0 +1,5 @@
+<ul>
+  {{- range sort $.Site.Data.blogroll "name" }}
+  <li>{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}{{ with .feed }} — <a href="{{ . }}">Feed</a>{{ end }}</li>
+  {{- end }}
+</ul>
