@@ -135,6 +135,7 @@ post. This was partially because shortly after I started writing,
 [this][kevq-post] post came out so I changed my focus a bit. If you don't post
 your full content on your web feed, read it!
 
+
 [rss]: <https://en.wikipedia.org/wiki/RSS> "RSS — Wikipedia"
 [atom]: <https://en.wikipedia.org/wiki/Atom_(Web_standard)> "Atom — Wikipedia"
 [json-feed]: <https://en.wikipedia.org/wiki/JSON_Feed> "JSON Feed — Wikipedia"

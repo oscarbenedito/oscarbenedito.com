@@ -53,4 +53,5 @@ Just like you don't go around giving everyone access to your browsing history or
 emails, you shouldn't do the same with companies. You might have nothing to
 hide, but why would you give such private information away?
 
+
 [rtb]: <https://en.wikipedia.org/wiki/Real-time_bidding> "Real-time bidding — Wikipedia"
