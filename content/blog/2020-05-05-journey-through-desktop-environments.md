@@ -3,6 +3,7 @@ title: "My journey through desktop environments"
 categories: technology
 tags: ["Decentralization", "Personal website", "Privacy", "Website"]
 date: 2020-05-05T19:26:00+00:00
+lastmod: 2020-05-06T07:52:00+00:00
 ---
 My first experience with GNU/Linux was with KDE. It is the desktop environment
 used on my college computers, and it was more or less the only experience I had
@@ -37,11 +38,12 @@ couple of weeks ago.
   point I am making.
 
 [i3][i3] is a tiling window manager, which means that it is a window manager
-that arranges windows in a way that they don't overlap. As I see it, a window
-manager is similar to a desktop environment (like GNOME or KDE), but a lot more
-"lightweight". It doesn't have all the features and applications desktop
-environments do, it simply arranges your windows. There are probably more
-differences, but I haven't looked into it much.
+that arranges windows in a way that they don't overlap. A window manager is the
+software that manages your windows (resize, move, close, etc.). The difference
+with desktop environments is that the latter come with a window manager, but
+also many more programs (like a terminal emulator or a text editor) as well as
+panels, system menus, and other features. These normally all look alike and work
+well together.
 
 I say I decided to give it a *real* shot because I have tried i3 multiple times
 before: mainly logging in, seeing how ugly everything looks, logging
