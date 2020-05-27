@@ -1,5 +1,6 @@
 ---
 title: "My journey through desktop environments"
+slug: "my-journey-through-desktop-environments"
 categories: technology
 tags: ["Decentralization", "Personal website", "Privacy", "Website"]
 date: 2020-05-05T19:26:00+00:00

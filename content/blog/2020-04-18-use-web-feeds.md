@@ -1,5 +1,6 @@
 ---
 title: "Use web feeds!"
+slug: "use-web-feeds"
 categories: technology
 tags: ["Decentralization", "Personal website", "Privacy", "Website"]
 date: 2020-04-18T14:59:00+00:00
