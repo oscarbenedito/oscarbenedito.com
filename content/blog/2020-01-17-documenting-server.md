@@ -1,6 +1,6 @@
 ---
 title: "Documenting my server"
-categories: incidental
+categories: "Incidental"
 tags: ["Personal server", "VPS", "Documentation", "DIY", "Backup"]
 lastmod: 2020-03-01
 ---

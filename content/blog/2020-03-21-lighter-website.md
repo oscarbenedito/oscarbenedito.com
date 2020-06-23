@@ -1,6 +1,6 @@
 ---
 title: "A lighter website"
-categories: technology
+categories: "Technology"
 tags: ["Personal domain", "CSS", "Hugo", "Personal website", "Website"]
 ---
 Following up with the [last post]({{< ref "/blog/2020-03-12-lightweight-website.md" >}}), I decided to make my website even faster (which probably doesn't make a difference anymore).

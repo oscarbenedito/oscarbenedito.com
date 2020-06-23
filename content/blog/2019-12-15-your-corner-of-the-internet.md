@@ -1,6 +1,6 @@
 ---
 title: "Your corner of the Internet"
-categories: technology
+categories: "Technology"
 tags: ["Personal domain", "Personal website", "Decentralization", "DIY", "Website", "Hugo"]
 lastmod: 2019-12-06
 ---

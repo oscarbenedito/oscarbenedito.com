@@ -1,7 +1,7 @@
 ---
 title: "Setting up a personal Git server"
 slug: "setting-up-a-personal-git-server"
-categories: technology
+categories: "Technology"
 tags: [
     "Decentralization",
     "Git",

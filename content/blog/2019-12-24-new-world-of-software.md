@@ -1,6 +1,6 @@
 ---
 title: "A new world of software"
-categories: technology
+categories: "Technology"
 tags: ["FOSS", "Software"]
 ---
 As I have said before, I was a big user of big tech companies' services. I also used macOS (and Windows before that) and proprietary software for mostly everything. I didn't really know what free[^fsw] software was and, if I was running any, it was by coincidence.

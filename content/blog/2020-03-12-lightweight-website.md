@@ -1,6 +1,6 @@
 ---
 title: "A lightweight website"
-categories: technology
+categories: "Technology"
 tags: ["Personal domain", "CSS", "Hugo", "Personal website", "Website"]
 ---
 Since the start of this site, having a lightweight website has been one of my priorities. Every file served has been minimized, you won't see any pictures that aren't vector graphics (except for the `favicon.ico` file) and users don't need to download fonts or JavaScript libraries. On top of that, the amount of JavaScript required is minimum. Indeed, as of right now, the only JS that runs is a very simple function to toggle the theme and another one to open the navigation menu on small screens. That results in super lightweight pages, which keeps the loading time to a minimum and reduces the bandwidth usage of the server.

@@ -1,6 +1,6 @@
 ---
 title: "Centralized, decentralized and distributed networks"
-categories: knowledge base
+categories: "Knowledge base"
 tags: ["Networks", "Communications", "Decentralization", "Centralization", "Distributed networks"]
 ---
 When we are trying to understand a communications network, having an approximate image of how the network operates can be very valuable. Do all communications go through the same node? Is there a central authority? Can nodes communicate directly with each other? Depending on how the network operates, we can classify it as centralized, decentralized or distributed.

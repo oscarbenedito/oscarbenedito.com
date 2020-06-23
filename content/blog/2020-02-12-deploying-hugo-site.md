@@ -1,6 +1,6 @@
 ---
 title: "Deploying a website built with Hugo"
-categories: technology
+categories: "Technology"
 tags: ["Personal website", "Personal domain", "Personal server", "Hosting services", "Self-hosting"]
 ---
 I have [previously talked]({{< ref "/blog/2019-12-15-your-corner-of-the-internet.md" >}}) about creating a personal website, in this post I will talk about hosting it. More specifically, I'm going to explain how to host a website built with Hugo.

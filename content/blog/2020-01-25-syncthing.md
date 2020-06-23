@@ -1,6 +1,6 @@
 ---
 title: "File synchronization software: Syncthing"
-categories: technology
+categories: "Technology"
 tags: ["Backup", "Decentralization", "File synchronization", "Privacy", "Software"]
 ---
 [Syncthing](https://syncthing.net/) is a file synchronization program. It allows you to sync files between computers over LAN or the Internet. It is a very simple program that just gets the job done.

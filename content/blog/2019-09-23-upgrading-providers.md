@@ -1,6 +1,6 @@
 ---
 title: "Upgrading to privacy-conscious providers"
-categories: technology
+categories: "Technology"
 tags: ["Decentralization", "Encryption", "Privacy"]
 lastmod: 2019-09-24
 ---

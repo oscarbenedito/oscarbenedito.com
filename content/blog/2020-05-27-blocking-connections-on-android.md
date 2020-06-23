@@ -1,7 +1,7 @@
 ---
 title: "Blocking connections on Android"
 slug: "blocking-connections-on-android"
-categories: technology
+categories: "Technology"
 tags: ["Decentralization", "Personal website", "Privacy", "Website"]
 date: 2020-05-27T19:01:00+00:00
 ---

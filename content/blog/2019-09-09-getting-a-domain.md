@@ -1,6 +1,6 @@
 ---
 title: "Getting my own domain name"
-categories: incidental
+categories: "Incidental"
 tags: ["Personal domain", "DNS Record"]
 lastmod: 2020-03-01
 ---
