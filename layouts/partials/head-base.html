@@ -5,4 +5,4 @@
 {{- $favicon := resources.Get "img/favicon.min.svg" | fingerprint }}
 <link rel="icon" href="{{ $favicon.RelPermalink }}">
 <link rel="shortcut icon" href="/favicon.ico">
-<title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "taxonomy" }}{{ .Title | title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "taxonomy" }}{{ .Title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>

@@ -1,13 +1,13 @@
 {{ define "main" }}
 <header class="page-header">
   <h1>{{ .Site.Params.blog_title }}</h1>
-  <h2>{{ .Params.categories | title }} entry</h2>
+  <h2>{{ .Params.categories }} entry</h2>
 </header>
 <main>
   <article class="h-entry">
     <header>
       <h1 class="post-title p-name">{{ .Title }}</h1>
-      <div class="post-meta">{{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . | title }}</a> &middot; {{ end }}<data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data>{{ if ne .Lastmod .Date }} (last modified on <data class="dt-updated" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
+      <div class="post-meta">{{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data>{{ if ne .Lastmod .Date }} (last modified on <data class="dt-updated" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
       </div>
     </header>
     <div class="post-content e-content">{{ .Content }}</div>
