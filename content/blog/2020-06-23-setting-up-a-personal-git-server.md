@@ -13,6 +13,7 @@ tags: [
     "Website",
 ]
 date: 2020-06-23T16:10:00+00:00
+lastmod: 2020-06-25T09:55:00+00:00
 ---
 
 Running a personal Git server is something that has been on my mind for quite a
@@ -170,13 +171,17 @@ the changes on my [stagit fork][sg-fork].
 
 I have only been using this server for a couple of days, but I have also been
 setting up a bunch of [suckless][sl] tools[^ff], so I have been using Git a lot.
-One of the best things is that setting up repositories has never been easier. No
-need to open a browser, log in to GitLab/GitHub and go through the process of
-creating a new repository. I just run
+One of the best things is that setting up repositories is very easy. No need to
+open a browser, log in to GitHub and go through the process of creating a new
+repository[^gl]. I just run
 
 [^ff]: Fun fact: after setting everything up I realized that suckless uses
   stagit to show their repositories, indeed the author of stagit is the current
   maintainer of some suckless projects like [st][st] and [dmenu][dmenu].
+
+[^gl]: I originally thought this was also the case for GitLab, however, you can
+  push a new repository to a new remote address and GitLab will automatically
+  create it.
 
 ```sh
 ssh git@oscarbenedito.com
@@ -226,6 +231,10 @@ is nicely supported by Git (learn more [here][g-email]).
 I almost forgot! If you want to check out my Git website or clone some
 repositories from my domain, you can find all of that here:
 <https://git.oscarbenedito.com>.
+
+*Edit*: The post originally said that creating a new repository on GitLab was a
+long process. However, you can just push to a new remote address and GitLab will
+automatically create the new repository.
 
 [cgit]: <https://git.zx2c4.com/cgit/about/> "cgit's information"
 [dmenu]: <https://tools.suckless.org/dmenu/> "dmenu's homepage"
