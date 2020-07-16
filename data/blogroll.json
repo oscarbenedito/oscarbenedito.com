@@ -1,126 +1,72 @@
 [
   {
-    "name": "blacklight447",
-    "url": "https://write.privacytools.io/my-thoughts-on-security/",
-    "feed": "https://write.privacytools.io/my-thoughts-on-security/feed/"
-  },
-  {
+    "feed": "https://brendan.abolivier.bzh/index.xml",
     "name": "Brendan Abolivier",
-    "url": "https://brendan.abolivier.bzh/",
-    "feed": "https://brendan.abolivier.bzh/index.xml"
+    "url": "https://brendan.abolivier.bzh"
   },
   {
+    "feed": "https://www.codesections.com/rss.xml",
     "name": "Codesections",
-    "url": "https://www.codesections.com/blog/",
-    "feed": "https://www.codesections.com/rss.xml"
+    "url": "https://www.codesections.com/blog/"
   },
   {
-    "name": "Ctrl blog",
-    "url": "https://www.ctrl.blog/",
-    "feed": "https://feed.ctrl.blog/latest.atom"
+    "feed": "https://www.davd.io/index.xml",
+    "name": "David Prandzioch",
+    "url": "https://www.davd.io"
   },
   {
-    "name": "davd.io",
-    "url": "https://www.davd.io/",
-    "feed": "https://www.davd.io/index.xml"
-  },
-  {
-    "name": "Dave Lane",
-    "url": "https://davelane.nz/blog",
-    "feed": "https://davelane.nz/rss.xml"
-  },
-  {
+    "feed": "https://desmondrivet.com/feeds/blog.rss",
     "name": "Desmond Rivet",
-    "url": "https://desmondrivet.com/blog/",
-    "feed": "https://desmondrivet.com/feeds/blog.rss"
+    "url": "https://desmondrivet.com/blog/"
   },
   {
+    "feed": "https://emanuelpina.pt/index.xml",
     "name": "Emanuel Pina",
-    "url": "https://emanuelpina.pt/",
-    "feed": "https://emanuelpina.pt/index.xml"
+    "url": "https://emanuelpina.pt"
   },
   {
+    "feed": "https://hacdias.com/articles/feed.xml",
     "name": "Henrique Dias",
-    "url": "https://hacdias.com/blog/",
-    "feed": "https://hacdias.com/blog/feed.xml"
+    "url": "https://hacdias.com/articles/"
   },
   {
-    "name": "InfoSec Handbook",
-    "url": "https://infosec-handbook.eu/blog/",
-    "feed": "https://infosec-handbook.eu/blog/index.xml"
+    "feed": "https://www.paritybit.ca/feeds/sitewide-feed.xml",
+    "name": "Jake Bauer",
+    "url": "https://www.paritybit.ca/blog"
   },
   {
+    "feed": "https://jlelse.blog/index.xml",
     "name": "Jan-Lukas Else",
-    "url": "https://jlelse.blog/",
-    "feed": "https://jlelse.blog/index.xml"
+    "url": "https://jlelse.blog"
   },
   {
-    "name": "Justin Vollmer",
-    "url": "https://www.justinvollmer.com/",
-    "feed": "https://www.justinvollmer.com/feed/"
-  },
-  {
+    "feed": "https://kevq.uk/feed",
     "name": "Kev Quirk",
-    "url": "https://kevq.uk/",
-    "feed": "https://kevq.uk/feed"
+    "url": "https://kevq.uk"
   },
   {
-    "name": "Marko Saric",
-    "url": "https://markosaric.com/blog/",
-    "feed": "https://markosaric.com/blog/feed/"
-  },
-  {
-    "name": "Matthias Ott",
-    "url": "https://matthiasott.com/",
-    "feed": "https://matthiasott.com/rss"
-  },
-  {
+    "feed": "https://mcol.xyz/rss.xml",
     "name": "mcol",
-    "url": "https://mcol.xyz/",
-    "feed": "https://mcol.xyz/rss.xml"
+    "url": "https://mcol.xyz"
   },
   {
+    "feed": "https://mikebabb.com/feed.xml",
     "name": "Mike Babb",
-    "url": "https://mikebabb.com/blog/",
-    "feed": "https://mikebabb.com/feed.xml"
+    "url": "https://mikebabb.com/blog/"
   },
   {
-    "name": "NCSC Guidance Feed",
-    "feed": "https://www.ncsc.gov.uk/feeds/guidance.xml"
+    "feed": "https://mikestone.me/feed/",
+    "name": "Mike Stone",
+    "url": "https://mikestone.me"
   },
   {
+    "feed": "https://blog.polynom.me/atom.xml",
     "name": "PapaTutuWawa",
-    "url": "https://blog.polynom.me/",
-    "feed": "https://blog.polynom.me/atom.xml"
+    "url": "https://blog.polynom.me"
   },
   {
-    "name": "PINE64",
-    "url": "https://www.pine64.org/blog/",
-    "feed": "https://www.pine64.org/feed/"
-  },
-  {
-    "name": "Privacy International",
-    "url": "https://privacyinternational.org/",
-    "feed": "https://privacyinternational.org/rss.xml"
-  },
-  {
-    "name": "privacytools.io",
-    "url": "https://blog.privacytools.io/",
-    "feed": "https://blog.privacytools.io/rss/"
-  },
-  {
+    "feed": "https://shivering-isles.com/feed.xml",
     "name": "Sheogorath",
-    "url": "https://shivering-isles.com/#blog",
-    "feed": "https://shivering-isles.com/feed.xml"
-  },
-  {
-    "name": "The New Oil",
-    "url": "https://write.as/thenewoil/",
-    "feed": "https://write.as/thenewoil/feed/"
-  },
-  {
-    "name": "Tutanota",
-    "url": "https://tutanota.com/blog/",
-    "feed": "https://tutanota.com/blog/feed.xml"
+    "url": "https://shivering-isles.com/#blog"
   }
 ]
