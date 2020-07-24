@@ -13,7 +13,7 @@ tags: [
     "Website",
 ]
 date: 2020-06-23T16:10:00+00:00
-lastmod: 2020-06-25T09:55:00+00:00
+lastmod: 2020-07-24T15:17:00+00:00
 ---
 
 Running a personal Git server is something that has been on my mind for quite a
@@ -70,6 +70,7 @@ Let's do that:
 ```sh
 useradd -d /srv/git git
 mkdir /srv/git
+chown git /srv/git
 ```
 
 Now, let's create the folder for the SSH configuration where we'll add our
