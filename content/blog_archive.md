@@ -1,6 +1,5 @@
 ---
-title: Personal blog
-subtitle: Archive
+title: Blog archive
 type: archive
 url: /blog/archive/
 ---

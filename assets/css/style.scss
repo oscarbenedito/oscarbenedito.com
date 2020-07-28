@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2019 Oscar Benedito
+Copyright (C) 2019-2020 Oscar Benedito
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -205,127 +205,27 @@ svg.basic-svg {
 }
 /* Header
 -------------------------------------------------- */
-nav {
-  background: var(--primary-color);
+header#page-header {
+  border-bottom: 2px solid var(--tertiary);
+  padding: calc(1.5 * var(--gap)) var(--gap);
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin-left: auto;
+    max-width: var(--main-width);
     margin-right: auto;
-  }
-  a {
-    display: block;
-    line-height: var(--navbar-height);
-    color: var(--primary-invert-color);
-    cursor: pointer;
-  }
-  a.logo {
-    padding: 11px 12px;
-    max-height: 50px;
-    svg {
-      height: 22.5px;
-      display: block;
-      max-width: 100%;
-      fill: var(--primary-invert-color);
+    margin-left: auto;
+    .logo { /* TODO Decide height */
+      height: 25px;
+      fill: var(--primary-color);
     }
-  }
-  a.logo:hover {
-    background: var(--primary-color-darken);
-    text-decoration: none;
-  }
-  .icon {
-    fill: var(--primary-invert-color);
-    width: 20px;
-    padding: 15px 0px;
-    display: block;
-  }
-  .bars{
-    display: none;
-    margin-left: 0px;
-  }
-  #bars-icon {
-    width: 17.5px;
-  }
-  @media screen and (max-width: 645px) {
-    .menu {
-      margin-left: 0px;
-      margin-right: 0px;
-      display: none;
-      background: var(--primary-color-darken);
+    .logo:hover {
+      fill: var(--primary-color-darken); /* TODO This color should be darker */
+    }
+    nav {
+      color: #666;
       a {
-        padding: 0px 36px;
-      }
-      a:hover {
-        background: var(--primary-color);
+        color: #666;
       }
     }
-    .bars {
-      display: flex;
-      list-style: none;
-      word-break: keep-all;
-      overflow-x: auto;
-    }
-    .logo {
-      margin-right: 0px;
-    }
   }
-  @media screen and (max-width: 340px) {
-    .bars {
-      margin-right: 0px;
-    }
-    .logo {
-      margin-left: 0px;
-    }
-  }
-}
-@media screen and (max-width: 600px) {
-  nav.show {
-    .menu {
-      display: block;
-      width: 100%;
-    }
-    a:not(#bars) {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-}
-nav.transparent {
-  background: var(--background);
-}
-.logo,
-.menu,
-.bars {
-  margin-left: var(--gap);
-  margin-right: var(--gap);
-}
-.menu {
-  display: flex;
-  list-style: none;
-  word-break: keep-all;
-  overflow-x: auto;
-}
-.bars {
-  display: none;
-}
-.menu a {
-  font-size: 20px;
-  padding: 0px calc(var(--gap) / 2);
-}
-.bars a {
-  font-size: 20px;
-  padding: 0px calc(var(--gap) / 2);
-}
-.menu a:hover {
-  background: var(--primary-color-darken);
-  text-decoration: none;
-}
-.bars a:hover {
-  background: var(--primary-color-darken);
-  text-decoration: none;
 }
 /* Main
 -------------------------------------------------- */
@@ -339,32 +239,6 @@ main {
 }
 main.list {
   max-width: calc(var(--post-list-width) + var(--gap) * 2);
-}
-.page-header {
-  background: var(--primary-color);
-  text-align: center;
-  padding: 96px 48px;
-  h1 {
-    color: var(--primary-invert-color);
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.125;
-  }
-  .h1:not(:last-child) {
-    margin-bottom: 4px;
-  }
-  h2 {
-    color: var(--primary-invert-color);
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.25;
-  }
-}
-.page-subheader {
-  margin-bottom: 24px;
-}
-.page-subheader h1 {
-  font-size: 40px;
 }
 .pagination {
   display: flex;
@@ -435,7 +309,6 @@ main.list {
 -------------------------------------------------- */
 article {
   header {
-    margin-top: 24px;
     margin-bottom: var(--content-gap);
   }
   .post-title {
@@ -590,7 +463,6 @@ article {
     margin-right: 4px;
     padding: 4px 6px;
     font-family: monospace;
-    font-size: 0.78em;
     line-height: 1.5;
     border-radius: 2px;
   }
