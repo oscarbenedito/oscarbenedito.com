@@ -280,43 +280,34 @@ main.list {
   padding-right: 18px;
   margin-left: auto;
 }
-/* Post entry card
+/* Post entry summary
 -------------------------------------------------- */
-.card {
-  position: relative;
+
+main.list > header {
   margin-bottom: var(--gap);
-  padding: var(--gap);
-  background: var(--card-background-color);
-  border-radius: var(--radius);
-  transition: transform 0.1s;
-  box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px 0px, rgba(10, 10, 10, 0.1) 0px 0px 0px 1px;
-  header h2 {
-    font-size: 25px;
+}
+article.summary {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  h2 a {
     color: var(--text-color);
   }
-  .content {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    color: var(--secondary-text-color);
-    font-size: 16px;
-    line-height: 1.6;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+  p {
+    margin: 0;
   }
-  footer {
-    color: var(--secondary-text-color);
-    font-size: 15px;
+  header {
+    margin-bottom: 1rem;
   }
-  .card-link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  .metadata {
+    color: var(--secondary-text-color);
+    a {
+      color: var(--secondary-text-color);
+    }
   }
 }
-
+article.summary:not(:first-of-type) {
+  border-top: 2px solid var(--tertiary);
+}
 /* Article
 -------------------------------------------------- */
 article {

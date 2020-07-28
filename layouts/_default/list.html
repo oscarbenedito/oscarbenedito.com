@@ -1,23 +1,32 @@
 {{ define "main" }}
 <main class="list">
+  {{- if .Content }}
+  <header>
+    {{ .Content }}
+  </header>
+  {{- else if eq .Kind "taxonomy" }}
+  <header>
+    <h1>{{ .Data.Singular | title }}: {{ .Title }}</h1>
+  </header>
+  {{- end }}
+
   {{- $paginator := .Paginator }}
   {{- range $paginator.Pages }}
-    <div class="card h-entry">
-      <header>
-        <h2 class="p-name">{{ .Title }}</h2>
-      </header>
-      <section class="content">
-        {{- if .Params.subtitle }}
-        <p class="p-summary">{{ .Params.subtitle }}</p>
-        {{- else }}
-        <p class="p-summary">{{ .Plain | htmlUnescape | truncate 200 }}</p>
-        {{- end }}
-      </section>
-      <footer>
-        {{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data> &middot; {{ partial "read-time.html" . }}
-      </footer>
-      <a class="card-link u-url" href="{{ .RelPermalink }}"></a>
-    </div>
+  <article class="summary h-entry">
+    <header>
+      <h2 class="p-name"><a class="u-url" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="metadata">
+        {{ with .Params.categories }}<a class="p-category" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<a href="{{ .RelPermalink }}"><data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data></a> &middot; {{ partial "read-time.html" . }}
+      <div>
+    </header>
+    <section class="content">
+      {{- if .Params.subtitle }}
+      <p class="p-summary">{{ .Params.subtitle }}</p>
+      {{- else }}
+      <p class="p-summary">{{ .Plain | htmlUnescape | truncate 200 }}</p>
+      {{- end }}
+    </section>
+  </article>
   {{- end }}
 
   {{- $paginator := .Paginator }}
