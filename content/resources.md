@@ -11,10 +11,3 @@ The following is a list of sites related to privacy and security on the internet
  - **[PRISM Break](https://prism-break.org/)**: Offers secure replacements to some common apps and providers, organized by operating system.
 
 I have also found [AlternativeTo](https://alternativeto.net/) to be really useful when looking for alternatives for one particular piece of software.
-
-
-# Blogroll
-
-Blogs I have found interesting, alphabetically sorted.
-
-{{< blogroll >}}
