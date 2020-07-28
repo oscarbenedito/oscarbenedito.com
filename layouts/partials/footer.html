@@ -1,27 +1,5 @@
-<footer class="page-footer">
-  <div class="row content">
-    <div class="column left">
-      <h3>Links</h3>
-      <p><a href="/">Home</a></p>
-      <p><a href="/blog/">Blog</a> (<a href="/blog/index.xml">feed</a>, <a href="/blog/archive/">archive</a>)</p>
-      <p><a href="/resources/">Other resources</a></p>
-      <p><a href="/about/">About</a></p>
-      <p><a href="/jsweblabels/" rel="jslicense">JavaScript Web Labels</a></p>
-    </div>
-    <div class="column right">
-      <h3>Privacy</h3>
-      <p>The site contains no ads or cross-site references. I keep Apache logs for 14 days and use GoAccess to keep track of how many visitors I get. This information is not shared with anyone else.</p>
-    </div>
-    <div class="column right">
-      <h3>License</h3>
-      {{- if or (eq .Params.headtitle "GPLv3") (eq .Params.headtitle "AGPLv3") }}
-      <p>Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</p>
-      {{- end }}
-      {{- if eq .Params.headtitle "CC BY 4.0" }}
-      <p>See the <a href="https://wiki.creativecommons.org/wiki/Modifying_the_CC_licenses">License Modification Policy</a>.</p>
-      {{- end }}
-      <p>{{ if eq .Params.title "License" }}Any other part of this page{{ else }}This work{{ end }} is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-      <p><a href="/licenses/cc-by-4.0/">Local copy of the license</a>.</p>
-    </div>
+<footer id="page-footer">
+  <div class="content">
+    <nav><a href="https://git.oscarbenedito.com/oscarbenedito.com/">Source code</a> &middot; <a href="/jsweblabels/" rel="jslicense">JavaScript Web Labels</a> &middot; <a href="/about/">About this site</a></nav>
   </div>
 </footer>
