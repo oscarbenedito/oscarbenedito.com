@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     {{ partial "head-base.html" . -}}
-    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Params.blog_title }}" href=/blog/index.xml>
     {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
     <link id="theme" rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
+    {{- block "add-to-header" . }}{{ end }}
   </head>
   <body>
     {{ partial "header.html" . }}

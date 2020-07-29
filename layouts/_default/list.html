@@ -1,3 +1,7 @@
+{{ define "add-to-header" }}
+<link rel="alternate" type="application/atom+xml" title="{{ .Site.Params.blog_title }}" href="{{ .RelPermalink }}index.xml">
+{{ end }}
+
 {{ define "main" }}
 <main class="list">
   {{- if .Content }}
