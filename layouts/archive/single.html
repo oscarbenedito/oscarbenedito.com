@@ -2,9 +2,9 @@
 <main>
   <article>
     <header>
-      <h1 class="post-title">{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
     </header>
-    <div class="post-content">
+    <div class="content">
       <h2>Posts ({{ len (where (where .Site.Pages "File.Dir" "==" "blog/") "IsPage" true) }})</h2>
       {{- range .Site.Params.active_years }}
         {{- $y := . }}

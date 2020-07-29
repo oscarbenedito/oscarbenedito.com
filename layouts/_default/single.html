@@ -2,14 +2,14 @@
 <main>
   <article class="h-entry">
     <header>
-      <h1 class="post-title p-name">{{ .Title }}</h1>
-      <div class="post-meta">{{ with .Params.categories }}<a class="p-category" style="color: var(--secondary-text-color)" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data>{{ if ne .Lastmod .Date }} (last modified on <data class="dt-updated" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
+      <h1 class="p-name">{{ .Title }}</h1>
+      <div class="metadata">{{ with .Params.categories }}<a class="p-category" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<a class="u-url" href="{{ .RelPermalink }}"><data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data></a>{{ if ne .Lastmod .Date }} (last modified on <data class="dt-updated" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
       </div>
     </header>
-    <div class="post-content e-content">{{ .Content }}</div>
+    <div class="content e-content">{{ .Content }}</div>
     {{- if .Params.tags }}
     <footer>
-      <ul class="post-tags">
+      <ul class="tags">
         {{- range .Params.tags | sort }}
         <li><a class="p-category" href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
         {{- end }}
@@ -19,7 +19,7 @@
   </article>
 
   {{- if or .NextInSection .PrevInSection }}
-  <nav class="pagination transparent">
+  <nav class="pagination">
     {{- if .NextInSection }}
     <a class="button" href="{{ .NextInSection.RelPermalink }}" title="{{ .NextInSection.Title }}">&larr; Newer Post</a>
     {{- end }}
