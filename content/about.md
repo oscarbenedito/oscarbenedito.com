@@ -8,7 +8,7 @@ You can contact me sending me an email to [oscar@oscarbenedito.com](mailto:oscar
 
 ## Privacy
 
-The site contains no ads or cross-site references. I am currently hosted by [Digital Ocean](https://www.digitalocean.com/) and can't guarantee that they don't keep any logs of the website's visitors. I do keep logs for 14 days and use GoAccess to keep track of how many visitors I get. This information is not shared with anyone else.
+The site contains no ads or cross-site references. I am currently hosted by [Hetzner](https://www.hetzner.com) and can't guarantee that they don't keep any logs of the website's visitors. I do keep logs for 14 days and use GoAccess to keep track of how many visitors I get. This information is not shared with anyone else.
 
 ## Licenses
 
