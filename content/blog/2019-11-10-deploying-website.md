@@ -19,7 +19,7 @@ The solution I chose was [rsync](https://rsync.samba.org/). It is a great piece 
 
 So finally the `rsync` command worked, and the time used to update the website is now around 10 seconds, which is a lot better than a minute (considering my website might get larger, the impact can be even bigger). To automate the process I build a little script that will mount the filesystem, build the site, synchronize it with the server and unmount it again:
 
-{{< highlight bash >}}
+```bash
 #!/bin/bash
 
 HUGO_PATH="{path_to_hugo_directory}"
@@ -34,6 +34,6 @@ mkdir $TEMP_DIR
 rsync -ruvc --progress --delete --temp-dir=$TEMP_DIR $HUGO_PATH/public/ $MOUNT_PATH/$WEBDAV_FOLDER
 rmdir $TEMP_DIR
 umount $MOUNT_PATH
-{{< /highlight >}}
+```
 
 As you can see, it is a very simple script. It removes the last built of the site from the local filesystem and builds it again (using the `--minify` option to reduce file sizes), it mounts the WebDAV resource, transfers the files and then unmounts the resource again.

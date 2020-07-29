@@ -37,7 +37,7 @@ Because of these advantages, you can find free hosting for static sites and lowe
 
 To create a static website with multiple pages, you can use a static site generator. There are a lot of static site generators, and I use Hugo (for a couple of reasons that I might write about some other time). With the use of Hugo—most other generators also offer this functionality—, you can code your navigation bar in a file, your footer in a different one and include both of them in multiple templates. These templates will then gather the content from your Markdown (or HTML) files, put it all together and output all the HTML files of your site. Now that I have an operative site, when I want to publish a new post, I create a file with some metadata and the post content, and Hugo does the rest. Post files look like the following:
 
-{{< highlight markdown >}}
+```markdown
 ---
 title: "Post title"
 categories: category
@@ -45,7 +45,7 @@ tags: ["tag1", "tag2"]
 ---
 
 Post content.
-{{< /highlight >}}
+```
 
 Thanks to Hugo, it is very easy to add content to a website, and the source code is neatly organized. Hugo also lets you minify the content to reduce file sizes—although some people might argue against it, I find it useful and some files get reduced by up to 30% (CSS files)[^minify].
 
