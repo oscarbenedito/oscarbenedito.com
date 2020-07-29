@@ -1,11 +1,8 @@
 ---
 headtitle: AGPLv3
-title: License
-subtitle: GNU Affero General Public License version 3
+title: GNU Affero General Public License version 3
 type: page
 ---
-
-### GNU AFFERO GENERAL PUBLIC LICENSE
 
 Version 3, 19 November 2007
 

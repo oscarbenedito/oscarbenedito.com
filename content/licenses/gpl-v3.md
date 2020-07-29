@@ -1,11 +1,8 @@
 ---
 headtitle: GPLv3
-title: License
-subtitle: GNU General Public License version 3
+title: GNU General Public License version 3
 type: page
 ---
-
-### GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007
 
