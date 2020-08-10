@@ -2,9 +2,15 @@
 title: "Use web feeds!"
 slug: "use-web-feeds"
 categories: "Technology"
-tags: ["Decentralization", "Personal website", "Privacy", "Website"]
+tags: [
+  "Decentralization",
+  "Personal website",
+  "Privacy",
+  "Website"
+]
 date: 2020-04-18T14:59:00+00:00
 ---
+
 Web feeds are data formats used to provide users with updates through web
 syndication. Websites can use web feeds to post their content in a format that
 allows users to easily check for updates regularly. Examples of web feeds are
@@ -142,6 +148,6 @@ your full content on your web feed, read it!
 [json-feed]: <https://en.wikipedia.org/wiki/JSON_Feed> "JSON Feed — Wikipedia"
 [silo]: <https://indieweb.org/silo> "Silo — IndieWeb Wiki"
 [tracking-pixel]: <https://en.wikipedia.org/wiki/Web_beacon> "Web beacon — Wikipedia"
-[nitter]: <https://github.com/zedeus/nitter> "Nitter repository"
-[bibliogram]: <https://github.com/cloudrac3r/bibliogram> "Bibliogram repository"
+[nitter]: <https://github.com/zedeus/nitter> "Nitter — GitHub"
+[bibliogram]: <https://sr.ht/~cadence/bibliogram/> "Bibliogram — sr.ht"
 [kevq-post]: <https://kevq.uk/why-having-a-full-post-rss-feed-is-a-good-idea/> "Why Having A Full Post RSS Feed Is A Good Idea — Kev Quirk"

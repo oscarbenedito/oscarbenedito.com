@@ -2,7 +2,12 @@
 title: "Blocking connections on Android"
 slug: "blocking-connections-on-android"
 categories: "Technology"
-tags: ["Decentralization", "Personal website", "Privacy", "Website"]
+tags: [
+  "Decentralization",
+  "Personal website",
+  "Privacy",
+  "Website"
+]
 date: 2020-05-27T19:01:00+00:00
 ---
 
@@ -67,5 +72,6 @@ on a stock ROM or another custom ROM—, let me know if it works! You still won'
 be able to block certain apps' connections as with NetGuard, but you won't have
 ads while keeping the VPN feature available for other uses.
 
-[ng]: <https://www.netguard.me/> "NetGuard's website"
-[repo]: <https://github.com/StevenBlack/hosts> "Unified hosts file repository"
+
+[ng]: <https://www.netguard.me/> "NetGuard's"
+[repo]: <https://github.com/StevenBlack/hosts> "Unified hosts — GitHub"

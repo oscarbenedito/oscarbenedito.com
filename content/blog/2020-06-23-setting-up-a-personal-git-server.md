@@ -237,15 +237,16 @@ repositories from my domain, you can find all of that here:
 long process. However, you can just push to a new remote address and GitLab will
 automatically create the new repository.
 
+
 [cgit]: <https://git.zx2c4.com/cgit/about/> "cgit's information"
-[dmenu]: <https://tools.suckless.org/dmenu/> "dmenu's homepage"
+[dmenu]: <https://tools.suckless.org/dmenu/> "dmenu"
 [g-email]: <https://git-send-email.io/> "Learn to use email with Git!"
-[gitea]: <https://gitea.io> "Gitea's home page"
-[gogs]: <https://gogs.io> "Gogs' homepage"
-[gsc]: <https://git.oscarbenedito.com/utilities/> "Personal git-shell commands"
-[prot-doc]: <https://git-scm.com/book/en/v2/Git-on-the-Server-Git-Daemon> "Git daemon documentation"
-[sg-fork]: <https://git.oscarbenedito.com/stagit/> "Personal stagit fork"
-[sh]: <https://sourcehut.org/> "Sourcehut's homepage"
-[sl]: <https://suckless.org> "Suckless' homepage"
-[st]: <https://st.suckless.org/> "st's homepage"
-[stagit]: <https://codemadness.org/stagit.html> "Stagit blog post"
+[gitea]: <https://gitea.io> "Gitea"
+[gogs]: <https://gogs.io> "Gogs"
+[gsc]: <https://git.oscarbenedito.com/utilities/> "Utilities — git.oscarbenedito.com"
+[prot-doc]: <https://git-scm.com/book/en/v2/Git-on-the-Server-Git-Daemon> "Git Daemon — Git"
+[sg-fork]: <https://git.oscarbenedito.com/stagit/> "stagit — git.oscarbenedito.com"
+[sh]: <https://sourcehut.org/> "Sourcehut"
+[sl]: <https://suckless.org> "Suckless"
+[st]: <https://st.suckless.org/> "st"
+[stagit]: <https://codemadness.org/stagit.html> "Stagit blog post — codemadness.org"

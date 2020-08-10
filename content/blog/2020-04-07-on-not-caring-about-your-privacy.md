@@ -2,9 +2,10 @@
 title: "On not caring about your privacy"
 slug: "on-not-caring-about-your-privacy"
 categories: "Incidental"
-tags: ["Privacy"]
+tags: [ "Privacy" ]
 date: 2020-04-07T16:17:00+00:00
 ---
+
 When talking about violations of our privacy, I've found that most people don't
 care because it is a thing that happens "far away" (*who in that huge enterprise
 cares about me, my browsing habits, etc.?*). I can see where those people are

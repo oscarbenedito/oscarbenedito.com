@@ -2,10 +2,16 @@
 title: "My journey through desktop environments"
 slug: "my-journey-through-desktop-environments"
 categories: "Technology"
-tags: ["Decentralization", "Personal website", "Privacy", "Website"]
+tags: [
+  "Decentralization",
+  "Personal website",
+  "Privacy",
+  "Website"
+]
 date: 2020-05-05T19:26:00+00:00
 lastmod: 2020-05-06T07:52:00+00:00
 ---
+
 My first experience with GNU/Linux was with KDE. It is the desktop environment
 used on my college computers, and it was more or less the only experience I had
 with the GNU/Linux operative system, so it was the desktop environment I
@@ -122,6 +128,6 @@ considering using a tiling manager, think about it! Also recommended if you use
 vim!
 
 
-[i3]: <https://i3wm.org/> "i3 website"
-[sway]: <https://swaywm.org/> "Sway website"
-[dwm]: <https://dwm.suckless.org/> "dwm website"
+[i3]: <https://i3wm.org/> "i3"
+[sway]: <https://swaywm.org/> "Sway"
+[dwm]: <https://dwm.suckless.org/> "dwm"
