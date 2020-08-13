@@ -1,5 +1,7 @@
 {{ define "add-to-header" }}
-<link rel="alternate" type="application/atom+xml" title="{{ .Site.Params.blog_title }}" href="{{ .RelPermalink }}index.xml">
+{{- if eq .Kind "taxonomy" }}
+<link rel="alternate" type="application/atom+xml" title="{{ .Data.Singular | title }}: {{ .Title  }} on Oscar's Blog" href="{{ .RelPermalink }}index.xml">
+{{ end }}
 {{ end }}
 
 {{ define "main" }}

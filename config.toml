@@ -11,7 +11,6 @@ disableKinds = "taxonomyTerm"
 
 [params]
   domain = "oscarbenedito.com"
-  blog_title = "Personal blog"
   active_years = ["2020", "2019"]
 
 [taxonomies]
