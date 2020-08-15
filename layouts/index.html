@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Oscar Benedito's website">
-    <meta name="author" content="{{ .Site.Author.name }}">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Oscar Benedito</title>
-    <link rel="alternate" type="application/atom+xml" title="Oscar's Blog" href="/blog/index.xml">
-    {{- $favicon := resources.Get "img/favicon.min.svg" | fingerprint }}
-    <link rel="icon" href="{{ $favicon.RelPermalink }}">
-    <link rel="shortcut icon" href="/favicon.ico">
-    {{- $style := resources.Get "css/landing.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    <link rel="me" href="https://fosstodon.org/@ob">
-    <link rel="me" href="https://github.com/oscarbenedito">
-    <link rel="me" href="https://gitlab.com/oscarbenedito">
-  </head>
-  <body>
-    <div class="content">
-      <h1 class="first">Oscar Benedito</h1>
-      <div class="imgs">
-        <a href="mailto:oscar@oscarbenedito.com" class="icon" rel="me"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></a>
-        <a href="/blog/" class="icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"/></svg></a>
-        <a href="https://git.oscarbenedito.com" class="icon" rel="me"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448"><path d="M439.5508,204.0542 244.0008,8.454201a28.87,28.87 0 0 0 -40.81,0l-40.66,40.629999 51.52,51.52c27.06,-9.14 52.68,16.77 43.39,43.68l49.66,49.66c34.23,-11.8 61.18,31 35.47,56.69 -26.49,26.49 -70.21,-2.87 -56,-37.34l-46.35,-46.29v121.85c25.3,12.54 22.26,41.85 9.08,55a34.34,34.34 0 0 1 -48.55,0c-17.57,-17.6 -11.07,-46.91 11.25,-56v-123c-20.8,-8.51 -24.6,-30.74 -18.64,-45l-50.79,-50.85 -134.1200032,134.14a28.86,28.86 0 0 0 0,40.81l195.6100032,195.6a28.86,28.86 0 0 0 40.8,0l194.69,-194.69a28.86,28.86 0 0 0 0,-40.81z"/></svg></a>
-      </div>
-    </div>
-  </body>
-</html>
+{{ define "add-to-header" }}
+<link rel="me" href="https://fosstodon.org/@ob">
+<link rel="me" href="https://github.com/oscarbenedito">
+<link rel="me" href="https://gitlab.com/oscarbenedito">
+<link rel="me" href="mailto:oscar@oscarbenedito.com">
+{{ end }}
+
+{{ define "main" }}
+<main>
+  <article>
+    <div class="content">{{ .Content }}</div>
+  </article>
+</main>
+{{ end }}

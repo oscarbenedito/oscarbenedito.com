@@ -8,8 +8,9 @@
     <title>404 Error | Oscar Benedito</title>
     {{- $favicon := resources.Get "img/favicon.min.svg" | fingerprint }}
     <link rel="icon" href="{{ $favicon.RelPermalink }}">
-    {{- $style := resources.Get "css/landing.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <style>
+{{ (resources.Get "css/landing.css" | minify).Content | safeCSS }}
+    </style>
   </head>
   <body>
     <div class="content">
