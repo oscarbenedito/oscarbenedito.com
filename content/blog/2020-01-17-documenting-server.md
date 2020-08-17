@@ -53,5 +53,5 @@ running in the server and its configuration.
 [worg]: <https://www.obenedito.org>
 [g]: <https://gotify.net/> "Gotify"
 [ga]: <https://goaccess.io/> "GoAccess"
-[gb]: <https://gitlab.com/oscarbenedito/utilities/-/tree/master/git-backup> "Git Backup — GitLab"
-[aun]: <https://gitlab.com/oscarbenedito/utilities/-/tree/master/atenea-updates-notifications> "Atenea Updates Notifications — GitLab"
+[gb]: <https://git.oscarbenedito.com/git-backup/> "Git Backup — git.oscarbenedito.com"
+[aun]: <https://git.oscarbenedito.com/scripts/file/atenea-updates-notifications.py.html> "Atenea Updates Notifications — git.oscarbenedito.com"

@@ -243,7 +243,7 @@ automatically create the new repository.
 [g-email]: <https://git-send-email.io/> "Learn to use email with Git!"
 [gitea]: <https://gitea.io> "Gitea"
 [gogs]: <https://gogs.io> "Gogs"
-[gsc]: <https://git.oscarbenedito.com/utilities/> "Utilities — git.oscarbenedito.com"
+[gsc]: <https://git.oscarbenedito.com/git-shell-commands/> "git-shell-commands — git.oscarbenedito.com"
 [prot-doc]: <https://git-scm.com/book/en/v2/Git-on-the-Server-Git-Daemon> "Git Daemon — Git"
 [sg-fork]: <https://git.oscarbenedito.com/stagit/> "stagit — git.oscarbenedito.com"
 [sh]: <https://sourcehut.org/> "Sourcehut"
