@@ -1,5 +1,6 @@
 ---
 title: "Documenting my server"
+slug: "documenting-server"
 categories: "Incidental"
 tags: [
   "Personal server",
@@ -8,6 +9,7 @@ tags: [
   "DIY",
   "Backup"
 ]
+date: 2020-01-17
 lastmod: 2020-03-01
 ---
 

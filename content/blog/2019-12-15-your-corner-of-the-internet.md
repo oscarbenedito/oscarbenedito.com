@@ -1,5 +1,6 @@
 ---
 title: "Your corner of the Internet"
+slug: "your-corner-of-the-internet"
 categories: "Technology"
 tags: [
   "Personal domain",
@@ -10,6 +11,7 @@ tags: [
   "Hugo"
 ]
 lastmod: 2019-12-06
+date: 2019-12-15
 ---
 
 We tend to have online accounts across different social networks and services.

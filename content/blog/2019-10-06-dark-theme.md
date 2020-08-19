@@ -1,10 +1,12 @@
 ---
 title: "Creating a dark theme"
+slug: "dark-theme"
 categories: "Technology"
 tags: [
   "CSS",
   "Website"
 ]
+date: 2019-10-06
 ---
 
 The first contact I had with HTML and CSS was about two years ago, when I

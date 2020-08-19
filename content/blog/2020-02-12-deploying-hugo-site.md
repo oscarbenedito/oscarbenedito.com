@@ -1,5 +1,6 @@
 ---
 title: "Deploying a website built with Hugo"
+slug: "deploying-hugo-site"
 categories: "Technology"
 tags: [
   "Personal website",
@@ -8,6 +9,7 @@ tags: [
   "Hosting services",
   "Self-hosting"
 ]
+date: 2020-02-12
 ---
 
 I have [previously talked][post] about creating a personal website, in this post

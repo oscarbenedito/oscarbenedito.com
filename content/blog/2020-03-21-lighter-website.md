@@ -1,5 +1,6 @@
 ---
 title: "A lighter website"
+slug: "lighter-website"
 categories: "Technology"
 tags: [
   "Personal domain",
@@ -8,6 +9,7 @@ tags: [
   "Personal website",
   "Website"
 ]
+date: 2020-03-21
 ---
 
 Following up with the [last post][post], I decided to make my website even

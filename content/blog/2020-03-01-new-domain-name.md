@@ -1,7 +1,9 @@
 ---
 title: "New domain name: oscarbenedito.com"
+slug: "new-domain-name"
 categories: "Incidental"
 tags: [ "Personal domain" ]
+date: 2020-03-01
 ---
 
 After a lot of thought, I have decided to change my domain to

@@ -1,5 +1,6 @@
 ---
 title: "Centralized, decentralized and distributed networks"
+slug: "types-of-networks"
 categories: "Knowledge base"
 tags: [
   "Networks",
@@ -8,6 +9,7 @@ tags: [
   "Centralization",
   "Distributed networks"
 ]
+date: 2020-03-02
 ---
 
 When we are trying to understand a communications network, having an approximate

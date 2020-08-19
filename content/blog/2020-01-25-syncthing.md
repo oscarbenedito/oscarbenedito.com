@@ -1,5 +1,6 @@
 ---
 title: "File synchronization software: Syncthing"
+slug: "syncthing"
 categories: "Technology"
 tags: [
   "Backup",
@@ -8,6 +9,7 @@ tags: [
   "Privacy",
   "Software"
 ]
+date: 2020-01-25
 ---
 
 [Syncthing][s] is a file synchronization program. It allows you to sync files

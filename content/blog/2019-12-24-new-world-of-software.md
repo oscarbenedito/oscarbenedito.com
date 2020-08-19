@@ -1,10 +1,12 @@
 ---
 title: "A new world of software"
+slug: "new-world-of-software"
 categories: "Technology"
 tags: [
   "FOSS",
   "Software"
 ]
+date: 2019-12-24
 ---
 
 As I have said before, I was a big user of big tech companies' services. I also

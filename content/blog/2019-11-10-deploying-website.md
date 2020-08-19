@@ -1,5 +1,6 @@
 ---
 title: "Deploying a website using the WebDAV protocol"
+slug: "deploying-website"
 categories: "Technology"
 tags: [
   "WebDAV",
@@ -9,6 +10,7 @@ tags: [
   "davfs2",
   "Autistici/Inventati"
 ]
+date: 2019-11-10
 ---
 
 Now that my website is [hosted by Autistici/Inventati][hb], I can no longer

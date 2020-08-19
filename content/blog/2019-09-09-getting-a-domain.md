@@ -1,10 +1,12 @@
 ---
 title: "Getting my own domain name"
+slug: "getting-a-domain"
 categories: "Incidental"
 tags: [
   "Personal domain",
   "DNS Record"
 ]
+date: 2019-09-09
 lastmod: 2020-03-01
 ---
 

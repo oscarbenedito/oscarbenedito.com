@@ -1,10 +1,12 @@
 ---
 title: "Switching to a password manager"
+slug: "password-manager"
 categories: "Technology"
 tags: [
   "Privacy",
   "Security"
 ]
+date: 2019-10-19
 ---
 
 Before I learned about password managers, less than a year ago, having all my

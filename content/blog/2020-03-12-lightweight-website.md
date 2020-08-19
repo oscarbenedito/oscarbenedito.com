@@ -1,5 +1,6 @@
 ---
 title: "A lightweight website"
+slug: "lightweight-website"
 categories: "Technology"
 tags: [
   "Personal domain",
@@ -8,6 +9,7 @@ tags: [
   "Personal website",
   "Website"
 ]
+date: 2020-03-12
 ---
 
 Since the start of this site, having a lightweight website has been one of my
