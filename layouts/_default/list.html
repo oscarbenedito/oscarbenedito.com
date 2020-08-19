@@ -1,5 +1,5 @@
 {{ define "add-to-header" }}
-{{- if eq .Kind "taxonomy" }}
+{{- if eq .Kind "term" }}
 <link rel="alternate" type="application/atom+xml" title="{{ .Data.Singular | title }}: {{ .Title  }} on Oscar's Blog" href="{{ .RelPermalink }}index.xml">
 {{ end }}
 {{ end }}
@@ -10,7 +10,7 @@
   <header>
     {{ .Content }}
   </header>
-  {{- else if eq .Kind "taxonomy" }}
+  {{- else if eq .Kind "term" }}
   <header>
     <h1>{{ .Data.Singular | title }}: {{ .Title }}</h1>
   </header>

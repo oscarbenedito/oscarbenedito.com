@@ -3,7 +3,8 @@ languageCode = "en-us"
 title = "Oscar Benedito"
 paginate = 5
 pygmentsStyle = "solarized-dark256"
-disableKinds = "taxonomyTerm"
+disableKinds = "taxonomy"
+ignoreErrors = ["error-disable-taxonomy"]
 
 [Author]
   name = "Oscar Benedito"
