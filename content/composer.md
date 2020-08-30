@@ -1,4 +1,4 @@
 ---
-title: Composer
-type: composer
+canonical: "/projects/composer/composer.html"
+type: redirect
 ---
