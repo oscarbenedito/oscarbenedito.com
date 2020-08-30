@@ -1,13 +1,8 @@
 ---
 title: "Documenting my server"
 slug: "documenting-server"
-categories: "Incidental"
-tags: [
-  "Personal server",
-  "VPS",
-  "Documentation",
-  "DIY",
-  "Backup"
+categories: [
+  "self-hosting"
 ]
 date: 2020-01-17
 lastmod: 2020-03-01

@@ -22,7 +22,7 @@
     <header>
       <h2 class="p-name"><a class="u-url" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <div class="metadata">
-        {{ with .Params.categories }}<a class="p-category" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<a href="{{ .RelPermalink }}"><data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data></a> &middot; {{ partial "read-time.html" . }}
+        {{ partial "categories.html" . }} &middot; <a href="{{ .RelPermalink }}"><data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data></a> &middot; {{ partial "read-time.html" . }}
       <div>
     </header>
     <section class="content">

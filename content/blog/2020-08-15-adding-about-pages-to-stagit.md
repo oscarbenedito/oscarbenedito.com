@@ -1,13 +1,9 @@
 ---
 title: "Adding about pages to stagit"
 slug: "adding-about-pages-to-stagit"
-categories: "Technology"
-tags: [
-  "Git",
-  "Personal server",
-  "Self-hosting",
-  "Software",
-  "Website"
+categories: [
+  "FOSS",
+  "projects"
 ]
 date: 2020-08-15T19:59:00+00:00
 ---

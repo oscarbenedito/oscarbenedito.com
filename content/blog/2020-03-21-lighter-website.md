@@ -1,13 +1,8 @@
 ---
 title: "A lighter website"
 slug: "lighter-website"
-categories: "Technology"
-tags: [
-  "Personal domain",
-  "CSS",
-  "Hugo",
-  "Personal website",
-  "Website"
+categories: [
+  "personal domain"
 ]
 date: 2020-03-21
 ---

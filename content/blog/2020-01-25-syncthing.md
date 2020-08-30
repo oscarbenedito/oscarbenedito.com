@@ -1,13 +1,10 @@
 ---
 title: "File synchronization software: Syncthing"
 slug: "syncthing"
-categories: "Technology"
-tags: [
-  "Backup",
+categories: [
   "Decentralization",
-  "File synchronization",
-  "Privacy",
-  "Software"
+  "FOSS",
+  "privacy"
 ]
 date: 2020-01-25
 ---

@@ -1,14 +1,9 @@
 ---
 title: "Your corner of the Internet"
 slug: "your-corner-of-the-internet"
-categories: "Technology"
-tags: [
-  "Personal domain",
-  "Personal website",
-  "Decentralization",
-  "DIY",
-  "Website",
-  "Hugo"
+categories: [
+  "decentralization",
+  "personal domain"
 ]
 lastmod: 2019-12-06
 date: 2019-12-15

@@ -1,13 +1,9 @@
 ---
 title: "Switching to LineageOS with microG"
 slug: "lineageos-with-microg"
-categories: "Technology"
-tags: [
-  "LineageOS",
-  "microG",
+categories: [
   "FOSS",
-  "Software",
-  "Privacy"
+  "privacy"
 ]
 date: 2019-11-17
 lastmod: 2019-11-22

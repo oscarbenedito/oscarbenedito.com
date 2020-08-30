@@ -1,0 +1,4 @@
+{{ $chars := split . "" }}
+{{- range $i, $e := $chars }}
+  {{- if $i }}{{ $e }}{{ else }}{{ $e | title }}{{ end }}
+{{- end -}}

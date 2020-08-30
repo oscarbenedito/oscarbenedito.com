@@ -3,19 +3,10 @@
   <article class="h-entry">
     <header>
       <h1 class="p-name">{{ .Title }}</h1>
-      <div class="metadata">{{ with .Params.categories }}<a class="p-category" href="{{ "blog/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> &middot; {{ end }}<a class="u-url" href="{{ .RelPermalink }}"><data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data></a>{{ if ne .Lastmod .Date }} (last modified on <data class="dt-updated" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
+      <div class="metadata">{{ partial "categories.html" . }} &middot; <a class="u-url" href="{{ .RelPermalink }}"><data class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</data></a>{{ if ne .Lastmod .Date }} (last modified on <data class="dt-updated" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</data>){{ end }}
       </div>
     </header>
     <div class="content e-content">{{ .Content }}</div>
-    {{- if .Params.tags }}
-    <footer>
-      <ul class="tags">
-        {{- range .Params.tags | sort }}
-        <li><a class="p-category" href="{{ "blog/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
-        {{- end }}
-      </ul>
-    </footer>
-    {{- end }}
   </article>
 
   {{- if or .NextInSection .PrevInSection }}

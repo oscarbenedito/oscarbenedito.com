@@ -1,13 +1,8 @@
 ---
 title: "Centralized, decentralized and distributed networks"
 slug: "types-of-networks"
-categories: "Knowledge base"
-tags: [
-  "Networks",
-  "Communications",
-  "Decentralization",
-  "Centralization",
-  "Distributed networks"
+categories: [
+  "miscellany",
 ]
 date: 2020-03-02
 ---

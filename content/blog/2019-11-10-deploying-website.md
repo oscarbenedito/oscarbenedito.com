@@ -1,14 +1,9 @@
 ---
 title: "Deploying a website using the WebDAV protocol"
 slug: "deploying-website"
-categories: "Technology"
-tags: [
-  "WebDAV",
-  "Scripts",
-  "rsync",
-  "File synchronization",
-  "davfs2",
-  "Autistici/Inventati"
+categories: [
+  "FOSS",
+  "personal domain"
 ]
 date: 2019-11-10
 ---

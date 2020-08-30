@@ -1,10 +1,8 @@
 ---
 title: "Switching to a password manager"
 slug: "password-manager"
-categories: "Technology"
-tags: [
-  "Privacy",
-  "Security"
+categories: [
+  "cryptography"
 ]
 date: 2019-10-19
 ---

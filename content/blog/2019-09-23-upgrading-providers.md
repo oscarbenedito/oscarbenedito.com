@@ -1,11 +1,10 @@
 ---
 title: "Upgrading to privacy-conscious providers"
 slug: "upgrading-providers"
-categories: "Technology"
-tags: [
-  "Decentralization",
-  "Encryption",
-  "Privacy"
+categories: [
+  "cryptography",
+  "decentralization",
+  "privacy"
 ]
 date: 2019-09-23
 lastmod: 2019-09-24

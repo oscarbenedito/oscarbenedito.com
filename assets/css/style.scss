@@ -351,32 +351,6 @@ article {
       border: 0;
     }
   }
-  footer {
-    margin-top: var(--content-gap);
-    margin-bottom: var(--content-gap);
-  }
-  .tags {
-    li {
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-    li:not(:last-child) {
-      margin-right: 0.5rem;
-    }
-    a {
-      display: block;
-      padding-left: 14px;
-      padding-right: 14px;
-      color: var(--primary-invert);
-      font-size: 14px;
-      line-height: 34px;
-      background: var(--primary-bg);
-      border-radius: 2px;
-    }
-    a:hover {
-      background: var(--primary-active);
-    }
-  }
 }
 
 // article }}}

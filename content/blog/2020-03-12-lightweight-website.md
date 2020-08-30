@@ -1,13 +1,8 @@
 ---
 title: "A lightweight website"
 slug: "lightweight-website"
-categories: "Technology"
-tags: [
-  "Personal domain",
-  "CSS",
-  "Hugo",
-  "Personal website",
-  "Website"
+categories: [
+  "personal domain"
 ]
 date: 2020-03-12
 ---

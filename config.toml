@@ -16,12 +16,10 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [taxonomies]
   category = "categories"
-  tag = "tags"
 
 [permalinks]
   blog = "/blog/:year/:month/:slug/"
   categories = "/blog/categories/:slug/"
-  tags = "/blog/tags/:slug/"
 
 [frontmatter]
   date  = ["date", ":filename", ":default"]

@@ -1,13 +1,9 @@
 ---
 title: "Deploying a website built with Hugo"
 slug: "deploying-hugo-site"
-categories: "Technology"
-tags: [
-  "Personal website",
-  "Personal domain",
-  "Personal server",
-  "Hosting services",
-  "Self-hosting"
+categories: [
+  "personal domain",
+  "self-hosting"
 ]
 date: 2020-02-12
 ---

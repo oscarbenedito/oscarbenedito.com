@@ -1,10 +1,9 @@
 ---
 title: "Creating a dark theme"
 slug: "dark-theme"
-categories: "Technology"
-tags: [
-  "CSS",
-  "Website"
+categories: [
+  "personal domain",
+  "projects"
 ]
 date: 2019-10-06
 ---

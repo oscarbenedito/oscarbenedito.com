@@ -1,13 +1,8 @@
 ---
 title: "Securing communications"
 slug: "securing-communications"
-categories: "Knowledge base"
-tags: [
-  "Cryptography",
-  "Software",
-  "Privacy",
-  "Security",
-  "Encryption"
+categories: [
+  "cryptography"
 ]
 date: 2020-01-12
 lastmod: 2020-08-10

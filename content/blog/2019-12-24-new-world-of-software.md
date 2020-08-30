@@ -1,10 +1,9 @@
 ---
 title: "A new world of software"
 slug: "new-world-of-software"
-categories: "Technology"
-tags: [
+categories: [
   "FOSS",
-  "Software"
+  "miscellany"
 ]
 date: 2019-12-24
 ---

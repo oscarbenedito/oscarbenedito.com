@@ -20,13 +20,7 @@
       <h2>Categories ({{ len .Site.Taxonomies.categories }})</h2>
       <ul>
         {{- range .Site.Taxonomies.categories }}
-          <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
-        {{- end }}
-      </ul>
-      <h2>Tags ({{ len .Site.Taxonomies.tags }})</h2>
-      <ul>
-        {{- range .Site.Taxonomies.tags }}
-          <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
+          <li><a href="{{ .Page.RelPermalink }}">{{ partial "first-upper.html" .Page.Title }}</a> ({{ .Count }} {{ if eq .Count 1}}entry{{ else }}entries{{ end }})</li>
         {{- end }}
       </ul>
     </div>
