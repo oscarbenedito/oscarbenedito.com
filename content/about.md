@@ -28,10 +28,6 @@ You can find the site's source code on [this repository][repo].
 You can find all the JavaScript run on the site along with the licenses and
 source code in the [JavaScript Web Labels page][jswl].
 
-## Contact
-
-You can contact me sending me an email to [oscar@oscarbenedito.com][email].
-
 
 [hetzner]: <https://www.hetzner.com> "Hetzner"
 [gpl]: <https://www.gnu.org/licenses/gpl-3.0.html> "GNUGeneral Public License version 3"
@@ -40,4 +36,3 @@ You can contact me sending me an email to [oscar@oscarbenedito.com][email].
 [cc-by-local]: </licenses/cc-by-4.0/> "Creative Commons Attribution 4.0 International License"
 [repo]: <https://git.oscarbenedito.com/oscarbenedito.com/> "Source code"
 [jswl]: </jsweblabels/> "JavaScript Web Labels"
-[email]: <mailto:oscar@oscarbenedito.com>

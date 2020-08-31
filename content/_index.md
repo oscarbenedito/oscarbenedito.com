@@ -16,7 +16,7 @@ about my academic/professional life, check out [my LinkedIn profile][li].
 
 ## Contact me
 
-Feel free to contact me at [oscar@oscarbenedito.com][em].
+Feel free to contact me! Details can be found on my [contact page][c].
 
 
 [cfis]: <https://cfis.upc.edu/es> "Interdisciplinary Higher Education Center (CFIS)"
@@ -26,4 +26,4 @@ Feel free to contact me at [oscar@oscarbenedito.com][em].
 [gl]: <https://gitlab.com/oscarbenedito> "GitLab profile"
 [gh]: <https://github.com/oscarbenedito> "GitHub profile"
 [li]: <https://www.linkedin.com/in/oscarbenedito> "LinkedIn profile"
-[em]: <mailto:oscar@oscarbenedito.com>
+[c]: </contact/> "Contact page"
