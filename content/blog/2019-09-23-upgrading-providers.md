@@ -62,9 +62,7 @@ solve.
 In order to encrypt my content, I needed to find an alternative to a lot of
 services that Google was offering me (or use tools such as [Cryptomator][c],
 which was discarded because of problem number 3). And so the search
-began[^note].
-
-[^note]: You can find some of the resources that I found useful [here][r].
+began.
 
 #### Email
 
@@ -142,7 +140,6 @@ change.
 [mw]: <https://www.gnu.org/proprietary/malware-google.html> "Google's Software is Malware — GNU Project"
 [to]: <https://takeout.google.com/> "Takeout — Google"
 [c]: <https://cryptomator.org> "Cryptomator"
-[r]: </resources/> "Resources — Oscar Benedito"
 [pm]: <https://protonmail.com> "Protonmail"
 [tn]: <https://tutanota.com> "Tutanota"
 [dx]: <https://www.davx5.com> "DAVx5"
