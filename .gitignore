@@ -1,5 +1,2 @@
-resources/
-public/
-assets/drafts/
-*.draft.*
-.DS_Store
+/resources/
+/public/
