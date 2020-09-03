@@ -30,9 +30,9 @@ source code in the [JavaScript Web Labels page][jswl].
 
 
 [hetzner]: <https://www.hetzner.com> "Hetzner"
-[gpl]: <https://www.gnu.org/licenses/gpl-3.0.html> "GNUGeneral Public License version 3"
+[gpl]: <https://www.gnu.org/licenses/gpl-3.0.html> "GNU General Public License version 3"
 [cc-by]: <https://creativecommons.org/licenses/by/4.0/> "Creative Commons Attribution 4.0 International License"
-[gpl-local]: </licenses/gpl-v3/> "GNUGeneral Public License version 3"
-[cc-by-local]: </licenses/cc-by-4.0/> "Creative Commons Attribution 4.0 International License"
+[gpl-local]: </licenses/gpl-3.0.txt/> "GNU General Public License version 3"
+[cc-by-local]: </licenses/cc-by-4.0.txt/> "Creative Commons Attribution 4.0 International License"
 [repo]: <https://git.oscarbenedito.com/oscarbenedito.com/> "Source code"
 [jswl]: </jsweblabels/> "JavaScript Web Labels"
