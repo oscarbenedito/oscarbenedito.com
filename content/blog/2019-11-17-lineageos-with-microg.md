@@ -3,7 +3,7 @@ title: "Switching to LineageOS with microG"
 slug: "lineageos-with-microg"
 categories: [
   "FOSS",
-  "privacy"
+  "Privacy"
 ]
 date: 2019-11-17
 lastmod: 2019-11-22

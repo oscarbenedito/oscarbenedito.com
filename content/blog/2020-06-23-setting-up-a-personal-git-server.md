@@ -2,9 +2,9 @@
 title: "Setting up a personal Git server"
 slug: "setting-up-a-personal-git-server"
 categories: [
-  "decentralization",
-  "personal domain",
-  "self-hosting"
+  "Decentralization",
+  "Personal domain",
+  "Self-hosting"
 ]
 date: 2020-06-23T16:10:00+00:00
 lastmod: 2020-07-24T15:17:00+00:00

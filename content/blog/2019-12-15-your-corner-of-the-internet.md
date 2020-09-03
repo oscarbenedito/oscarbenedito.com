@@ -2,8 +2,8 @@
 title: "Your corner of the Internet"
 slug: "your-corner-of-the-internet"
 categories: [
-  "decentralization",
-  "personal domain"
+  "Decentralization",
+  "Personal domain"
 ]
 lastmod: 2019-12-06
 date: 2019-12-15

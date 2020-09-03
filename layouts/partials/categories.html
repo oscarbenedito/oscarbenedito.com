@@ -1,10 +1,4 @@
 {{ range $i, $e := ( .Params.categories ) }}
   {{- if $i }}, {{ end -}}
-  <a class="p-category" href="{{ "blog/categories/" | relURL }}{{ $e | urlize }}">
-    {{- if $i }}
-      {{- $e }}
-    {{- else }}
-      {{- partial "first-upper.html" $e }}
-    {{- end -}}
-  </a>
+  <a class="p-category" href="{{ "blog/categories/" | relURL }}{{ $e | urlize }}">{{ $e }}</a>
 {{- end -}}

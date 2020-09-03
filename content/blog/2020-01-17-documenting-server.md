@@ -2,7 +2,7 @@
 title: "Documenting my server"
 slug: "documenting-server"
 categories: [
-  "self-hosting"
+  "Self-hosting"
 ]
 date: 2020-01-17
 lastmod: 2020-03-01

@@ -4,7 +4,7 @@ slug: "syncthing"
 categories: [
   "Decentralization",
   "FOSS",
-  "privacy"
+  "Privacy"
 ]
 date: 2020-01-25
 ---

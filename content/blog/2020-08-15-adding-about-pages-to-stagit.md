@@ -3,7 +3,7 @@ title: "Adding about pages to stagit"
 slug: "adding-about-pages-to-stagit"
 categories: [
   "FOSS",
-  "projects"
+  "Projects"
 ]
 date: 2020-08-15T19:59:00+00:00
 ---

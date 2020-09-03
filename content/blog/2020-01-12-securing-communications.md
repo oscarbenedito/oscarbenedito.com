@@ -2,7 +2,7 @@
 title: "Securing communications"
 slug: "securing-communications"
 categories: [
-  "cryptography"
+  "Cryptography"
 ]
 date: 2020-01-12
 lastmod: 2020-08-10

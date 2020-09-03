@@ -2,7 +2,7 @@
 title: "A lightweight website"
 slug: "lightweight-website"
 categories: [
-  "personal domain"
+  "Personal domain"
 ]
 date: 2020-03-12
 ---

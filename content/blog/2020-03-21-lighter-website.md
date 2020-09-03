@@ -2,7 +2,7 @@
 title: "A lighter website"
 slug: "lighter-website"
 categories: [
-  "personal domain"
+  "Personal domain"
 ]
 date: 2020-03-21
 ---

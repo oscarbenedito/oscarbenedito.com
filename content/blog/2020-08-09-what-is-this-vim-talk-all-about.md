@@ -3,7 +3,7 @@ title: "What is this vim talk all about?"
 slug: "what-is-this-vim-talk-all-about"
 categories: [
   "FOSS",
-  "miscellany"
+  "Miscellany"
 ]
 date: 2020-08-09T15:16:00+00:00
 ---

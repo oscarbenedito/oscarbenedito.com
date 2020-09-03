@@ -5,5 +5,5 @@
 {{- $favicon := resources.Get "img/favicon.min.svg" | fingerprint }}
 <link rel="icon" href="{{ $favicon.RelPermalink }}">
 <link rel="shortcut icon" href="/favicon.ico">
-<title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "term" }}{{ partial "first-upper.html" .Title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<title>{{ if .Params.headtitle }}{{ .Params.headtitle }} | {{ else if eq .Kind "term" }}{{ .Title }} | {{ else if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 <link rel="alternate" type="application/atom+xml" title="Oscar's Blog" href="/blog/index.xml">

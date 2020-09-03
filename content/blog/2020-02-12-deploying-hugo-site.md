@@ -2,8 +2,8 @@
 title: "Deploying a website built with Hugo"
 slug: "deploying-hugo-site"
 categories: [
-  "personal domain",
-  "self-hosting"
+  "Personal domain",
+  "Self-hosting"
 ]
 date: 2020-02-12
 ---

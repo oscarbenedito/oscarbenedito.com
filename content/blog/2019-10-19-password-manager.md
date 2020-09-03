@@ -2,7 +2,7 @@
 title: "Switching to a password manager"
 slug: "password-manager"
 categories: [
-  "cryptography"
+  "Cryptography"
 ]
 date: 2019-10-19
 ---

@@ -2,7 +2,7 @@
 title: "Use web feeds!"
 slug: "use-web-feeds"
 categories: [
-  "decentralization"
+  "Decentralization"
 ]
 date: 2020-04-18T14:59:00+00:00
 ---

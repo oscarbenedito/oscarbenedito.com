@@ -2,8 +2,8 @@
 title: "On not caring about your privacy"
 slug: "on-not-caring-about-your-privacy"
 categories: [
-  "miscellany",
-  "privacy"
+  "Miscellany",
+  "Privacy"
 ]
 date: 2020-04-07T16:17:00+00:00
 ---

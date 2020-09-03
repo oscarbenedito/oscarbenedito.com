@@ -2,8 +2,8 @@
 title: "New domain name: oscarbenedito.com"
 slug: "new-domain-name"
 categories: [
-  "miscellany",
-  "personal domain"
+  "Miscellany",
+  "Personal domain"
 ]
 date: 2020-03-01
 ---

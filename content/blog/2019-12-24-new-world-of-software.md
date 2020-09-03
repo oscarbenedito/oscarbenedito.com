@@ -3,7 +3,7 @@ title: "A new world of software"
 slug: "new-world-of-software"
 categories: [
   "FOSS",
-  "miscellany"
+  "Miscellany"
 ]
 date: 2019-12-24
 ---

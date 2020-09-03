@@ -2,9 +2,9 @@
 title: "Upgrading to privacy-conscious providers"
 slug: "upgrading-providers"
 categories: [
-  "cryptography",
-  "decentralization",
-  "privacy"
+  "Cryptography",
+  "Decentralization",
+  "Privacy"
 ]
 date: 2019-09-23
 lastmod: 2019-09-24

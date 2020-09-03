@@ -3,7 +3,7 @@ title: "Deploying a website using the WebDAV protocol"
 slug: "deploying-website"
 categories: [
   "FOSS",
-  "personal domain"
+  "Personal domain"
 ]
 date: 2019-11-10
 ---

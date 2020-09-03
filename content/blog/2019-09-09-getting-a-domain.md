@@ -2,8 +2,8 @@
 title: "Getting my own domain name"
 slug: "getting-a-domain"
 categories: [
-  "decentralization",
-  "personal domain"
+  "Decentralization",
+  "Personal domain"
 ]
 date: 2019-09-09
 lastmod: 2020-03-01

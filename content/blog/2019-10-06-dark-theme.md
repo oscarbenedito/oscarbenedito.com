@@ -2,8 +2,8 @@
 title: "Creating a dark theme"
 slug: "dark-theme"
 categories: [
-  "personal domain",
-  "projects"
+  "Personal domain",
+  "Projects"
 ]
 date: 2019-10-06
 ---

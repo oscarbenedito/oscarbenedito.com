@@ -2,7 +2,7 @@
 title: "Centralized, decentralized and distributed networks"
 slug: "types-of-networks"
 categories: [
-  "miscellany",
+  "Miscellany",
 ]
 date: 2020-03-02
 ---
