@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="list">
+<main class="list h-feed">
   {{- if .Content }}
   <header>
     {{ .Content }}
@@ -20,7 +20,7 @@
   {{- range $paginator.Pages }}
   <article class="summary h-entry">
     <header>
-      <h2 class="p-name"><a class="u-url" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <h2><a class="u-url p-name" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <div class="metadata">
         {{ partial "categories.html" . }} &middot; <a href="{{ .RelPermalink }}"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></a> &middot; {{ partial "read-time.html" . }}
       <div>
