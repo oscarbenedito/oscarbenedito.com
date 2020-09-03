@@ -3,7 +3,7 @@
   <head>
     {{ partial "head-base.html" . -}}
     {{- $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
-    <link id="theme" rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
     {{- block "add-to-header" . }}{{ end }}
   </head>
   <body>
