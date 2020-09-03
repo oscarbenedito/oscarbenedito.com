@@ -18,19 +18,21 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import sys
-import re
 import json
+import xml.etree.ElementTree as ET
 
-entries = re.compile(r'.*<outline text=\"Blogroll\">(.*?)</outline>.*', re.DOTALL)
-entry = re.compile(r'<outline type=\"rss\" text=\"(.*)\" xmlUrl=\"(.*)\" htmlUrl=\"(.*)\"/>')
-
-with open(sys.argv[1], 'r') as f:
-    inp = f.read()
-
-lines = re.match(entries, inp).group(1)
+tree = ET.parse(sys.argv[1])
+root = tree.getroot()
 
 out = []
-for (name, feed, html) in re.findall(entry, lines):
-    out.append({ "name": name, "url": html, "feed": feed })
+for category in root[0]:
+    if category.attrib['text'] == "Blogroll":
+        for entry in category:
+            out.append({
+                "name": entry.attrib['text'],
+                "url": entry.attrib['htmlUrl'],
+                "feed": entry.attrib['xmlUrl']
+            })
+        break
 
 print(json.dumps(out, indent=2, sort_keys=True, ensure_ascii=False))
