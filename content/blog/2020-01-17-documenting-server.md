@@ -23,7 +23,7 @@ services:
 - It runs [this script][gb] daily to back up all my git repositories and others
   I find interesting.
 - It notifies me if any new documents are uploaded to my college Moodle using
-  [this script][aun] and a cronjob.
+  [this script][mun] and a cronjob.
 - It notifies me every time someone logs in to the server using SSH.
 
 As time passes I am adding more and more features to my server. In the first
@@ -51,4 +51,4 @@ running in the server and its configuration.
 [g]: <https://gotify.net/> "Gotify"
 [ga]: <https://goaccess.io/> "GoAccess"
 [gb]: <https://git.oscarbenedito.com/git-backup/> "Git Backup — git.oscarbenedito.com"
-[aun]: <https://git.oscarbenedito.com/scripts/file/atenea-updates-notifications.py.html> "Atenea Updates Notifications — git.oscarbenedito.com"
+[mun]: <https://git.oscarbenedito.com/osf/file/moodle-updates-notifications.py.html> "Moodle Updates Notifications — git.oscarbenedito.com"
