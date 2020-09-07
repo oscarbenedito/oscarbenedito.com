@@ -1,7 +1,4 @@
----
-title: Contact me
-type: page
----
+<!-- title: Contact me -->
 
 You can contact me sending an email to [oscar@oscarbenedito.com][email].
 

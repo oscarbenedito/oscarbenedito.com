@@ -1,0 +1,19 @@
+<main>
+  <article class="h-entry">
+    <header>
+      <h1 class="p-name">{{ title }}</h1>
+      <div class="metadata">{{ categories_html }} &middot; <a class="u-url" href="/{{ url }}"><time class="dt-published" datetime="{{ date }}">{{ date_nice }}</time></a>{{ _if modified }} (last modified on <time class="dt-updated" datetime="{{ lastmod }}">{{ lastmod_nice }}</time>){{ _fi }}
+      </div>
+    </header>
+    <div class="content e-content">{{ content }}</div>
+    <div class="p-author h-card" style="display: none;">
+      <a rel="me" class="p-name u-url" href="https://oscarbenedito.com">Oscar Benedito</a>
+      <img class="u-photo" src="/{{ _asset_img/favicon.min.svg }}"/>
+    </div>
+  </article>
+
+  {{ _if more_pages }}<nav class="pagination">{{ _fi }}
+    {{ _if next_url }}<a class="button" href="/{{ next_url }}" title="{{ next_title }}">&larr; Newer Post</a>{{ _fi }}
+    {{ _if prev_url }}<a class="button right" href="/{{ prev_url }}" title="{{ prev_title }}">Previous Post &rarr;</a>{{ _fi }}
+  {{ _if more_pages }}</nav>{{ _fi }}
+</main>

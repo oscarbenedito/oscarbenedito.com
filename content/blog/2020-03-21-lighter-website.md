@@ -1,11 +1,7 @@
----
-title: "A lighter website"
-slug: "lighter-website"
-categories: [
-  "Personal domain"
-]
-date: 2020-03-21
----
+<!-- title: A lighter website -->
+<!-- slug: lighter-website -->
+<!-- categories: Personal domain -->
+<!-- date: 2020-03-21T00:00:00Z -->
 
 Following up with the [last post][post], I decided to make my website even
 faster (which probably doesn't make a difference anymore).
@@ -64,5 +60,5 @@ helpful if in the future I have a site with bigger static files (or someone
 reading this has!).
 
 
-[post]: <{{< ref "/blog/2020-03-12-lightweight-website.md" >}}> "A lightweight website — Oscar Benedito"
+[post]: </blog/2020/03/lightweight-website/> "A lightweight website — Oscar Benedito"
 [hp]: <https://gohugo.io/hugo-pipes> "Hugo Pipes"

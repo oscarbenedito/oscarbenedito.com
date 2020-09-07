@@ -1,11 +1,7 @@
----
-title: "Use web feeds!"
-slug: "use-web-feeds"
-categories: [
-  "Decentralization"
-]
-date: 2020-04-18T14:59:00+00:00
----
+<!-- title: Use web feeds! -->
+<!-- slug: use-web-feeds -->
+<!-- categories: Decentralization -->
+<!-- date: 2020-04-18T14:59:00Z -->
 
 Web feeds are data formats used to provide users with updates through web
 syndication. Websites can use web feeds to post their content in a format that

@@ -1,13 +1,8 @@
----
-title: "Getting my own domain name"
-slug: "getting-a-domain"
-categories: [
-  "Decentralization",
-  "Personal domain"
-]
-date: 2019-09-09
-lastmod: 2020-03-01
----
+<!-- title: Getting my own domain name -->
+<!-- slug: getting-a-domain -->
+<!-- categories: Decentralization, Personal domain -->
+<!-- date: 2019-09-09T00:00:00Z -->
+<!-- lastmod: 2020-03-01T00:00:00Z -->
 
 After thinking about getting my own domain name for a while and letting the
 thought rest for a couple of months, I finally bought one. It is a very easy and

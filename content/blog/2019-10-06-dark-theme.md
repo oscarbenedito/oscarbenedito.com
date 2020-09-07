@@ -1,12 +1,7 @@
----
-title: "Creating a dark theme"
-slug: "dark-theme"
-categories: [
-  "Personal domain",
-  "Projects"
-]
-date: 2019-10-06
----
+<!-- title: Creating a dark theme -->
+<!-- slug: dark-theme -->
+<!-- categories: Personal domain, Projects -->
+<!-- date: 2019-10-06T00:00:00Z -->
 
 The first contact I had with HTML and CSS was about two years ago, when I
 created my first website along with a friend who already had some experience

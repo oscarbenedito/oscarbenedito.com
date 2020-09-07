@@ -1,12 +1,7 @@
----
-title: "Deploying a website using the WebDAV protocol"
-slug: "deploying-website"
-categories: [
-  "FOSS",
-  "Personal domain"
-]
-date: 2019-11-10
----
+<!-- title: Deploying a website using the WebDAV protocol -->
+<!-- slug: deploying-website -->
+<!-- categories: FOSS, Personal domain -->
+<!-- date: 2019-11-10T00:00:00Z -->
 
 Now that my website is [hosted by Autistici/Inventati][hb], I can no longer
 deploy it by just pushing my git repository's changes to GitLab, as I used to.
@@ -42,7 +37,7 @@ implementing it should have been a breeze. I encountered two problems:
 1. By default, `rsync` makes use of modification times to check whether a file
   should be transferred, but every time I build my site, all files are created
   again, so the modification times are always newer than the ones in the
-  server.\
+  server.<br/>
   There is a quick fix for this: the program has an option (`-c` or
   `--checksum`) that makes the program use the checksum of a file (instead of
   the modification time) along with the file size to determine whether it has
@@ -52,7 +47,7 @@ implementing it should have been a breeze. I encountered two problems:
   reason (that I still don't know, my guess is something to do with
   permissions), when those auxiliary files are finally renamed to the definitive
   filename, it fails, giving out an error and exiting without any file
-  transferred.\
+  transferred.<br/>
   To fix this issue, I used the `--temp-dir` option to specify a
   local directory as the one that should be used for the temporary files. With
   that set up, it doesn't give any more errors.
@@ -86,7 +81,7 @@ to reduce file sizes), it mounts the WebDAV resource, transfers the files and
 then unmounts the resource again.
 
 
-[hb]: <{{< ref "/blog/2019-11-04-new-host.md" >}}> "New website hosting servers — Oscar Benedito"
+[hb]: </blog/2019/11/new-host/> "New website hosting servers — Oscar Benedito"
 [d]: <https://savannah.nongnu.org/projects/davfs2> "davfs2 — NonGNU Savannah"
 [hugo]: <https://gohugo.io> "Hugo"
 [r]: <https://rsync.samba.org> "rsync"

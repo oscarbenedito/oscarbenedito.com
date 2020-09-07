@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ long_title }}</title>
+  <link href="https://oscarbenedito.com/{{ url }}index.xml" rel="self"/>
+  <link href="https://oscarbenedito.com/{{ url }}" rel="alternate"/>
+  <updated>{{ updated }}</updated>
+  <id>tag:oscarbenedito.com,2020-04-13:/{{ url }}</id>
+  <author>
+    <name>Oscar Benedito</name>
+  </author>
+  {{ content }}
+</feed>

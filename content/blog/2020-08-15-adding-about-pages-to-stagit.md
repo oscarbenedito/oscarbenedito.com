@@ -1,12 +1,7 @@
----
-title: "Adding about pages to stagit"
-slug: "adding-about-pages-to-stagit"
-categories: [
-  "FOSS",
-  "Projects"
-]
-date: 2020-08-15T19:59:00+00:00
----
+<!-- title: Adding about pages to stagit -->
+<!-- slug: adding-about-pages-to-stagit -->
+<!-- categories: FOSS, Projects -->
+<!-- date: 2020-08-15T19:59:00Z -->
 
 I use [stagit][sg] to show the public repositories of my Git server on the web.
 I chose stagit because it is a very simple and lightweight tool, which makes

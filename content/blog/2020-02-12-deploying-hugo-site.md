@@ -1,12 +1,7 @@
----
-title: "Deploying a website built with Hugo"
-slug: "deploying-hugo-site"
-categories: [
-  "Personal domain",
-  "Self-hosting"
-]
-date: 2020-02-12
----
+<!-- title: Deploying a website built with Hugo -->
+<!-- slug: deploying-hugo-site -->
+<!-- categories: Personal domain, Self-hosting -->
+<!-- date: 2020-02-12T00:00:00Z -->
 
 I have [previously talked][post] about creating a personal website, in this post
 I will talk about hosting it. More specifically, I'm going to explain how to
@@ -129,7 +124,7 @@ on port 80 to redirect to the encrypted site.
 Your site is ready!
 
 
-[post]: <{{< ref "/blog/2019-12-15-your-corner-of-the-internet.md" >}}> "Your corner of the Internet — Oscar Benedito"
+[post]: </blog/2019/12/your-corner-of-the-internet/> "Your corner of the Internet — Oscar Benedito"
 [ex]: <https://gitlab.com/pages/hugo> "GitLab Pages Examples: Hugo — GitLab"
 [dmsnh]: <https://doesmysiteneedhttps.com/> "Does my site need HTTPS?"
 [le]: <https://letsencrypt.org> "Let's Encrypt"

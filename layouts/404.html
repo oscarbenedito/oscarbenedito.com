@@ -3,20 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Oscar Benedito's website">
-    <meta name="author" content="{{ .Site.Author.name }}">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="author" content="Oscar Benedito">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>404 Error | Oscar Benedito</title>
-    {{- $favicon := resources.Get "img/favicon.min.svg" | fingerprint }}
-    <link rel="icon" href="{{ $favicon.RelPermalink }}">
-    <style>
-{{ (resources.Get "css/landing.css" | minify).Content | safeCSS }}
-    </style>
+    <link rel="icon" href="/{{ _asset_img/favicon.min.svg }}">
   </head>
-  <body>
-    <div class="content">
-      <a href="/" class="img first"><img class="big-icon" src="{{ $favicon.RelPermalink }}"></a>
-      <p class="title">404 Error</p>
-      <p class="subtitle last">The file or page you requested was not found.</p>
+  <body style="background-color: hsl(0, 0%, 94%); color: hsl(0, 0%, 47%); font-family: sans-serif;">
+    <div style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+      <a href="/" style="font-size:0; margin-top: 0;"><img style="width:100px; height:100px;" src="/{{ _asset_img/favicon.min.svg }}"></a>
+      <p style="font-size: 3em; font-weight: bold; margin-bottom: 0.25em;">404 Error</p>
+      <p style="font-size: 1.5em; margin-bottom: 0;">The file or page you requested was not found.</p>
     </div>
   </body>
 </html>

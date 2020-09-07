@@ -1,6 +1,4 @@
----
-title: Personal blog
----
+<!-- title: Personal blog -->
 
 # Personal blog
 

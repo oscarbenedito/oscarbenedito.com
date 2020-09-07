@@ -1,14 +1,8 @@
----
-title: "Setting up a personal Git server"
-slug: "setting-up-a-personal-git-server"
-categories: [
-  "Decentralization",
-  "Personal domain",
-  "Self-hosting"
-]
-date: 2020-06-23T16:10:00+00:00
-lastmod: 2020-07-24T15:17:00+00:00
----
+<!-- title: Setting up a personal Git server -->
+<!-- slug: setting-up-a-personal-git-server -->
+<!-- categories: Decentralization, Personal domain, Self-hosting -->
+<!-- date: 2020-06-23T16:10:00Z -->
+<!-- lastmod: 2020-07-24T15:17:00Z -->
 
 Running a personal Git server is something that has been on my mind for quite a
 long time. One of the most popular solutions I have seen around is

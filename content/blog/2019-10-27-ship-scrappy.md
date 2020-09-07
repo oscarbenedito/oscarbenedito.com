@@ -1,25 +1,20 @@
----
-title: "Ship scrappy"
-slug: "ship-scrappy"
-subtitle: "I just wanted to post this interesting reflexion, as I tend to make sure everything is 100% perfect before “shipping it”. In some scenarios, this can be good, since you don't want what you are …"
-categories: [
-  "Miscellany"
-]
-date: 2019-10-27
----
+<!-- title: Ship scrappy -->
+<!-- slug: ship-scrappy -->
+<!-- categories: Miscellany -->
+<!-- date: 2019-10-27T00:00:00Z -->
 
-> The only choice is to launch before you’re ready.\
-> Before it’s perfect.\
-> Before it’s 100% proven to be no risk to you.\
-> At that moment, your resistance says, “don’t ship it, it’s crappy stuff. We don’t ship crap.”\
-> And it’s true that you shouldn’t ship work that’s hurried, sloppy or ungenerous.\
-> But what’s actually on offer is something scrappy.\
-> Scrappy means that while it’s unpolished, it’s better than good enough.\
-> Scrappy doesn’t care about cosmetics as much as it cares about impact.\
-> Scrappy is flexible and resilient and ready to learn.\
+> The only choice is to launch before you’re ready.<br/>
+> Before it’s perfect.<br/>
+> Before it’s 100% proven to be no risk to you.<br/>
+> At that moment, your resistance says, “don’t ship it, it’s crappy stuff. We don’t ship crap.”<br/>
+> And it’s true that you shouldn’t ship work that’s hurried, sloppy or ungenerous.<br/>
+> But what’s actually on offer is something scrappy.<br/>
+> Scrappy means that while it’s unpolished, it’s better than good enough.<br/>
+> Scrappy doesn’t care about cosmetics as much as it cares about impact.<br/>
+> Scrappy is flexible and resilient and ready to learn.<br/>
 > Ship scrappy.
 >
-> --- *[Seth's Blog][ss]*
+> — *[Seth's Blog][ss]*
 
 I just wanted to post this interesting reflexion, as I tend to make sure
 everything is 100% perfect before "shipping it". In some scenarios, this can be

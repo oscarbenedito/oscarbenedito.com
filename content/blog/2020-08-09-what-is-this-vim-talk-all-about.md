@@ -1,12 +1,7 @@
----
-title: "What is this vim talk all about?"
-slug: "what-is-this-vim-talk-all-about"
-categories: [
-  "FOSS",
-  "Miscellany"
-]
-date: 2020-08-09T15:16:00+00:00
----
+<!-- title: What is this vim talk all about? -->
+<!-- slug: what-is-this-vim-talk-all-about -->
+<!-- categories: FOSS, Miscellany -->
+<!-- date: 2020-08-09T15:16:00Z -->
 
 Oh no! Another [vim][vim] post! Well... yes. I have seen a lot of people
 criticizing vim before even trying it, so I am going to try and explain my

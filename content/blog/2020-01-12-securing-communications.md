@@ -1,12 +1,8 @@
----
-title: "Securing communications"
-slug: "securing-communications"
-categories: [
-  "Cryptography"
-]
-date: 2020-01-12
-lastmod: 2020-08-10
----
+<!-- title: Securing communications -->
+<!-- slug: securing-communications -->
+<!-- categories: Cryptography -->
+<!-- date: 2020-01-12T00:00:00Z -->
+<!-- lastmod: 2020-08-10T00:00:00Z -->
 
 We use cryptographic techniques daily without really knowing how they work, so
 I'm going to try and explain some basic concepts. Let's start with Wikipedia's
@@ -15,7 +11,7 @@ current definition:
 > Cryptography or cryptology is the practice and study of techniques for secure
 > communication in the presence of third parties called adversaries.
 >
-> --- *[Wikipedia's cryptography entry][cry]*
+> — *[Wikipedia's cryptography entry][cry]*
 
 One cryptographic process we are all familiar with is encryption, that allows us
 to change the contents of a message so only certain people with a "key" can

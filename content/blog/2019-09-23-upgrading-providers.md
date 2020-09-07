@@ -1,14 +1,8 @@
----
-title: "Upgrading to privacy-conscious providers"
-slug: "upgrading-providers"
-categories: [
-  "Cryptography",
-  "Decentralization",
-  "Privacy"
-]
-date: 2019-09-23
-lastmod: 2019-09-24
----
+<!-- title: Upgrading to privacy-conscious providers -->
+<!-- slug: upgrading-providers -->
+<!-- categories: Cryptography, Decentralization, Privacy -->
+<!-- date: 2019-09-23T00:00:00Z -->
+<!-- lastmod: 2019-09-24T00:00:00Z -->
 
 I have been reading a lot about decentralization and not depending too much in
 one company in the past six months and I realized how much I relied on Google:

@@ -1,23 +1,25 @@
-DEST = /srv/oscarbenedito.com
+DST = /srv/oscarbenedito.com
 
-.PHONY: default deploy blogroll clean
+.PHONY: site server blogroll deploy loc clean
 
-default:
-	@echo "No default target, please choose one: deploy, blogroll, clean"
-	@exit 2
+site:
+	python3 gensite.py
 
-deploy: clean
+server: site
+	python3 -m http.server --bind localhost --directory _site
+
+blogroll:
+	python3 misc/update-blogroll.py
+
+deploy:
 	git fetch origin master
 	git reset --hard origin/master
 	git verify-commit master
-	hugo
-	rm -f public/index.xml
-	rsync --perms --recursive --checksum --delete public/ $(DEST)
+	python3 gensite.py
+	rsync --perms --recursive --checksum --delete _site/ $(DST)
 
-blogroll: data/blogroll.json
-
-data/blogroll.json: blogroll.ompl
-	./create-blogroll.py blogroll.ompl > data/blogroll.json
+loc:
+	grep -vE '^[[:space:]]*#|^[[:space:]]*$$|^[[:space:]]*"""' gensite.py | wc -l
 
 clean:
-	rm -rf public resources
+	rm -rf _site

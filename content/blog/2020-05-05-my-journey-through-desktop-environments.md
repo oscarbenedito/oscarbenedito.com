@@ -1,13 +1,8 @@
----
-title: "My journey through desktop environments"
-slug: "my-journey-through-desktop-environments"
-categories: [
-  "FOSS",
-  "Miscellany"
-]
-date: 2020-05-05T19:26:00+00:00
-lastmod: 2020-05-06T07:52:00+00:00
----
+<!-- title: My journey through desktop environments -->
+<!-- slug: my-journey-through-desktop-environments -->
+<!-- categories: FOSS, Miscellany -->
+<!-- date: 2020-05-05T19:26:00Z -->
+<!-- lastmod: 2020-05-06T07:52:00Z -->
 
 My first experience with GNU/Linux was with KDE. It is the desktop environment
 used on my college computers, and it was more or less the only experience I had

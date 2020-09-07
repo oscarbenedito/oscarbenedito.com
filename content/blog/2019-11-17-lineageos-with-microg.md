@@ -1,13 +1,8 @@
----
-title: "Switching to LineageOS with microG"
-slug: "lineageos-with-microg"
-categories: [
-  "FOSS",
-  "Privacy"
-]
-date: 2019-11-17
-lastmod: 2019-11-22
----
+<!-- title: Switching to LineageOS with microG -->
+<!-- slug: lineageos-with-microg -->
+<!-- categories: FOSS, Privacy -->
+<!-- date: 2019-11-17T00:00:00Z -->
+<!-- lastmod: 2019-11-22T00:00:00Z -->
 
 One of the things I wanted to do when switching to more privacy-respecting
 providers was getting rid of Google Services on my phone. According to multiple

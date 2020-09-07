@@ -1,11 +1,7 @@
----
-title: "Centralized, decentralized and distributed networks"
-slug: "types-of-networks"
-categories: [
-  "Miscellany",
-]
-date: 2020-03-02
----
+<!-- title: Centralized, decentralized and distributed networks -->
+<!-- slug: types-of-networks -->
+<!-- categories: Miscellany -->
+<!-- date: 2020-03-02T00:00:00Z -->
 
 When we are trying to understand a communications network, having an approximate
 image of how the network operates can be very valuable. Do all communications go

@@ -1,11 +1,7 @@
----
-title: "Switching to a password manager"
-slug: "password-manager"
-categories: [
-  "Cryptography"
-]
-date: 2019-10-19
----
+<!-- title: Switching to a password manager -->
+<!-- slug: password-manager -->
+<!-- categories: Cryptography -->
+<!-- date: 2019-10-19T00:00:00Z -->
 
 Before I learned about password managers, less than a year ago, having all my
 passwords on the same place sounded like a really bad idea—if someone managed to

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>{{ _if description }}
+    <meta name="description" content="{{ description }}">{{ _fi }}
+    <meta name="author" content="Oscar Benedito"/>
+    <link rel="icon" href="/{{ _asset_img/favicon.min.svg }}"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>{{ _if title }}{{ title }} | {{ _fi }}Oscar Benedito</title>
+    <link rel="alternate" type="application/atom+xml" title="Oscar's Blog" href="/blog/index.xml"/>
+    <link rel="stylesheet" type="text/css" href="/{{ _asset_css/style.min.css }}"/>{{ _if extraheader }}
+    {{ extraheader }}{{ _fi }}
+  </head>
+  <body>
+    <header id="page-header">
+      <div class="content">
+        <a href="/" title="Home"><svg class="logo" style="height: 1.6em;" viewBox="0 0 84.665 8.89"><use xlink:href="/{{ _asset_img/logo.svg }}#l"></use></svg></a>
+        <nav><a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="https://git.oscarbenedito.com">Git</a></nav>
+      </div>
+    </header>
+    {{ content }}
+    <footer id="page-footer">
+      <div class="content">
+        <nav><a href="https://git.oscarbenedito.com/oscarbenedito.com/">Source code</a> &middot; <a href="/jsweblabels/" rel="jslicense">JavaScript Web Labels</a> &middot; <a href="/about/">About this site</a></nav>
+      </div>
+    </footer>{{ _if extrafooter }}
+    {{ extrafooter }}{{ _fi }}
+  </body>
+</html>

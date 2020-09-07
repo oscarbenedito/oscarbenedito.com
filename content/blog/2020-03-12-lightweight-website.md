@@ -1,11 +1,7 @@
----
-title: "A lightweight website"
-slug: "lightweight-website"
-categories: [
-  "Personal domain"
-]
-date: 2020-03-12
----
+<!-- title: A lightweight website -->
+<!-- slug: lightweight-website -->
+<!-- categories: Personal domain -->
+<!-- date: 2020-03-12T00:00:00Z -->
 
 Since the start of this site, having a lightweight website has been one of my
 priorities. Every file served has been minimized, you won't see any pictures

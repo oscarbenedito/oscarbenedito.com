@@ -1,12 +1,7 @@
----
-title: "A new world of software"
-slug: "new-world-of-software"
-categories: [
-  "FOSS",
-  "Miscellany"
-]
-date: 2019-12-24
----
+<!-- title: A new world of software -->
+<!-- slug: new-world-of-software -->
+<!-- categories: FOSS, Miscellany -->
+<!-- date: 2019-12-24T00:00:00Z -->
 
 As I have said before, I was a big user of big tech companies' services. I also
 used macOS (and Windows before that) and proprietary software for mostly

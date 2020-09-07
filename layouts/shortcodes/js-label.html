@@ -1,7 +1,0 @@
-<tr>
-  {{- $js := resources.Get (.Get "asset") | minify | fingerprint }}
-  <td><a href="{{ $js.RelPermalink }}">/{{ (.Get "asset") }}</a></td>
-  <td><a href="{{ .Get "license-url" }}">{{ .Get "license-slug" }}</a></td>
-  {{- $js := resources.Get (.Get "asset") }}
-  <td><a href="{{ $js.RelPermalink }}">{{ $js.RelPermalink }}</a></td>
-</tr>

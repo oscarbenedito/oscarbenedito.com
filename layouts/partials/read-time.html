@@ -1,2 +1,0 @@
-{{ $readTime := math.Round (div (countwords .Content) 140.0) -}}
-{{ if le $readTime 1.0 }}1 minute{{ else }}{{ $readTime }} minutes{{ end -}}

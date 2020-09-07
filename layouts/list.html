@@ -1,0 +1,16 @@
+<main class="list h-feed">
+  <header>
+    {{ intro }}
+  </header>
+
+  {{ content }}
+
+  {{ _if more_pages }}<div class="pagination">{{ _fi }}
+    {{ _if prev_url }}<a class="button" href="/{{ prev_url }}">&larr; Newer Posts</a>{{ _fi }}
+    {{ _if next_url }}<a class="button right" href="/{{ next_url }}">Older Posts &rarr;</a>{{ _fi }}
+  {{ _if more_pages }}</div>{{ _fi }}
+  <div class="p-author h-card" style="display: none;">
+    <a rel="me" class="p-name u-url" href="https://oscarbenedito.com">Oscar Benedito</a>
+    <img class="u-photo" src="/{{ _asset_img/favicon.min.svg }}"/>
+  </div>
+</main>

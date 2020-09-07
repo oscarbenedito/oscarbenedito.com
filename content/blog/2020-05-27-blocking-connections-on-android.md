@@ -1,11 +1,7 @@
----
-title: "Blocking connections on Android"
-slug: "blocking-connections-on-android"
-categories: [
-  "Privacy"
-]
-date: 2020-05-27T19:01:00+00:00
----
+<!-- title: Blocking connections on Android -->
+<!-- slug: blocking-connections-on-android -->
+<!-- categories: Privacy -->
+<!-- date: 2020-05-27T19:01:00Z -->
 
 I have been a user of [NetGuard][ng] for quite some time. It is a great Android
 app that lets you control which apps get Internet access and which don't. The

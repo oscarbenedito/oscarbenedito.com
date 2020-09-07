@@ -1,13 +1,8 @@
----
-title: "Your corner of the Internet"
-slug: "your-corner-of-the-internet"
-categories: [
-  "Decentralization",
-  "Personal domain"
-]
-lastmod: 2019-12-06
-date: 2019-12-15
----
+<!-- title: Your corner of the Internet -->
+<!-- slug: your-corner-of-the-internet -->
+<!-- categories: Decentralization, Personal domain -->
+<!-- lastmod: 2019-12-06T00:00:00Z -->
+<!-- date: 2019-12-15T00:00:00Z -->
 
 We tend to have online accounts across different social networks and services.
 We upload our projects in some sites, we post on different ones and we follow
@@ -76,7 +71,7 @@ dynamic ones.
 - **More secure**: since there isn't an app server, potential vulnerabilities
   are reduced drastically.
 - **Faster**: because the server doesn't need to do operations, it can respond
-  to requests faster, hence accelerating the loading time.\
+  to requests faster, hence accelerating the loading time.<br/>
   *That is a general claim, by using proper caching and using content delivery
   networks, speeds can change considerably. It also depends on the number of
   plugins installed (or other operations made by the server).*

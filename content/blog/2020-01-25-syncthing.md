@@ -1,13 +1,7 @@
----
-title: "File synchronization software: Syncthing"
-slug: "syncthing"
-categories: [
-  "Decentralization",
-  "FOSS",
-  "Privacy"
-]
-date: 2020-01-25
----
+<!-- title: File synchronization software: Syncthing -->
+<!-- slug: syncthing -->
+<!-- categories: Decentralization, FOSS, Privacy -->
+<!-- date: 2020-01-25T00:00:00Z -->
 
 [Syncthing][s] is a file synchronization program. It allows you to sync files
 between computers over LAN or the Internet. It is a very simple program that

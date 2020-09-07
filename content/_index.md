@@ -1,6 +1,5 @@
----
-title: Oscar Benedito
----
+<!-- priority: 1.0 -->
+<!-- extraheader: <link rel="me" href="https://fosstodon.org/@ob"><link rel="me" href="https://github.com/oscarbenedito"><link rel="me" href="https://gitlab.com/oscarbenedito"><link rel="me" href="mailto:oscar@oscarbenedito.com"> -->
 
 Hello and welcome to my website! My name is Oscar Benedito and I am currently
 pursuing a double degree in Mathematics and Computer Engineering at the

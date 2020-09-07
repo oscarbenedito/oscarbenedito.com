@@ -1,0 +1,11 @@
+<entry>
+  <title>{{ title }}</title>
+  <link href="https://oscarbenedito.com/{{ url }}"/>
+  <id>tag:oscarbenedito.com,{{ year }}-{{ month }}-{{ day }}:/{{ url }}</id>
+  <author>
+    <name>Oscar Benedito</name>
+  </author>
+  <published>{{ date }}</published>
+  <updated>{{ lastmod }}</updated>
+  <content type="html">{{ c_escaped }}</content>
+</entry>

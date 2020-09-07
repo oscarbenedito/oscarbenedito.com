@@ -1,12 +1,8 @@
----
-title: "Documenting my server"
-slug: "documenting-server"
-categories: [
-  "Self-hosting"
-]
-date: 2020-01-17
-lastmod: 2020-03-01
----
+<!-- title: Documenting my server -->
+<!-- slug: documenting-server -->
+<!-- categories: Self-hosting -->
+<!-- date: 2020-01-17T00:00:00Z -->
+<!-- lastmod: 2020-03-01T01:00:00Z -->
 
 Not long ago I realized that I could get $50 of credit on Digital Ocean with my
 GitHub Student account, so I decided to try it. I transferred my website there,
