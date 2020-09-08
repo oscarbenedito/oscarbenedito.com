@@ -6,6 +6,7 @@ site:
 	python3 gensite.py
 
 server: site
+	git ls-files | entr make &
 	python3 -m http.server --bind localhost --directory _site
 
 blogroll:

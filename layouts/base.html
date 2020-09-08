@@ -26,5 +26,6 @@
       </div>
     </footer>{{ _if extrafooter }}
     {{ extrafooter }}{{ _fi }}
-  </body>
+  </body>{{ _if _asset_live.js }}
+  <script type="text/javascript" src="/{{ _asset_live.js }}"></script>{{ _fi }}
 </html>
