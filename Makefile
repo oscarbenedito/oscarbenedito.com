@@ -16,6 +16,7 @@ deploy:
 	git fetch origin master
 	git reset --hard origin/master
 	git verify-commit master
+	git submodule foreach 'git fetch origin master; git reset --hard $$sha1'
 	python3 gensite.py
 	rsync --perms --recursive --checksum --delete _site/ $(DST)
 
