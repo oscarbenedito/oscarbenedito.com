@@ -338,16 +338,28 @@ def main():
         for name in files:
             file = os.path.join(path, name)
             rfile = os.path.relpath(file, 'assets')
+            with open(file, 'r') as c:
+                content = c.read()
+
+            # minify css
+            if os.path.splitext(file)[1] == '.css':
+                content = re.sub('\s*/\*(?:.|\n)*?\*/\s*', '', content)
+                content = re.sub('\s+', ' ', content)
+                content = re.sub('\s*({|}|;|,)\s*', r'\1', content)
+                content = re.sub(':\s*', ':', content)
+                rfile = '{0}.min{1}'.format(*os.path.splitext(rfile))
+
             h = hashlib.sha256()
-            with open(file, 'rb') as c:
-                h.update(c.read())
+            h.update(content.encode('utf-8'))
             name, ext = os.path.splitext(rfile)
             dst = '{n}.{h}{e}'.format(n=name, h=h.hexdigest()[:8], e=ext)
+
             params['_asset_' + rfile] = dst
             basedir = os.path.dirname(os.path.join('_site', dst))
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
-            shutil.copy(file, os.path.join('_site', dst))
+            with open(os.path.join('_site', dst), 'w') as c:
+                c.write(content)
 
     # load layouts
     base_layout = fread('layouts/base.html')
