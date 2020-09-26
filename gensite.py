@@ -244,13 +244,13 @@ def make_pages(src, dst, layout, blog=False, **params):
     return items, categories
 
 
-def make_lists(posts, dst, list_layout, item_layout, **params):
+def make_lists(posts, dst, list_layout, item_layout, src=None, **params):
     """Generate HTML lists for a blog."""
     item_per_page = 5
     items = []
     count = 1
     page_dst = dst
-    text = fread('content/' + dst + '_index.md')
+    text = fread(src) if src else fread('content/' + dst + '_index.md')
     params['intro'] = markdown.markdown(text, extensions=['footnotes', 'fenced_code'])
     for i, post in enumerate(posts):
         item_params = dict(params, **post)
@@ -398,10 +398,11 @@ def main():
     # create blog categories
     for name, posts in categories.items():
         dst = 'blog/categories/' + urlize(name) + '/'
+        src = 'content/blog/categories/' + urlize(name) + '.md'
         lt = name + ' on Oscar\'s Blog'
         eh = '<link rel="alternate" type="application/atom+xml" title="' + lt + '" href="/' + dst + 'index.xml"/>'
-        make_lists(posts, dst, list_html, item_html, title=name, extraheader=eh,
-                   **params)
+        make_lists(posts, dst, list_html, item_html, src=src, title=name,
+                   extraheader=eh, **params)
         make_feed(posts, dst, feed_xml, item_xml, title=name, long_title=lt,
                   **params)
 
