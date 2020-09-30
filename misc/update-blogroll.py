@@ -33,12 +33,17 @@ for category in root[0]:
             })
         break
 
-ompl = '<?xml version="1.0" encoding="utf-8"?>\n<opml version="1.0">\n  <head>\n    <title>Oscar Benedito\'s Blogroll</title>\n  </head>\n  <body>\n    <outline text="Oscar Benedito\'s Blogroll">\n'
+ompl = '<?xml version="1.0" encoding="utf-8"?>\n<opml version="1.0">\n' \
+       '  <head>\n    <title>Oscar Benedito\'s Blogroll</title>\n  </head>\n' \
+       '  <body>\n    <outline text="Oscar Benedito\'s Blogroll">\n'
 md = '<!-- blogroll -->\n'
 
+ompl_item = '      <outline type="rss" text="{}" xmlUrl="{}" htmlUrl="{}"/>\n'
+md_item = '- [{}]({}) — [Feed]({})\n'
+
 for blog in sorted(blogs, key=lambda i: i['text'].lower()):
-    ompl += '      <outline type="rss" text="' + blog['text'] + '" xmlUrl="' + blog['feed'] + '" htmlUrl="' + blog['html'] + '"/>\n'
-    md += '- [' + blog['text'] + '](' + blog['html'] + ') — [Feed](' + blog['feed'] + ')\n'
+    ompl += ompl_item.format(blog['text'], blog['feed'], blog['html'])
+    md += md_item.format(blog['text'], blog['html'], blog['feed'])
 
 ompl += '    </outline>\n  </body>\n</opml>\n'
 md += '<!-- /blogroll -->'
@@ -49,7 +54,7 @@ with open('static/blogroll/blogroll.ompl', 'w') as f:
 with open('content/blogroll.md', 'r') as f:
     text = f.read()
 
-re.sub('<!-- blogroll -->.*<!-- /blogroll -->', md, text, flags=re.DOTALL)
+text = re.sub('<!-- blogroll -->.*<!-- /blogroll -->', md, text, flags=re.DOTALL)
 
 with open('content/blogroll.md', 'w') as f:
     f.write(text)
