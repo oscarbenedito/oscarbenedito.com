@@ -11,7 +11,19 @@ with `pip3 install markdown`).
 
 ## Other notes
 
-The font used for the logo is "Libre Baskerville" in bold.
+The font used for the logo is "Libre Baskerville" in bold. The `woff2` file used
+for the font only includes the needed letters for the logo ("BOacdeinorst") to
+keep the file size small (2.5 KiB). To create such file, you can use the
+following command:
+
+```sh
+pyftsubset LibreBaskerville-Bold.ttf \
+  --unicodes=U+004F,U+0073,U+0063,U+0061,U+0072,U+0042,U+0065,U+006E,U+0064,U+0069,U+0074,U+006F \
+  --output-file=<output-font-file>.woff2 --flavor=woff2
+```
+
+You might need to run `pip3 install fonttools brotli` to install the
+dependencies.
 
 ## License
 

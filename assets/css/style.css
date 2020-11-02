@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-/* variables {{{ */
+/* declarations {{{ */
 
 :root {
     --gap: 1.5rem;
@@ -53,7 +53,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     }
 }
 
-/* variables }}} */
+/* Only imports the letters needed for the logo ("BOacdeinorst") */
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-weight: 700;
+    src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(/fonts/LibreBaskerville-Bold.8b127675.woff2) format('woff2');
+    unicode-range: U+0042,U+004F,U+0061,U+0063,U+0064,U+0065,U+0069,U+006E,U+006F,U+0072,U+0073,U+0074;
+}
+
+/* declarations }}} */
 
 /* defaults {{{ */
 
@@ -165,13 +173,17 @@ header#page-header .content {
 }
 
 header#page-header .content .logo {
-    height: 1.6em;
-    fill: var(--primary-logo);
-    stroke: none;
+    font-size: 1.9em;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+    color: var(--primary-logo);
+    line-height: 1;
+    text-decoration: none;
 }
 
 header#page-header .content .logo:hover {
-    fill: var(--primary-dark);
+    color: var(--primary-dark);
+    text-decoration: none;
 }
 
 header#page-header .content nav {
