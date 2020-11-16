@@ -2,6 +2,7 @@
 <!-- slug: give-back-to-foss -->
 <!-- categories: FOSS, Miscellany -->
 <!-- date: 2020-11-11T18:25:00Z -->
+<!-- lastmod: 2020-11-16T23:22:00Z -->
 
 Most people make use of free and open source software—or services based on
 it—that is made available to the public for free. And I mean free, not services
@@ -13,7 +14,7 @@ still use Wikipedia (or other sites based on the same engine), the VLC media
 player, or others.
 
 These programs are great, not only because they are universally affordable (have
-no cost!), but because they are focussed on the user. Their goal is to serve the
+no cost!), but because they are focused on the user. Their goal is to serve the
 user, not the developer, which often involves software that is more private,
 useful and easy to adapt to your needs. Software that doesn't break after a
 couple of years, and that keeps working even on older devices.
@@ -32,12 +33,12 @@ current projects grow. How can we help? Glad you asked!
   thought "this is very useful, I should donate", I could press a button to give
   2 euros, I would probably do it. The problem is that there is no such
   convenient button. My most successful strategy has been thinking about a
-  handful of projects I wanted to donate, and then sit down on my computer and
-  donate a bigger amount to each one of them. This way I only have to do it once
-  every so many months, instead of a little donation every two weeks.
+  handful of projects I wanted to donate to, and then sit down on my computer
+  and donate a bigger amount to each one of them. This way I only have to do it
+  once every so many months, instead of a little donation every two weeks.
 - **Report bugs**: Instead of complaining that something doesn't work, take some
   time to make sure it's something about the program (not just you messing up)
-  and, if it is, go to the project's bug tracker and either apport more details
+  and, if it is, go to the project's bug tracker and either provide more details
   to an already open issue or file a new one if you can't find it there. This is
   can be more time-consuming depending on the bug, but it's free (except for the
   time you pay, of course :)).
