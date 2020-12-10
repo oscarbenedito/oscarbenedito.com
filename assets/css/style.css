@@ -124,11 +124,10 @@ ul {
 
 a {
     color: var(--primary-dark);
-    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 table {
@@ -192,6 +191,11 @@ header#page-header .content nav {
 
 header#page-header .content nav a {
     color: var(--secondary-text);
+    text-decoration: none;
+}
+
+header#page-header .content nav a:hover {
+    text-decoration: underline;
 }
 
 /* header }}} */
@@ -216,6 +220,11 @@ footer#page-footer .content nav {
 
 footer#page-footer .content nav a {
     color: var(--secondary-text);
+    text-decoration: none;
+}
+
+footer#page-footer .content nav a:hover {
+    text-decoration: underline;
 }
 
 /* footer }}} */
@@ -244,6 +253,7 @@ main {
     border: 1px solid transparent;
     border-color: var(--button-color);
     border-width: 1px;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -272,6 +282,11 @@ article.summary {
 
 article.summary h2 a {
     color: var(--text-color);
+    text-decoration: none;
+}
+
+article.summary h2 a:hover {
+    text-decoration: underline;
 }
 
 article.summary p {
@@ -288,6 +303,11 @@ article.summary .metadata {
 
 article.summary .metadata a {
     color: var(--secondary-text);
+    text-decoration: none;
+}
+
+article.summary .metadata a:hover {
+    text-decoration: underline;
 }
 
 article.summary:not(:first-of-type) {
@@ -308,6 +328,11 @@ article .metadata {
 
 article .metadata a {
     color: var(--secondary-text);
+    text-decoration: none;
+}
+
+article .metadata a:hover {
+    text-decoration: underline;
 }
 
 article .content h1 {
