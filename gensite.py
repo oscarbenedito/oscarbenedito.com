@@ -251,7 +251,10 @@ def make_lists(posts, dst, list_layout, item_layout, src=None, **params):
     count = 1
     page_dst = dst
     text = fread(src) if src else fread('content/' + dst + '_index.md')
-    params['intro'] = markdown.markdown(text, extensions=['footnotes', 'fenced_code'])
+    end = 0
+    for key, val, end in read_headers(text):
+        params[key] = val
+    params['intro'] = markdown.markdown(text[end:], extensions=['footnotes', 'fenced_code'])
     for i, post in enumerate(posts):
         item_params = dict(params, **post)
         item_params['summary'] = truncate(post['content'])
@@ -386,8 +389,7 @@ def main():
                                         'blog/{{ year }}/{{ month }}/{{ slug }}/',
                                         post_layout, True, **params)
     # create HTML list pages
-    make_lists(blog_posts, 'blog/', list_html, item_html, title='Personal blog',
-               **params)
+    make_lists(blog_posts, 'blog/', list_html, item_html, **params)
     add_to_sitemap('blog/', lastmod=blog_posts[0]['lastmod'], priority='1.0')
     # create Atom feeds
     make_feed(blog_posts, 'blog/', feed_xml, item_xml, title='Personal blog',
