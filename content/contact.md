@@ -1,4 +1,5 @@
 <!-- title: Contact me -->
+<!-- description: Contact information. -->
 
 You can contact me sending an email to [oscar@oscarbenedito.com][email].
 

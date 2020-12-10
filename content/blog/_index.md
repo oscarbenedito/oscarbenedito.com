@@ -1,4 +1,5 @@
 <!-- title: Personal blog -->
+<!-- description: My personal blog. Subscribe to my web feed if you want to keep up to date! -->
 
 # Personal blog
 

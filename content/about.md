@@ -1,4 +1,5 @@
 <!-- title: About this site -->
+<!-- description: Information about the site: privacy, license and source code. -->
 
 ## Privacy
 

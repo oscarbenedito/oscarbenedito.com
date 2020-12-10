@@ -1,5 +1,6 @@
 <!-- priority: 1.0 -->
 <!-- extraheader: <link rel="me" href="https://fosstodon.org/@ob"/><link rel="me" href="https://github.com/oscarbenedito"/><link rel="me" href="https://gitlab.com/oscarbenedito"/><link rel="me" href="mailto:oscar@oscarbenedito.com"/><link rel="pgpkey" href="/pgp/pubkey.asc"/> -->
+<!-- description: Hello and welcome to my website! I'm Oscar Benedito and this is my corner of the Internet. -->
 
 Hello and welcome to my website! My name is Oscar Benedito and I am currently
 pursuing a double degree in Mathematics and Computer Engineering at the
