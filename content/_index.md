@@ -1,5 +1,5 @@
 <!-- priority: 1.0 -->
-<!-- extraheader: <link rel="me" href="https://fosstodon.org/@ob"/><link rel="me" href="https://github.com/oscarbenedito"/><link rel="me" href="https://gitlab.com/oscarbenedito"/><link rel="me" href="mailto:oscar@oscarbenedito.com"/><link rel="pgpkey" href="/pgp/pubkey.asc"/> -->
+<!-- extraheader: <link rel="me" href="https://fosstodon.org/@ob"/><link rel="me" href="https://sr.ht/~ob"/><link rel="me" href="https://github.com/oscarbenedito"/><link rel="me" href="https://gitlab.com/oscarbenedito"/><link rel="me" href="mailto:oscar@oscarbenedito.com"/><link rel="pgpkey" href="/pgp/pubkey.asc"/> -->
 <!-- description: Hello and welcome to my website! I'm Oscar Benedito and this is my corner of the Internet. -->
 
 Hello and welcome to my website! My name is Oscar Benedito and I am currently
@@ -11,7 +11,7 @@ depending on the season and year) and I juggle.
 
 I encourage you to check out some of my content: [my blog][blog], where I talk
 about privacy, software and other related topics, or [my Git repositories][git]
-(which are mirrored on [GitLab][gl] and [GitHub][gh]). If you want to read more
+(which are mirrored on [sr.ht][sh] and [GitHub][gh]). If you want to read more
 about my academic/professional life, check out [my LinkedIn profile][li].
 
 ## Contact me
@@ -23,7 +23,7 @@ Feel free to contact me! Details can be found on my [contact page][c].
 [upc]: <https://www.upc.edu/en> "Universitat Politècnica de Catalunya (UPC)"
 [blog]: </blog/> "Personal blog"
 [git]: <https://git.oscarbenedito.com> "Personal Git server"
-[gl]: <https://gitlab.com/oscarbenedito> "GitLab profile"
+[sh]: <https://git.sr.ht/~ob> "SourceHut Git repositories"
 [gh]: <https://github.com/oscarbenedito> "GitHub profile"
 [li]: <https://www.linkedin.com/in/oscarbenedito> "LinkedIn profile"
 [c]: </contact/> "Contact page"
