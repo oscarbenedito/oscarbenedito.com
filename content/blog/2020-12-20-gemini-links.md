@@ -1,0 +1,91 @@
+<!-- title: Gemini's different approach to links -->
+<!-- slug: gemini-links -->
+<!-- categories: Miscellany -->
+<!-- date: 2020-12-20T20:01:00Z -->
+
+I have lately been reading many pages on [Gemini][gmi]. There has been a lot of
+interest around it on the blogs/microblogs I follow, which has lead to me check
+it out as well. The project is very interesting, and if you have ever been
+interested in how much bandwidth the current web wastes, the lack of privacy
+there is when we navigate it, the constant security issues that come up with
+browsers, etc., I recommend you to take a look at the project and read the FAQs.
+This post, however, is not about the Gemini protocol, but about how the
+`text/gemini` media type handles links in comparison to HTML.
+
+`text/gemini` is a very lightweight markup format. It only allows text, headers,
+sub-headers, sub-sub-headers, preformatted text, unordered lists, quotes, and
+links. As you can see, it has a (small) subset of the functionality of other
+hypertext formats such as HTML, Markdown or org-mode. On top of that, links have
+to be on their own line, and you can optionally give them a title. If I wanted
+to link to the Gemini homepage as I did in the last paragraph using
+`text/gemini`, it would have to be in its own line:
+
+- [Project Gemini][gmi]
+
+That sounds very inconvenient, right? Why not just put the link inside the
+paragraph like in HTML? I have found this way of linking a lot more pleasant
+when reading articles, and that's the reason for this post.
+
+When links are in the middle of text, sometimes you click on them while
+reading—maybe even before you've finished reading the sentence! Even if you
+don't, they are distracting, you will probably have to make a mental note: read
+the link once done with the paragraph, or you'll have to think: is this link
+worth it? To decide whether to do the mental note in the first place. If you
+don't do this, then you probably rescan the whole paragraph for links you have
+ignored (or just ignore links altogether). By having the links at the end of the
+paragraph, you won't get distracted in the middle of your reading, and you won't
+have to rescan for ignored links.
+
+Aside from that, HTML links don't take up any space, they merely decorate a word
+that was already there, while in `text/gemini` they take up a line of text,
+which means authors will probably think twice before linking to 5 different
+websites that don't provide any useful knowledge to the reader. But even if that
+doesn't stop them, now links have titles, which means the visitor knows what the
+link is about before clicking it. That is a nice feature because it makes it
+easy to ignore anything you are not interested in. If the author doesn't specify
+the title, the URL will be shown in its place, and that already gives a lot of
+information. I know that in most browsers, you can hover over a link to see the
+URL, but you have to reach for the mouse to do it (and it is even harder to see
+the URL when on a phone or tablet).
+
+*But the words with HTML links already tell what the link is about!*
+
+Not always. For example, let's look at the start of the post, where the word
+Gemini links somewhere. Three options of possible links come to mind: I'm
+linking to the homepage of the project, the Wikipedia page (or some other wiki),
+or a previous post where I talk about how I've been using Gemini lately. Two
+types of readers also come to mind: someone that doesn't know what Gemini is
+(interested to click if it's one of the first two options) or someone that knows
+about Gemini, but is curious about others' experience with it (interested only
+in the last link). So it's not only about whether the link is useful or not but
+also about the particular visitor. However, if at the end of the paragraph there
+was a line with one of the following texts, it is obvious for the reader what
+kind of content the link is pointing to.
+
+- Project Gemini
+- Gemini — Wikipedia
+- Why I started using Gemini — Oscar Benedito
+
+Two notes: this way of writing titles is the one I follow for HTML's `a` tags'
+`title` attribute, but other authors will do them differently. Also, the correct
+way to link to a blog post would be to link using the whole sentence ("I have
+lately been reading many pages on Gemini"), but not everyone does it.
+
+## Final thoughts
+
+When first reading about links in `text/gemini` I thought they were too
+limiting, but they turned out to be quite nice. Don't get me wrong, links inside
+text can be very useful, especially considering that the web is not only made of
+large articles but, for this particular type of webpage, I find Gemini's
+approach better. This also made me realize how distracting links can be, and I
+am now trying to reduce the amounts of links to a minimum, as well as footnotes,
+to reduce the distractions caused by them. For now, I will still use links the
+"HTML way" because this blog is hosted on the world wide web, but I might change
+my mind in the future.
+
+On another note, if Gemini sounds interesting, check out the
+[specification][spec], it is easy to read and the approach is very interesting.
+
+
+[gmi]: <https://gemini.circumlunar.space> "Project Gemini"
+[spec]: <https://gemini.circumlunar.space/docs/specification.html> "Gemini protocol specification"
