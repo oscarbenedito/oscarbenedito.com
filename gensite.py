@@ -104,7 +104,7 @@ def add_to_sitemap(path, lastmod=None, freq=None, priority=None):
 
 def set_redirect(src, dst):
     """Create HTML redirect."""
-    fwrite(src, '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=\'/' + dst + '\'"/><link rel="canonical" href="/' + dst + '"/><meta name="robots" content="noindex"></head><body><p>This page has been moved to <a href="/' + dst + '">https://oscarbenedito.com/' + dst + '</a>.</p></body></html>')
+    fwrite(src, '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/' + dst + '"/><link rel="canonical" href="/' + dst + '"/><meta name="robots" content="noindex"></head><body><p>This page has been moved to <a href="/' + dst + '">https://oscarbenedito.com/' + dst + '</a>.</p></body></html>')
     log('I', 'Info: redirect /{} => /{}', src, dst)
 
 
