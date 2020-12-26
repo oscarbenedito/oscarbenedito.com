@@ -21,7 +21,8 @@ I am hosting local copies of the licenses: [GPLv3][gpl-local],
 
 ## Source code
 
-You can find the site's source code on [this repository][repo].
+This site is genarated using [gensite.py][], a small Python script based on
+[makesite.py][]. You can find the site's source code on [this repository][repo].
 
 You can find all the JavaScript run on the site along with the licenses and
 source code in the [JavaScript Web Labels page][jswl].
@@ -32,5 +33,7 @@ source code in the [JavaScript Web Labels page][jswl].
 [cc-by]: <https://creativecommons.org/licenses/by/4.0/> "Creative Commons Attribution 4.0 International License"
 [gpl-local]: </licenses/gpl-3.0.txt> "GNU General Public License version 3"
 [cc-by-local]: </licenses/cc-by-4.0.txt> "Creative Commons Attribution 4.0 International License"
+[gensite.py]: <https://git.oscarbenedito.com/oscarbenedito.com/file/gensite.py.html> "gensite.py — git.oscarbenedito.com"
+[makesite.py]: <https://github.com/sunainapai/makesite> "makesite.py — GitHub"
 [repo]: <https://git.oscarbenedito.com/oscarbenedito.com/> "Source code"
 [jswl]: </jsweblabels/> "JavaScript Web Labels"
