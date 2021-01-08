@@ -291,7 +291,7 @@ def make_feed(posts, dst, list_layout, item_layout, **params):
         if (i == max):
             break
         item_params = dict(params, **post)
-        item_params['c_escaped'] = post['content'].replace('>', '&gt;').replace('<', '&lt;')
+        item_params['c_escaped'] = post['content'].replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;')
         item = render(item_layout, **item_params)
         items.append(item)
 
