@@ -5,20 +5,22 @@
   </head>
   <body>
     <outline text="Oscar Benedito's Blogroll">
-      <outline type="rss" text="Brendan Abolivier" xmlUrl="https://brendan.abolivier.bzh/index.xml" htmlUrl="https://brendan.abolivier.bzh"/>
-      <outline type="rss" text="Codesections" xmlUrl="https://www.codesections.com/rss.xml" htmlUrl="https://www.codesections.com/blog/"/>
-      <outline type="rss" text="David Prandzioch" xmlUrl="https://www.davd.io/index.xml" htmlUrl="https://www.davd.io"/>
-      <outline type="rss" text="Desmond Rivet" xmlUrl="https://desmondrivet.com/feeds/blog.rss" htmlUrl="https://desmondrivet.com/blog/"/>
-      <outline type="rss" text="Emanuel Pina" xmlUrl="https://emanuelpina.pt/index.xml" htmlUrl="https://emanuelpina.pt"/>
-      <outline type="rss" text="Henrique Dias" xmlUrl="https://hacdias.com/articles/feed.xml" htmlUrl="https://hacdias.com/articles/"/>
-      <outline type="rss" text="Jake Bauer" xmlUrl="https://www.paritybit.ca/feeds/sitewide-feed.xml" htmlUrl="https://www.paritybit.ca/blog"/>
-      <outline type="rss" text="Jan-Lukas Else" xmlUrl="https://jlelse.blog/index.xml" htmlUrl="https://jlelse.blog"/>
-      <outline type="rss" text="Kev Quirk" xmlUrl="https://kevq.uk/feed/" htmlUrl="https://kevq.uk"/>
-      <outline type="rss" text="mcol" xmlUrl="https://mcol.xyz/rss.xml" htmlUrl="https://mcol.xyz"/>
-      <outline type="rss" text="Mike Babb" xmlUrl="https://mikebabb.com/feed.xml" htmlUrl="https://mikebabb.com/blog/"/>
-      <outline type="rss" text="Mike Stone" xmlUrl="https://mikestone.me/feed/" htmlUrl="https://mikestone.me"/>
-      <outline type="rss" text="PapaTutuWawa" xmlUrl="https://blog.polynom.me/atom.xml" htmlUrl="https://blog.polynom.me"/>
-      <outline type="rss" text="Sheogorath" xmlUrl="https://shivering-isles.com/feed.xml" htmlUrl="https://shivering-isles.com/#blog"/>
+      <outline type="rss" text="Anirudh Oppiliappan (icyphox)" xmlUrl="https://icyphox.sh/blog/feed.xml" htmlUrl="https://icyphox.sh" />
+      <outline type="rss" text="Brendan Abolivier" xmlUrl="https://brendan.abolivier.bzh/index.xml" htmlUrl="https://brendan.abolivier.bzh" />
+      <outline type="rss" text="Codesections" xmlUrl="https://www.codesections.com/rss.xml" htmlUrl="https://www.codesections.com/blog/" />
+      <outline type="rss" text="Daniel Jakots" xmlUrl="https://chown.me/blog/feeds/atom.xml" htmlUrl="https://chown.me" />
+      <outline type="rss" text="David Prandzioch" xmlUrl="https://www.davd.io/index.xml" htmlUrl="https://www.davd.io" />
+      <outline type="rss" text="Desmond Rivet" xmlUrl="https://desmondrivet.com/feeds/blog.rss" htmlUrl="https://desmondrivet.com/blog/" />
+      <outline type="rss" text="Emanuel Pina" xmlUrl="https://emanuelpina.pt/index.xml" htmlUrl="https://emanuelpina.pt" />
+      <outline type="rss" text="Henrique Dias" xmlUrl="https://hacdias.com/articles/feed.xml" htmlUrl="https://hacdias.com/articles/" />
+      <outline type="rss" text="Jake Bauer" xmlUrl="https://www.paritybit.ca/feeds/sitewide-feed.xml" htmlUrl="https://www.paritybit.ca/blog" />
+      <outline type="rss" text="Jan-Lukas Else" xmlUrl="https://jlelse.blog/.rss" htmlUrl="https://jlelse.blog" />
+      <outline type="rss" text="Marc" xmlUrl="https://atthis.link/rss.xml" htmlUrl="https://atthis.link" />
+      <outline type="rss" text="mcol" xmlUrl="https://mcol.xyz/rss.xml" htmlUrl="https://mcol.xyz" />
+      <outline type="rss" text="Mike Babb" xmlUrl="https://mikebabb.com/feed.xml" htmlUrl="https://mikebabb.com/blog/" />
+      <outline type="rss" text="Mike Stone" xmlUrl="https://mikestone.me/feed.xml" htmlUrl="https://mikestone.me" />
+      <outline type="rss" text="PapaTutuWawa" xmlUrl="https://blog.polynom.me/atom.xml" htmlUrl="https://blog.polynom.me" />
+      <outline type="rss" text="Sheogorath" xmlUrl="https://shivering-isles.com/feed.xml" htmlUrl="https://shivering-isles.com/#blog" />
     </outline>
   </body>
 </opml>

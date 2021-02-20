@@ -38,7 +38,7 @@ ompl = '<?xml version="1.0" encoding="utf-8"?>\n<opml version="1.0">\n' \
        '  <body>\n    <outline text="Oscar Benedito\'s Blogroll">\n'
 md = '<!-- blogroll -->\n'
 
-ompl_item = '      <outline type="rss" text="{}" xmlUrl="{}" htmlUrl="{}"/>\n'
+ompl_item = '      <outline type="rss" text="{}" xmlUrl="{}" htmlUrl="{}" />\n'
 md_item = '- [{}]({}) — [Feed]({})\n'
 
 for blog in sorted(blogs, key=lambda i: i['text'].lower()):
