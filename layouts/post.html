@@ -2,7 +2,7 @@
   <article class="h-entry">
     <header>
       <h1 class="p-name">{{ title }}</h1>
-      <div class="metadata">{{ categories_html }} &middot; <a class="u-url" href="/{{ url }}"><time class="dt-published" datetime="{{ date }}">{{ date_nice }}</time></a>{{ _if modified }} (last modified on <time class="dt-updated" datetime="{{ lastmod }}">{{ lastmod_nice }}</time>){{ _fi }}
+      <div class="metadata">{{ categories_html }} &middot; <time class="dt-published" datetime="{{ date }}">{{ date_nice }}</time>{{ _if modified }} (last modified on <time class="dt-updated" datetime="{{ lastmod }}">{{ lastmod_nice }}</time>){{ _fi }}
       </div>
     </header>
     <div class="content e-content">{{ content }}</div>
@@ -10,6 +10,7 @@
       <a rel="me" class="p-name u-url" href="https://oscarbenedito.com">Oscar Benedito</a>
       <img class="u-photo" src="/{{ _asset_img/favicon.min.svg }}" alt=""/>
     </div>
+    <a class="u-url" href="/{{ url }}" style="display: none;"></a>
   </article>
 
   {{ _if more_pages }}<nav class="pagination">{{ _fi }}
