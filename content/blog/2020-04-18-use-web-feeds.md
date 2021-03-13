@@ -141,5 +141,5 @@ your full content on your web feed, read it!
 [silo]: <https://indieweb.org/silo> "Silo — IndieWeb Wiki"
 [tracking-pixel]: <https://en.wikipedia.org/wiki/Web_beacon> "Web beacon — Wikipedia"
 [nitter]: <https://github.com/zedeus/nitter> "Nitter — GitHub"
-[bibliogram]: <https://sr.ht/~cadence/bibliogram/> "Bibliogram — sr.ht"
+[bibliogram]: <https://sr.ht/~cadence/bibliogram/> "Bibliogram — Sourcehut"
 [kevq-post]: <https://kevq.uk/why-having-a-full-post-rss-feed-is-a-good-idea/> "Why Having A Full Post RSS Feed Is A Good Idea — Kev Quirk"

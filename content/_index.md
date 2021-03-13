@@ -11,8 +11,8 @@ depending on the season and year) and I juggle.
 
 I encourage you to check out some of my content: [my blog][blog], where I talk
 about privacy, software and other related topics, or [my Git repositories][git]
-(which are mirrored on [sr.ht][sh] and [GitHub][gh]). If you want to read more
-about my academic/professional life, check out [my LinkedIn profile][li].
+(which are mirrored on [Sourcehut][sh] and [GitHub][gh]). If you want to read
+more about my academic/professional life, check out [my LinkedIn profile][li].
 
 ## Contact me
 
@@ -23,7 +23,7 @@ Feel free to contact me! Details can be found on my [contact page][c].
 [upc]: <https://www.upc.edu/en> "Universitat Politècnica de Catalunya (UPC)"
 [blog]: </blog/> "Personal blog"
 [git]: <https://git.oscarbenedito.com> "Personal Git server"
-[sh]: <https://git.sr.ht/~ob> "SourceHut Git repositories"
+[sh]: <https://git.sr.ht/~ob> "Sourcehut Git repositories"
 [gh]: <https://github.com/oscarbenedito> "GitHub profile"
 [li]: <https://www.linkedin.com/in/oscarbenedito> "LinkedIn profile"
 [c]: </contact/> "Contact page"
