@@ -2,7 +2,7 @@
 <!-- slug: sharing-a-secret -->
 <!-- categories: Cryptography -->
 <!-- date: 2020-02-23T00:00:00Z -->
-<!-- extrafooter: <script id="MathJax-script" async src="/js/mathjax-3.1.0/tex-chtml.js"></script> -->
+<!-- extrafooter: <a href="/jsweblabels/" rel="jslicense" style="display: none;"></a><script id="MathJax-script" async src="/js/mathjax-3.1.0/tex-chtml.js"></script> -->
 
 Making a backup of a secret can be tricky. For instance: I have a lot of
 passwords stored in an encrypted file, which I can edit through my password
