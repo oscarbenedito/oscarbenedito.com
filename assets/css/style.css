@@ -186,17 +186,9 @@ header#page-header .content .logo:hover {
     text-decoration: none;
 }
 
-header#page-header .content nav {
-    color: var(--secondary-text);
-}
-
+header#page-header .content nav,
 header#page-header .content nav a {
     color: var(--secondary-text);
-    text-decoration: none;
-}
-
-header#page-header .content nav a:hover {
-    text-decoration: underline;
 }
 
 /* header }}} */
@@ -213,19 +205,11 @@ footer#page-footer .content {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-}
-
-footer#page-footer .content nav {
     color: var(--secondary-text);
 }
 
-footer#page-footer .content nav a {
+footer#page-footer .content a {
     color: var(--secondary-text);
-    text-decoration: none;
-}
-
-footer#page-footer .content nav a:hover {
-    text-decoration: underline;
 }
 
 /* footer }}} */
@@ -298,17 +282,9 @@ article.summary header {
     margin-bottom: 1rem;
 }
 
-article.summary .metadata {
-    color: var(--secondary-text);
-}
-
+article.summary .metadata,
 article.summary .metadata a {
     color: var(--secondary-text);
-    text-decoration: none;
-}
-
-article.summary .metadata a:hover {
-    text-decoration: underline;
 }
 
 article.summary:not(:first-of-type) {
@@ -323,17 +299,9 @@ article header {
     margin-bottom: var(--content-gap);
 }
 
-article .metadata {
-    color: var(--secondary-text);
-}
-
+article .metadata,
 article .metadata a {
     color: var(--secondary-text);
-    text-decoration: none;
-}
-
-article .metadata a:hover {
-    text-decoration: underline;
 }
 
 article .content h1 {
