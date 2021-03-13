@@ -26,9 +26,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     --text-strong: hsl(0, 0%, 10%);
     --secondary-text: hsl(0, 0%, 44%);
     --primary-logo: #6dba6a;
-    --primary-active: #6dba6a;
-    --primary-dark: #50914a;
-    --primary-invert: #fff;
+    --primary-text: #50914a;
     --hr-color: hsl(0, 0%, 94%);
     --hr-dark: hsl(0, 0%, 88%);
     --button-color: hsl(0, 0%, 74%);
@@ -42,9 +40,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         --text-strong: hsl(0, 0%, 80%);
         --secondary-text: hsl(0, 0%, 55%);
         --primary-logo: #4876a1;
-        --primary-active: #1b2c3f;
-        --primary-dark: #4d80b3;
-        --primary-invert: hsl(0, 0%, 80%);
+        --primary-text: #4d80b3;
         --hr-color: hsl(0, 0%, 20%);
         --hr-dark: hsl(0, 0%, 20%);
         --button-color: hsl(0, 0%, 70%);
@@ -124,7 +120,7 @@ ul {
 }
 
 a {
-    color: var(--primary-dark);
+    color: var(--primary-text);
 }
 
 a:hover {
@@ -182,7 +178,7 @@ header#page-header .content .logo {
 }
 
 header#page-header .content .logo:hover {
-    color: var(--primary-dark);
+    color: var(--primary-text);
     text-decoration: none;
 }
 
