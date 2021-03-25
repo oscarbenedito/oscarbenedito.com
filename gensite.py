@@ -85,11 +85,6 @@ def log(type, msg, *args):
     #     sys.stderr.write('Info: ' + msg.format(*args) + '\n')
 
 
-def truncate(text, words=50):
-    """Remove tags and truncate text to the specified number of words."""
-    return ' '.join(re.sub('(?s)<.*?>', '', text).split()[:words]) + '...'
-
-
 def urlize(name):
     """Convert string tu URL."""
     return name.lower().replace(' ', '-')
@@ -109,7 +104,12 @@ def add_to_sitemap(path, lastmod=None, freq=None, priority=None):
 
 def set_redirect(src, dst):
     """Create HTML redirect."""
-    fwrite(src, '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/' + dst + '"/><link rel="canonical" href="/' + dst + '"/><meta name="robots" content="noindex"></head><body><p>This page has been moved to <a href="/' + dst + '">https://oscarbenedito.com/' + dst + '</a>.</p></body></html>')
+    fwrite(src, '<!DOCTYPE html><html><head><meta charset="utf-8">'
+                '<meta http-equiv="refresh" content="0; url=/{}"/>'
+                '<link rel="canonical" href="/{}"/><meta name="robots" content="noindex">'
+                '</head><body><p>This page has been moved to '
+                '<a href="/{}">https://oscarbenedito.com/{}</a>.</p>'
+                '</body></html>'.format(dst, dst, dst, dst))
     log('I', 'redirect /{} => /{}', src, dst)
 
 
@@ -204,32 +204,31 @@ def make_pages(src, dst, layout, blog=False, **params):
             rendered_content = render(page_params['content'], **page_params)
             page_params['content'] = rendered_content
 
-        page_dst = render(dst, **page_params)
-
-        if 'url' in page_params:
-            page_dst = page_params['url']
-        else:
-            page_params.update({'url': page_dst})
+        if 'url' not in page_params:
+            page_params['url'] = render(dst, **page_params)
+        else:   # can be deleted, just to warn since I have never used it
+            log('W', 'parameter \'url\' set in {}', src_path)
 
         if blog:
-            page_params.update({ 'src_path': src_path, })
+            page_params['src_path'] = src_path
             items.append(page_params)
         else:
-            fwrite(page_dst, render(layout, **page_params))
+            fwrite(page_params['url'], render(layout, **page_params))
             pri = page_params['priority'] if 'priority' in page_params else None
-            add_to_sitemap(page_dst, lastmod=page_params['lastmod'], priority=pri)
-            log('I', 'page {} => /{}', src_path, page_dst)
+            add_to_sitemap(page_params['url'], lastmod=page_params['lastmod'], priority=pri)
+            log('I', 'page {} => /{}', src_path, page_params['url'])
 
+    # the following is only executed if blog == True, otherwise items is empty
     items.sort(key=lambda x: x['date'], reverse=True)
     for i, item in enumerate(items):
         if i != 0:
             item['next_url'] = items[i-1]['url']
             item['next_title'] = items[i-1]['title']
-            item['more_pages'] = '1'
+            item['multiple_pages'] = '1'
         if i < len(items)-1:
             item['prev_url'] = items[i+1]['url']
             item['prev_title'] = items[i+1]['title']
-            item['more_pages'] = '1'
+            item['multiple_pages'] = '1'
 
         for category in item['categories']:
             if category not in categories:
@@ -258,10 +257,13 @@ def make_lists(posts, dst, list_layout, item_layout, src=None, **params):
     params['intro'] = markdown.markdown(text[end:], extensions=['footnotes', 'fenced_code'])
     for i, post in enumerate(posts):
         item_params = dict(params, **post)
-        item_params['summary'] = truncate(post['content'])
+
+        # remove tags and truncate at 50 words
+        item_params['summary'] = ' '.join(re.sub('(?s)<.*?>', '', post['content']).split()[:50]) + '...'
+
         items.append(render(item_layout, **item_params))
         if i % item_per_page == item_per_page-1 and len(posts)-1 > i:
-            params['more_pages'] = '1'
+            params['multiple_pages'] = '1'
             params['content'] = ''.join(items)
             params['next_url'] = dst + 'page/' + str(count+1) + '/'
             if count != 1:
@@ -304,18 +306,21 @@ def make_feed(posts, dst, list_layout, item_layout, **params):
 
 def make_archive(posts, categories, dst, layout, **params):
     year = 0
-    params['content'] = '<h2>Posts (' + str(len(posts)) + ')</h2>\n'
+    params['content'] = '<h2>Posts ({})</h2>\n'.format(len(posts))
     for post in posts:
         if post['year'] != year:
-            params['content'] += ('</ul>\n' if year != 0 else '') + '<h3>' + post['year'] + '</h3>\n<ul>\n'
+            params['content'] += '</ul>\n' if year != 0 else ''
+            params['content'] += '<h3>{}</h3>\n<ul>\n'.format(post['year'])
             year = post['year']
-        params['content'] += '<li><a href="/' + post['url'] + '">' + post['title'] + '</a> (' + post['date_nice'][:-6] + ')</li>\n'
+        params['content'] += '<li><a href="/{}">{}</a> ({})</li>\n' \
+                             ''.format(post['url'], post['title'], post['date_nice'][:-6])
     params['content'] += '</ul>\n'
 
-    params['content'] += '<h2>Categories (' + str(len(categories)) + ')</h2>\n<ul>\n'
+    params['content'] += '<h2>Categories ({})</h2>\n<ul>\n'.format(len(categories))
     for key in sorted(categories):
         val = categories[key]
-        params['content'] += '<li><a href="/' + dst + 'categories/' + urlize(key) + '/">' + key + '</a> (' + str(len(val)) + (' entry' if len(val) == 1 else ' entries') + ')</li>\n'
+        params['content'] += '<li><a href="/{}categories/{}/">{}</a> ({} {})</li>\n' \
+                             ''.format(dst, urlize(key), key, len(val), 'entry' if len(val) == 1 else 'entries')
     params['content'] += '</ul>\n'
 
     page_dst = dst + 'archive/'
@@ -335,7 +340,8 @@ def main():
 
     # initialize sitemap
     global sitemap
-    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n' \
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 
     # copy assets adding part of their sha256 value to the filename
     for path, _, files in os.walk('assets'):
@@ -366,47 +372,41 @@ def main():
                 c.write(content)
 
     # load layouts
-    base_layout = fread('layouts/base.html')
-    page_layout = fread('layouts/page.html')
-    post_layout = fread('layouts/post.html')
-    list_html = fread('layouts/list.html')
+    l_base = fread('layouts/base.html')
+    l_page = render(l_base, pre=True, content=fread('layouts/page.html'))
+    l_post = render(l_base, pre=True, content=fread('layouts/post.html'))
+    l_list = render(l_base, pre=True, content=fread('layouts/list.html'))
+    l_feed = fread('layouts/feed.xml')
     item_html = fread('layouts/item.html')
-    feed_xml = fread('layouts/feed.xml')
     item_xml = fread('layouts/item.xml')
-    layout_404 = fread('layouts/404.html')
-
-    # combine layouts to form final layouts
-    page_layout = render(base_layout, pre=True, content=page_layout)
-    post_layout = render(base_layout, pre=True, content=post_layout)
-    list_html = render(base_layout, pre=True, content=list_html)
 
     # create site pages
-    make_pages('content/_index.md', '', page_layout, **params)
-    make_pages('content/[!_]*.*', '{{ slug }}/', page_layout, **params)
-    fwrite('404.html', render(layout_404, **params))
+    make_pages('content/_index.md', '', l_page, **params)
+    make_pages('content/[!_]*.*', '{{ slug }}/', l_page, **params)
+    fwrite('404.html', render(fread('layouts/404.html'), **params))
 
     # create blog post pages
-    blog_posts, categories = make_pages('content/blog/[!_]*.*',
-                                        'blog/{{ year }}/{{ month }}/{{ slug }}/',
-                                        post_layout, True, **params)
+    all_posts, categories = make_pages('content/blog/[!_]*.*',
+                                       'blog/{{ year }}/{{ month }}/{{ slug }}/',
+                                       l_post, blog=True, **params)
     # create HTML list pages
-    make_lists(blog_posts, 'blog/', list_html, item_html, **params)
-    add_to_sitemap('blog/', lastmod=blog_posts[0]['lastmod'], priority='1.0')
+    make_lists(all_posts, 'blog/', l_list, item_html, **params)
+    add_to_sitemap('blog/', lastmod=all_posts[0]['lastmod'], priority='1.0')
     # create Atom feeds
-    make_feed(blog_posts, 'blog/', feed_xml, item_xml, title='Personal blog',
+    make_feed(all_posts, 'blog/', l_feed, item_xml, title='Personal blog',
               long_title='Oscar\'s Blog', **params)
     # create blog archive
-    make_archive(blog_posts, categories, 'blog/', page_layout,
-                 title='Blog archive', **params)
+    make_archive(all_posts, categories, 'blog/', l_page, title='Blog archive', **params)
+
     # create blog categories
-    for name, posts in categories.items():
+    for name, c_posts in categories.items():
         dst = 'blog/categories/' + urlize(name) + '/'
         src = 'content/blog/categories/' + urlize(name) + '.md'
         lt = name + ' on Oscar\'s Blog'
         eh = '<link rel="alternate" type="application/atom+xml" title="' + lt + '" href="/' + dst + 'index.xml"/>'
-        make_lists(posts, dst, list_html, item_html, src=src, title=name,
+        make_lists(c_posts, dst, l_list, item_html, src=src, title=name,
                    extraheader=eh, **params)
-        make_feed(posts, dst, feed_xml, item_xml, title=name, long_title=lt,
+        make_feed(c_posts, dst, l_feed, item_xml, title=name, long_title=lt,
                   **params)
 
     # set redirections
