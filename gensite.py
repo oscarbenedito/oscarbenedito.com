@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # gensite.py: Static site generator based on makesite.py.
-# Copyright (C) 2020 Oscar Benedito <oscar@oscarbenedito.com>
+# Copyright (C) 2020-2021 Oscar Benedito <oscar@oscarbenedito.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
