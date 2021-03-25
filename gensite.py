@@ -207,11 +207,7 @@ def make_pages(src, dst, layout, blog=False, **params):
             page_params.update({'url': page_dst})
 
         if blog:
-            w = int(len(re.sub('(?s)<.*?>', ' ', page_params['content']).split())/140)
-            page_params.update({
-                'read_time': str(w) + ' minutes' if w > 1 else '1 minute',
-                'src_path': src_path,
-            })
+            page_params.update({ 'src_path': src_path, })
             items.append(page_params)
         else:
             fwrite(page_dst, render(layout, **page_params))
