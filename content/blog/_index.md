@@ -1,7 +1,6 @@
 <!-- title: Personal blog -->
 <!-- description: My personal blog. Subscribe to my web feed if you want to keep up to date! -->
-
-# Personal blog
+<!-- feed_title: Oscar's Blog -->
 
 This is my personal blog. You can subscribe to [my feed][] or look through all
 the posts on [the archive][]. You can find links to other blogs I follow on [my

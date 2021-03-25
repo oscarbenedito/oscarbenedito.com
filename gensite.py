@@ -244,63 +244,69 @@ def make_pages(src, dst, layout, blog=False, **params):
     return items, categories
 
 
-def make_lists(posts, dst, list_layout, item_layout, src=None, **params):
-    """Generate HTML lists for a blog."""
-    item_per_page = 5
-    items = []
-    count = 1
-    page_dst = dst
-    text = fread(src) if src else fread('content/' + dst + '_index.md')
+def make_lists(posts, dst, l_html, l_html_item, l_feed, l_feed_item, **params):
+    """Generate HTML lists and Atom feed for a set of posts."""
+    if os.path.isfile('content/' + dst + '_index.md'):
+        text = fread('content/' + dst + '_index.md')
+    else:
+        text = fread('content/' + dst[:-1] + '.md')
     end = 0
+
     for key, val, end in read_headers(text):
         params[key] = val
+
     params['intro'] = markdown.markdown(text[end:], extensions=['footnotes', 'fenced_code'])
+
+    # make HTML lists
+    ipp = 5     # items per page
+    params['content'] = ''
+    if dst != 'blog/':  # blog feed appears on all pages already
+        params['extraheader'] = '<link rel="alternate" type="application/atom+xml" ' \
+                                'title="{}" href="/{}index.xml"/>'.format(params['feed_title'], dst)
+
     for i, post in enumerate(posts):
         item_params = dict(params, **post)
 
         # remove tags and truncate at 50 words
         item_params['summary'] = ' '.join(re.sub('(?s)<.*?>', '', post['content']).split()[:50]) + '...'
 
-        items.append(render(item_layout, **item_params))
-        if i % item_per_page == item_per_page-1 and len(posts)-1 > i:
-            params['multiple_pages'] = '1'
-            params['content'] = ''.join(items)
-            params['next_url'] = dst + 'page/' + str(count+1) + '/'
-            if count != 1:
-                params['prev_url'] = dst + ('page/' + str(count-1) + '/' if count != 2 else '')
-            fwrite(page_dst, render(list_layout, **params))
-            log('I', 'list => /{}', page_dst)
-            count = count+1
-            page_dst = dst + 'page/' + str(count) + '/'
-            items = []
+        params['content'] += render(l_html_item, **item_params)
 
-    if count != 1:
-        del params['next_url']
-        params['prev_url'] = dst + ('page/' + str(count-1) + '/' if count != 2 else '')
-    params['content'] = ''.join(items)
-    fwrite(page_dst, render(list_layout, **params))
-    log('I', 'list => /{}', page_dst)
+        if i % ipp == ipp-1 or i == len(posts)-1:
+            page = i//ipp + 1
+            curr_dst = dst + ('page/{}/'.format(page) if i >= ipp else '')
+
+            if i != len(posts)-1:
+                params['multiple_pages'] = '1'
+                params['next_url'] = '{}page/{}/'.format(dst, page + 1)
+            elif page > 1:
+                params.pop('next_url')
+
+            fwrite(curr_dst, render(l_html, **params))
+            log('I', 'list => /{}', curr_dst)
+
+            params['prev_url'] = curr_dst
+            params['content'] = ''
 
     set_redirect(dst + 'page/1/', dst)
 
-
-def make_feed(posts, dst, list_layout, item_layout, **params):
-    """Generate feed for a blog."""
-    max = 15
+    # make Atom feed
+    ipp = 15    # item per feed
     params['url'] = dst
     page_dst = dst + 'index.xml'
-    items = []
+    params['content'] = ''
     for i, post in enumerate(posts):
-        if (i == max):
+        if (i == ipp):
             break
         item_params = dict(params, **post)
-        item_params['c_escaped'] = post['content'].replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;')
-        item = render(item_layout, **item_params)
-        items.append(item)
 
-    params['content'] = ''.join(items)
+        # escape HTML content
+        item_params['c_escaped'] = post['content'].replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;')
+
+        params['content'] += render(l_feed_item, **item_params)
+
     params['updated'] = posts[0]['lastmod']
-    fwrite(page_dst, render(list_layout, **params))
+    fwrite(page_dst, render(l_feed, **params))
     log('I', 'feed => /{}', page_dst)
 
 
@@ -389,25 +395,19 @@ def main():
     all_posts, categories = make_pages('content/blog/[!_]*.*',
                                        'blog/{{ year }}/{{ month }}/{{ slug }}/',
                                        l_post, blog=True, **params)
-    # create HTML list pages
-    make_lists(all_posts, 'blog/', l_list, item_html, **params)
+
+    # create HTML list pages and Atom feed
+    make_lists(all_posts, 'blog/', l_list, item_html, l_feed, item_xml, **params)
+
     add_to_sitemap('blog/', lastmod=all_posts[0]['lastmod'], priority='1.0')
-    # create Atom feeds
-    make_feed(all_posts, 'blog/', l_feed, item_xml, title='Personal blog',
-              long_title='Oscar\'s Blog', **params)
+
     # create blog archive
     make_archive(all_posts, categories, 'blog/', l_page, title='Blog archive', **params)
 
     # create blog categories
     for name, c_posts in categories.items():
         dst = 'blog/categories/' + urlize(name) + '/'
-        src = 'content/blog/categories/' + urlize(name) + '.md'
-        lt = name + ' on Oscar\'s Blog'
-        eh = '<link rel="alternate" type="application/atom+xml" title="' + lt + '" href="/' + dst + 'index.xml"/>'
-        make_lists(c_posts, dst, l_list, item_html, src=src, title=name,
-                   extraheader=eh, **params)
-        make_feed(c_posts, dst, l_feed, item_xml, title=name, long_title=lt,
-                  **params)
+        make_lists(c_posts, dst, l_list, item_html, l_feed, item_xml, **params)
 
     # set redirections
     set_redirect('licenses/agpl-v3/', 'licenses/agpl-3.0.txt')
