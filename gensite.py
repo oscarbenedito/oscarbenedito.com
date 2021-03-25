@@ -64,7 +64,7 @@ def fwrite(filename, text):
     filename = filename + 'index.html' if filename.endswith('/') or filename == '' else filename
     filename = os.path.join('_site', filename)
     if os.path.exists(filename):
-        log('W', 'Warning: Overwritting file: {}', filename)
+        log('W', 'Overwritting file: {}', filename)
 
     basedir = os.path.dirname(filename)
     if not os.path.isdir(basedir):
@@ -76,8 +76,13 @@ def fwrite(filename, text):
 
 def log(type, msg, *args):
     """Log message with specified arguments."""
-    if type == 'E' or type == 'W':  # or type == 'I':
-        sys.stderr.write(msg.format(*args) + '\n')
+    if type == 'E':
+        sys.stderr.write('Error: ' + msg.format(*args) + '\n')
+        sys.exit(1)
+    if type == 'W':
+        sys.stderr.write('Warning: ' + msg.format(*args) + '\n')
+    # if type == 'I':
+    #     sys.stderr.write('Info: ' + msg.format(*args) + '\n')
 
 
 def truncate(text, words=50):
@@ -105,7 +110,7 @@ def add_to_sitemap(path, lastmod=None, freq=None, priority=None):
 def set_redirect(src, dst):
     """Create HTML redirect."""
     fwrite(src, '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/' + dst + '"/><link rel="canonical" href="/' + dst + '"/><meta name="robots" content="noindex"></head><body><p>This page has been moved to <a href="/' + dst + '">https://oscarbenedito.com/' + dst + '</a>.</p></body></html>')
-    log('I', 'Info: redirect /{} => /{}', src, dst)
+    log('I', 'redirect /{} => /{}', src, dst)
 
 
 def read_headers(text):
@@ -213,7 +218,7 @@ def make_pages(src, dst, layout, blog=False, **params):
             fwrite(page_dst, render(layout, **page_params))
             pri = page_params['priority'] if 'priority' in page_params else None
             add_to_sitemap(page_dst, lastmod=page_params['lastmod'], priority=pri)
-            log('I', 'Info: page {} => /{}', src_path, page_dst)
+            log('I', 'page {} => /{}', src_path, page_dst)
 
     items.sort(key=lambda x: x['date'], reverse=True)
     for i, item in enumerate(items):
@@ -235,7 +240,7 @@ def make_pages(src, dst, layout, blog=False, **params):
         fwrite(item['url'], render(layout, **item))
         pri = item['priority'] if 'priority' in item else None
         add_to_sitemap(item['url'], lastmod=item['lastmod'], priority=pri)
-        log('I', 'Info: post {} => /{}', item['src_path'], item['url'])
+        log('I', 'post {} => /{}', item['src_path'], item['url'])
 
     return items, categories
 
@@ -262,7 +267,7 @@ def make_lists(posts, dst, list_layout, item_layout, src=None, **params):
             if count != 1:
                 params['prev_url'] = dst + ('page/' + str(count-1) + '/' if count != 2 else '')
             fwrite(page_dst, render(list_layout, **params))
-            log('I', 'Info: list => /{}', page_dst)
+            log('I', 'list => /{}', page_dst)
             count = count+1
             page_dst = dst + 'page/' + str(count) + '/'
             items = []
@@ -272,7 +277,7 @@ def make_lists(posts, dst, list_layout, item_layout, src=None, **params):
         params['prev_url'] = dst + ('page/' + str(count-1) + '/' if count != 2 else '')
     params['content'] = ''.join(items)
     fwrite(page_dst, render(list_layout, **params))
-    log('I', 'Info: list => /{}', page_dst)
+    log('I', 'list => /{}', page_dst)
 
     set_redirect(dst + 'page/1/', dst)
 
@@ -294,7 +299,7 @@ def make_feed(posts, dst, list_layout, item_layout, **params):
     params['content'] = ''.join(items)
     params['updated'] = posts[0]['lastmod']
     fwrite(page_dst, render(list_layout, **params))
-    log('I', 'Info: feed => /{}', page_dst)
+    log('I', 'feed => /{}', page_dst)
 
 
 def make_archive(posts, categories, dst, layout, **params):
@@ -316,7 +321,7 @@ def make_archive(posts, categories, dst, layout, **params):
     page_dst = dst + 'archive/'
     fwrite(page_dst, render(layout, **params))
     add_to_sitemap(page_dst, lastmod=posts[0]['lastmod'], priority='0.4')
-    log('I', 'Info: page => /{}', page_dst)
+    log('I', 'page => /{}', page_dst)
 
 
 def main():
