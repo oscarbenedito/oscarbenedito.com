@@ -260,6 +260,7 @@ def make_lists(posts, dst, l_html, l_html_item, l_feed, l_feed_item, **params):
     # make HTML lists
     ipp = 5     # items per page
     params['content'] = ''
+    title = params['title']
     if dst != 'blog/':  # blog feed appears on all pages already
         params['extraheader'] = '<link rel="alternate" type="application/atom+xml" ' \
                                 'title="{}" href="/{}index.xml"/>'.format(params['feed_title'], dst)
@@ -281,6 +282,9 @@ def make_lists(posts, dst, l_html, l_html_item, l_feed, l_feed_item, **params):
                 params['next_url'] = '{}page/{}/'.format(dst, page + 1)
             elif page > 1:
                 params.pop('next_url')
+
+            if page != 1:
+                params['title'] = '{} (page {} of {})'.format(title, page, ((len(posts)-1)//ipp) + 1)
 
             fwrite(curr_dst, render(l_html, **params))
             log('I', 'list => /{}', curr_dst)
