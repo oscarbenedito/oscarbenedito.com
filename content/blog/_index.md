@@ -3,11 +3,11 @@
 
 # Personal blog
 
-This is my personal blog. You can subscribe to [my feed][feed] or look through
-all the posts on [the archive][archive]. You can find links to other blogs I
-follow on [my blogroll][br].
+This is my personal blog. You can subscribe to [my feed][] or look through all
+the posts on [the archive][]. You can find links to other blogs I follow on [my
+blogroll][].
 
 
-[feed]: </blog/index.xml> "Blog feed"
-[archive]: </blog/archive/> "Blog archive"
-[br]: </blogroll/> "Blogroll"
+[my feed]: </blog/index.xml> "Blog feed"
+[the archive]: </blog/archive/> "Blog archive"
+[my blogroll]: </blogroll/> "Blogroll"
