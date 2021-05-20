@@ -393,6 +393,7 @@ def main():
     # create site pages
     make_pages('content/_index.md', '', l_page, **params)
     make_pages('content/[!_]*.*', '{{ slug }}/', l_page, **params)
+    make_pages('content/projects/[!_]*.*', 'projects/{{ slug }}/', l_page, **params)
     fwrite('404.html', render(fread('layouts/404.html'), **params))
 
     # create blog post pages
