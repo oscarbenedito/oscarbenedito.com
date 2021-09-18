@@ -1,17 +1,18 @@
 <!-- priority: 1.0 -->
-<!-- extraheader: <link rel="me" href="https://fosstodon.org/@ob"/><link rel="me" href="https://sr.ht/~ob"/><link rel="me" href="https://github.com/oscarbenedito"/><link rel="me" href="https://gitlab.com/oscarbenedito"/><link rel="me" href="mailto:oscar@oscarbenedito.com"/><link rel="pgpkey" href="/pgp/pubkey.asc"/> -->
+<!-- extraheader: <link rel="me" href="https://github.com/oscarbenedito"/><link rel="me" href="https://gitlab.com/oscarbenedito"/><link rel="me" href="mailto:oscar@oscarbenedito.com"/><link rel="pgpkey" href="/pgp/pubkey.asc"/> -->
 <!-- description: Hello and welcome to my website! I'm Oscar Benedito and this is my corner of the Internet. -->
 
-Hello and welcome to my website! My name is Oscar Benedito and I am currently
-pursuing a double degree in Mathematics and Computer Engineering at the
-[Interdisciplinary Higher Education Center (CFIS)][cfis] from [UPC][upc]. I am
-passionate about cryptography, computer security and distributed technologies.
-Aside from technology, I also like doing sport (the particular sport varies
-depending on the season and year) and I juggle.
+Hello and welcome to my website! My name is Oscar Benedito and I am a
+23-year-old from Barcelona. I enjoy tinkering with and customizing computers and
+I often undertake small software projects for personal use. When away from a
+computer, I like to do sport (the particular sport varies depending on the
+season and year) and, since two years ago, I also juggle. This year I graduated
+in Mathematics and Computer Engineering from [UPC][upc] and I am currently
+working as an Assistant Software Engineer at Oracle.
 
 I encourage you to check out some of my content: [my blog][blog], where I talk
 about privacy, software and other related topics, or [my Git repositories][git]
-(which are mirrored on [Sourcehut][sh] and [GitHub][gh]). If you want to read
+(which are mirrored on [SourceHut][sh] and [GitHub][gh]). If you want to read
 more about my academic/professional life, check out [my LinkedIn profile][li].
 
 ## Contact me
@@ -19,7 +20,6 @@ more about my academic/professional life, check out [my LinkedIn profile][li].
 Feel free to contact me! Details can be found on my [contact page][c].
 
 
-[cfis]: <https://cfis.upc.edu/es> "Interdisciplinary Higher Education Center (CFIS)"
 [upc]: <https://www.upc.edu/en> "Universitat Politècnica de Catalunya (UPC)"
 [blog]: </blog/> "Personal blog"
 [git]: <https://git.oscarbenedito.com> "Personal Git server"
