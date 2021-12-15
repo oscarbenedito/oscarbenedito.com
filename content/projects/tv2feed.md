@@ -4,9 +4,9 @@
 Follow TV shows using Atom feeds!
 
 TV2Feed is a Python script that creates Atom feeds for TV shows, creating one
-entry per episode. The script can be found [here][script] ([raw file][raw]). For
-examples of outputs (which are not updated periodically), see [feed][] (combined
-feed) or [show/210][showfeed] (single show).
+entry per episode. The script can be found [here][script]. For examples of
+outputs (which are not updated periodically), see [feed][] (combined shows feed)
+or [show/210][showfeed] (single show feed).
 
 ## How to use
 
@@ -24,6 +24,7 @@ go under:
 - `https://<domain>/<path>/feed`: if multiple shows specified
 - `https://<domain>/<path>/show/<show_id>`: if only one show specified
 
+Were `<domain>` and `<path>` are the values specified on the script variables.
 That is because the feed URIs will point there. Note that if only one show is
 specified, TV2Feed will generate it assuming there is one feed per show (which
 will make the feed title the same as the show's).
@@ -41,6 +42,11 @@ or, alternatively (could also be scripted with just one cronjob):
 0 * * * * /usr/local/bin/tv2feed 210 > /srv/www/tv2feed/show/210
 0 * * * * /usr/local/bin/tv2feed 431 > /srv/www/tv2feed/show/431
 ```
+
+## Contact
+
+If you have any questions or there is an edge case I did not account for, please
+[let me know][contact].
 
 ## Other notes
 
@@ -60,5 +66,6 @@ All data generated is gathered from [TVmaze][]'s API.
 [raw]: <https://git.oscarbenedito.com/osf/raw/tv2feed.py>
 [feed]: </projects/tv2feed/feed>
 [showfeed]: </projects/tv2feed/show/210>
+[contact]: </contact/> "Contact page"
 [agpl]: <https://www.gnu.org/licenses/agpl-3.0.html> "GNU Affero General Public License - GNU Project"
 [TVmaze]: <https://www.tvmaze.com>
