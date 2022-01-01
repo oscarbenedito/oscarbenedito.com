@@ -111,6 +111,8 @@ def set_redirect(src, dst):
                 '<a href="/{}">https://oscarbenedito.com/{}</a>.</p>'
                 '</body></html>'.format(dst, dst, dst, dst))
     log('I', 'redirect /{} => /{}', src, dst)
+    # uncomment next line to print apache redirects
+    # sys.stdout.write('Redirect permanent "/{}" "/{}"\n'.format(src, dst))
 
 
 def read_headers(text):
