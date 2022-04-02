@@ -50,7 +50,6 @@ import glob
 import sys
 import datetime
 import hashlib
-import markdown
 
 
 def fread(filename):
@@ -167,8 +166,9 @@ def read_content(filename):
     text = text[end:]
 
     # convert Markdown content to HTML
-    if filename.endswith('.md'):
-        text = markdown.markdown(text, extensions=['footnotes', 'fenced_code'])
+    # if filename.endswith('.md'):
+    #     import markdown
+    #     text = markdown.markdown(text, extensions=['footnotes', 'fenced_code'])
 
     content.update({
         'content': text,
@@ -248,16 +248,16 @@ def make_pages(src, dst, layout, blog=False, **params):
 
 def make_lists(posts, dst, l_html, l_html_item, l_feed, l_feed_item, **params):
     """Generate HTML lists and Atom feed for a set of posts."""
-    if os.path.isfile('content/' + dst + '_index.md'):
-        text = fread('content/' + dst + '_index.md')
+    if os.path.isfile('content/' + dst + '_index.html'):
+        text = fread('content/' + dst + '_index.html')
     else:
-        text = fread('content/' + dst[:-1] + '.md')
+        text = fread('content/' + dst[:-1] + '.html')
     end = 0
 
     for key, val, end in read_headers(text):
         params[key] = val
 
-    params['intro'] = markdown.markdown(text[end:], extensions=['footnotes', 'fenced_code'])
+    params['intro'] = text[end:]
 
     # make HTML lists
     ipp = 5     # items per page
@@ -393,7 +393,7 @@ def main():
     item_xml = fread('layouts/item.xml')
 
     # create site pages
-    make_pages('content/_index.md', '', l_page, **params)
+    make_pages('content/_index.html', '', l_page, **params)
     make_pages('content/[!_]*.*', '{{ slug }}/', l_page, **params)
     make_pages('content/projects/[!_]*.*', 'projects/{{ slug }}/', l_page, **params)
     fwrite('404.html', render(fread('layouts/404.html'), **params))

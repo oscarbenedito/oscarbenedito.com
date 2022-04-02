@@ -1,0 +1,262 @@
+<!-- title: Setting up a personal Git server -->
+<!-- slug: setting-up-a-personal-git-server -->
+<!-- categories: Decentralization, Personal domain, Self-hosting -->
+<!-- date: 2020-06-23T16:10:00Z -->
+<!-- lastmod: 2020-07-24T15:17:00Z -->
+
+<p>
+  Running a personal Git server is something that has been on my mind for quite a long time. One of
+  the most popular solutions I have seen around is <a href="https://gitea.io">Gitea</a>. A couple of
+  months ago, when trying out different things, I decided to run Gitea locally to see how easy it
+  would be to implement on my server. It turns out pretty easy, especially if you are using Docker.
+  However, my server doesn't run Docker as of now and it also felt like customizing it would be hard
+  (for example, getting rid of the username in the URLs). Gitea looks like a very good solution for
+  self-hosting Git (and the sites look very nice!), but in my case, it felt like using a
+  sledgehammer to crack a nut. I figured most self-hosted Git solutions would turn out to be a bit
+  too much for my use case, so I decided to look into hosting Git without any other program.</p>
+<!-- /p -->
+
+<p>
+  I had experience setting up a bare-bones Git server only usable through SSH, so I looked up how to
+  create a website with the <code>bare</code> repositories. It turns out there's even a built-in
+  option<sup id="fnref1"><a href="#fn1">1</a></sup>! Other programs have more or less similar looks,
+  but I decided to check if there was any way to have a static generator for the webpage—the fewer
+  things running on my server the better! And there is one (that I found):
+  <a href="https://codemadness.org/stagit.html">stagit</a>. It is very simple, and it does the job.
+  On top of that, the program is super small, which makes it very easy to modify it if needed<sup
+  id="fnref2"><a href="#fn2">2</a></sup>. I gave it a try and it worked nicely. I decided that it
+  was a good solution for my use case, therefore having a vanilla Git server would work, so I
+  started building it<sup id="fnref3"><a href="#fn3">3</a></sup>.</p>
+<!-- /p -->
+
+<p>Let's see how to set it up!</p>
+
+<h2>Setting up a Git server</h2>
+
+<p>
+  What will happen is we'll have <code>bare</code> repositories on our server which we'll then
+  clone/fetch/push to using SSH<sup id="fnref4"><a href="#fn4">4</a></sup>. We'll put these
+  repositories on the <code>/srv/git</code> directory—because I keep everything served from my
+  server on <code>/srv</code>—but any location will work. To keep Git separated from the root user,
+  we'll create a new <code>git</code> user, with <code>/srv/git</code> as its home folder, this way,
+  the remote address will be <code>git@domain:repo.git</code> (no need for an absolute address).
+  Let's do that:</p>
+<!-- /p -->
+
+<pre><code><!--
+     -->useradd -d /srv/git git
+<!-- -->mkdir /srv/git
+<!-- -->chown git /srv/git</code></pre>
+
+<p>Now, let's create the folder for the SSH configuration where we'll add our public key.</p>
+
+<pre><code><!--
+     -->su git
+<!-- -->cd
+<!-- -->mkdir .ssh &amp;&amp; chmod 700 .ssh
+<!-- -->touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code></pre>
+
+<p>
+  We could stop here, adding our key to the file (you can also use <code>ssh-copy-id</code>), but we
+  can take a couple more steps to isolate the user from the server, useful especially if you want to
+  share access to the git user with someone else.</p>
+<!-- /p -->
+
+<p>
+  To do that, we'll use the <code>git-shell</code> shell, which will only run scripts found on
+  <code>~/git-shell-commands</code>.<sup id="fnref5"><a href="#fn5">5</a></sup></p>
+<!-- /p -->
+
+<pre><code>chsh git -s $(which git-shell)</code></pre>
+
+<p>
+  Now if you add someone else's public SSH key to the server, they won't be able to run any command.
+  If you want to allow some commands, create scripts on <code>~/git-shell-commands</code>. For
+  example, I have scripts to initiate repositories, add SSH keys and other useful commands, you can
+  see them all <a href="https://git.oscarbenedito.com/git-shell-commands/">here</a>.</p>
+<!-- /p -->
+
+<h2>Making repositories public</h2>
+
+<p>
+  Now we can pull and push to our repository, and we can share access to them by adding SSH keys (or
+  sharing the password if you use one). However, we might want to have public repositories that
+  people should be able to clone without the need to have access to all of them. To do so, we'll use
+  the Git Daemon (that uses the Git Protocol). All we have to do is run the following command (and
+  keep it running, I recommend running a systemd service if you use systemd, there is an example
+  <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Git-Daemon">here</a>).</p>
+<!-- /p -->
+
+<pre><code>git daemon --reuseaddr --base-path=/srv/git/ /srv/git/</code></pre>
+
+<p>
+  This daemon will only serve repositories that have a file named <code>git-daemon-export-ok</code>
+  in them, so if you want to make a certain repository public, all you have to do is run:</p>
+<!-- /p -->
+
+<pre><code>touch /srv/git/repo.git/git-daemon-export-ok</code></pre>
+
+<p>
+  Remove that file to make it private again. The cloning address will be
+  <code>git://domain/repo.git</code> and you can't push to that address. You can also serve
+  repositories through HTTP which will allow you to have fine-grained control over who can access
+  which repositories, look it up if you are interested.</p>
+<!-- /p -->
+
+<h2>Making a website</h2>
+
+<p>
+  Now we can host private and public repositories, but we may want to share the public ones easily.
+  A website is a good way to allow people to quickly see your repositories without the need to clone
+  every single one of them. We'll use stagit to create the HTML files which we'll host as a static
+  site. First of all, let's install stagit:</p>
+<!-- /p -->
+
+<pre><code><!--
+     -->git clone git://git.codemadness.org/stagit
+<!-- -->cd stagit
+<!-- -->sudo make install</code></pre>
+
+<p>To create a website for a repository run</p>
+
+<pre><code>stagit /path/to/repo.git</code></pre>
+
+<p>from the directory where you want the site built. To create an index file with all your repositories simply run</p>
+
+<pre><code>stagit-index /path/to/repo-1.git /path/to/repo-2.git &gt; index.html</code></pre>
+
+<p>
+  with the path to all your repositories. Make sure you have the correct information on the
+  <code>owner</code>, <code>description</code> and <code>url</code> files so that stagit uses them
+  when creating the HTML.</p>
+<!-- /p -->
+
+<p>
+  Having to do this is every time you update your repositories is not a reasonable solution, but we
+  can set up a <code>post-receive</code> hook to do it for us. There are examples of scripts to use
+  as an initial creation script for the whole site and a post-receive hook on stagit's source code
+  repository. I have changed those scripts a bit to only process public repositories (the ones with
+  the <code>git-daemon-export-ok</code> file) as well a modified the source a bit. You can find the
+  changes on my <a href="https://git.oscarbenedito.com/stagit/">stagit fork</a>.</p>
+<!-- /p -->
+
+<h2>Pros of this setup</h2>
+
+<p>
+  I have only been using this server for a couple of days, but I have also been setting up a bunch
+  of <a href="https://suckless.org">suckless</a> tools<sup id="fnref6"><a href="#fn6">6</a></sup>,
+  so I have been using Git a lot. One of the best things is that setting up repositories is very
+  easy. No need to open a browser, log in to GitHub and go through the process of creating a new
+  repository<sup id="fnref7"><a href="#fn7">7</a></sup>. I just run</p>
+<!-- /p -->
+
+<pre><code><!--
+     -->ssh git@oscarbenedito.com
+<!-- -->init reponame</code></pre>
+
+<p>
+  Done! I can also set it up as public by running a script I have on my <code>git-shell</code> and
+  change the description/owner/url just as easily.</p>
+<!-- /p -->
+
+<p>
+  Another thing I have noticed is that Git's clone/fetch/push commands are significantly faster on
+  this server than GitLab or GitHub. However, I don't know compared to a self-hosted instance of
+  Gitea or <a href="https://gogs.io">Gogs</a>.</p>
+<!-- /p -->
+
+<h2>Cons of this setup</h2>
+
+<p>
+  One thing that might be missed by this setup is the ability to download a tarball with the code
+  from a certain commit, browse the code as it was in a given commit, see git blame, etc. This could
+  be solved by using another tool for the website part—such as <a
+  href="https://git.zx2c4.com/cgit/about/">cgit</a>—so if I ever want to do that, it shouldn't be hard.</p>
+<!-- /p -->
+
+<p>
+  Another thing is how the website looks. Other self-hosting solutions like Gogs, Gitea, GitLab...
+  look a lot nicer than stagit. However this isn't a priority right now and I appreciate the ability
+  to have full control over how the server works—and it has been very interesting to learn about it
+  all. Once again this is something to do with the website, and not the repository hosting
+  itself.</p>
+<!-- /p -->
+
+<h2>Final comments</h2>
+
+<p>
+  It has been fun to set everything up and realize how easy it is to self-host Git without the need
+  for other software. On top of that, I can now share my repositories from my domain, which means it
+  is easier to stop using other hosting services if I stop wanting to accept their policies, similar
+  to having email on my domain.</p>
+<!-- /p -->
+
+<p>
+  For now, I will still have my public repositories hosted on GitLab and GitHub, as I don't mind it
+  and some people might be more used to those UIs. They also act as a backup in case something
+  happens to my server or if I want to edit my repositories from a computer without SSH access to my
+  server.</p>
+<!-- /p -->
+
+<p>
+  Finally, I have talked about some software that will allow you to self-host Git, but I don't want
+  to end this post without mentioning <a href="https://sourcehut.org/">sourcehut</a>. I find it a
+  very good solution because everyone can contribute to your projects without the need to create yet
+  another account. Everything is done through email, which is nicely supported by Git (learn more
+  <a href="https://git-send-email.io/">here</a>).</p>
+<!-- /p -->
+
+<p>
+  I almost forgot! If you want to check out my Git website or clone some repositories from my
+  domain, you can find all of that here: <a href="https://git.oscarbenedito.com">https://git.oscarbenedito.com</a>.</p>
+<!-- /p -->
+
+<p>
+  <em>Edit</em>: The post originally said that creating a new repository on GitLab was a long
+  process. However, you can just push to a new remote address and GitLab will automatically create
+  the new repository.</p>
+<!-- /p -->
+
+<!-- footnotes -->
+<hr />
+
+<ol>
+  <li id="fn1">
+    Run <code>git instaweb</code> from a Git repository to try it. <a href="#fnref1" title="Jump
+    back to footnote 1 in the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn2">
+    I haven't modified the source code much yet, but I have some ideas in mind. <a href="#fnref2"
+    title="Jump back to footnote 2 in the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn3">
+    Funnily enough, I had already set up a Git server there for a couple of repositories containing
+    a lot of personal information to avoid hosting them on GitLab or GitHub. I completely forgot
+    about it. I deleted it and started from scratch, as I wanted to document the process on my
+    personal wiki. <a href="#fnref3" title="Jump back to footnote 3 in the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn4">
+    Bare repositories are simply a folder with the files of the <code>.git</code> directory of a
+    repository. Indeed, you can clone a repository from your computer running <code>git clone
+    /path/to/repo/.git cloned-repo</code>. This directory contains all the information of the
+    repository, that is why Git is distributed. <a href="#fnref4" title="Jump back to footnote 4 in
+    the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn5">
+    If the <code>chsh</code> command doesn't work, make sure <code>git-shell</code> is in
+    <code>/etc/shells</code>, if not, add it manually. <a href="#fnref5" title="Jump back to
+    footnote 5 in the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn6">
+    Fun fact: after setting everything up I realized that suckless uses stagit to show their
+    repositories, indeed the author of stagit is the current maintainer of some suckless projects
+    like <a href="https://st.suckless.org/">st</a> and <a
+    href="https://tools.suckless.org/dmenu/">dmenu</a>. <a href="#fnref6" title="Jump
+    back to footnote 6 in the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn7">
+    I originally thought this was also the case for GitLab, however, you can push a new repository
+    to a new remote address and GitLab will automatically create it. <a href="#fnref7" title="Jump
+    back to footnote 7 in the text">&#8617;</a></li>
+  <!-- /li -->
+</ol>

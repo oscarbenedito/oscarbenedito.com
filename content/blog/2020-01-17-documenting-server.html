@@ -1,0 +1,52 @@
+<!-- title: Documenting my server -->
+<!-- slug: documenting-server -->
+<!-- categories: Self-hosting -->
+<!-- date: 2020-01-17T00:00:00Z -->
+<!-- lastmod: 2020-03-01T01:00:00Z -->
+
+<p>
+  Not long ago I realized that I could get $50 of credit on Digital Ocean with my GitHub Student
+  account, so I decided to try it. I transferred my website there, and with time I started adding
+  services. It is currently running the following services:</p>
+<!-- /p -->
+
+<ul>
+  <li>My webpage (<a href="https://oscarbenedito.com">oscarbenedito.com</a>).</li>
+  <li>
+    Redirections from <a href="https://www.oscarbenedito.com">www.oscarbenedito.com</a>,
+    <a href="https://obenedito.org">obenedito.org</a> and
+    <a href="https://www.obenedito.org">www.obenedito.org</a> to
+    <a href="https://oscarbenedito.com">oscarbenedito.com</a>.</li>
+  <!-- /li -->
+  <li>A <a href="https://gotify.net/">Gotify</a> server through which I am able to send notifications to my phone.</li>
+  <li> A static page showing traffic on my website thanks to <a href="https://goaccess.io/">GoAccess</a> (which analyzes Apache's log files).</li>
+  <li>It runs <a href="https://git.oscarbenedito.com/git-backup/">this script</a> daily to back up all my git repositories and others I find interesting.</li>
+  <li>It notifies me if any new documents are uploaded to my college Moodle using <a href="https://git.oscarbenedito.com/osf/file/moodle-updates-notifications.py.html">this script</a> and a cronjob.</li>
+  <li>It notifies me every time someone logs in to the server using SSH.</li>
+</ul>
+
+<p>
+  As time passes I am adding more and more features to my server. In the first place because it is
+  fun to learn about different things and installing them, but also because they are useful features
+  (indeed I have tried to run other programs which ended up not being as useful as I initially
+  thought). I realized it is getting to the point where if something was to happen to my server (and
+  it got erased), I would probably not remember how I set up everything, so I decided to do some
+  documentation work<sup id="fnref1"><a href="#fn1">1</a></sup>.</p>
+<!-- /p -->
+
+<p>
+  After some time, I am nearly done documenting everything that is set up and I am pretty confident
+  if I had to do it all again now, the documentation would be very useful. Besides, it is also a
+  good way of keeping a record of everything running in the server and its configuration.</p>
+<!-- /p -->
+
+<!-- footnotes -->
+<hr />
+
+<ol>
+  <li id="fn1">
+    I know that taking snapshots of the server or making a backup every once in a while would solve
+    that issue. However, that wasn't the only goal. I wanted to be able to rebuild my server from
+    scratch again. <a href="#fnref1" title="Jump back to footnote 1 in the text">&#8617;</a></li>
+  <!-- /li -->
+</ol>

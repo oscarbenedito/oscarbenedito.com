@@ -1,0 +1,54 @@
+<!-- title: Adding about pages to stagit -->
+<!-- slug: adding-about-pages-to-stagit -->
+<!-- categories: FOSS, Projects -->
+<!-- date: 2020-08-15T19:59:00Z -->
+
+<p>
+  I use <a href="https://codemadness.org/stagit.html">stagit</a> to show the public repositories of
+  my Git server on the web. I chose stagit because it is a very simple and lightweight tool, which
+  makes tinkering with the source code very straightforward (which I have been doing a bit lately)
+  and because the resulting website is static: easy to set up, faster, and there aren't any
+  application-specific issues (there is no application). Static sites are also nice because you know
+  exactly what is going on when a page is requested—the file is served—, whereas if it is a dynamic
+  site, you might or might not know what operations the server is doing to answer the request.</p>
+<!-- /p -->
+
+<p>
+  Stagit doesn't have many features. This isn't necessarily bad, as it keeps the source small and
+  readable and it still does everything I consider necessary, it even has an Atom feed for commits!
+  The one feature I really missed was being able to show an about page with the repository's readme
+  file when it is opened<sup id="fnref1"><a href="#fn1">1</a></sup>. For me, it is a basic feature,
+  especially with repositories for projects without a website/wiki. When I hear about a piece of
+  software, the first I do is go check out the repository and read a bit about it, and readme files
+  make that easier. Since most of my repositories have readmes written in Markdown, I wanted stagit
+  to convert them to HTML, so they could be shown nicely on the repositories' website.</p>
+<!-- /p -->
+
+<p>
+  If you want to try it out yourself, the change on stagit is very simple, just a couple of lines,
+  but it will add a dependency to the program<sup id="fnref2"><a href="#fn2">2</a></sup>. I use
+  <a href="https://github.com/mity/md4c">md4c</a> to parse the files, and it is ridiculously fast. I
+  haven't noticed any changes in the time it takes for stagit to run. Check out
+  <a href="https://git.oscarbenedito.com/stagit/commit/1fdbc7e8ef4025e50678261ca670daca85ac298c.html">this
+  commit</a> if you want to know how I did it, and feel free to suggest other approaches if you
+  think they are better.</p>
+<!-- /p -->
+
+<!-- footnotes -->
+<hr />
+
+<ol>
+  <li id="fn1">
+    Stagit has a link on the navigation bar to the readme file, and you could easily make that the
+    default <code>index.html</code> file, but it is just the page with the raw file (as any other
+    file is shown), it isn't presented like an about page. <a href="#fnref1" title="Jump back to
+    footnote 1 in the text">&#8617;</a></li>
+  <!-- /li -->
+  <li id="fn2">
+    The dependency is only for parsing Markdown, if you don't need that, you can just show the raw
+    file without the line numbers and metadata, this is what
+    <a href="https://git.oscarbenedito.com/stagit/commit/1fdbc7e8ef4025e50678261ca670daca85ac298c.html#h5-5-16">I
+    do</a> when the readme file isn't a Markdown file. <a href="#fnref2" title="Jump back to
+    footnote 2 in the text">&#8617;</a></li>
+  <!-- /li -->
+</ol>

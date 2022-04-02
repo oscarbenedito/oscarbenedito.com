@@ -1,0 +1,65 @@
+<!-- title: TV2Feed -->
+<!-- description: TV2Feed: Follow TV shows using Atom feeds! -->
+
+<p>Follow TV shows using Atom feeds!</p>
+
+<p>
+  TV2Feed is a Python script that creates Atom feeds for TV shows, creating one entry per episode.
+  The script can be found <a href="https://git.oscarbenedito.com/osf/file/tv2feed.py.html">here</a>.
+  For examples of outputs (which are not updated periodically), see <a
+  href="/projects/tv2feed/feed">feed</a> (combined shows feed) or <a
+  href="/projects/tv2feed/show/210">show/210</a> (single show feed).</p>
+<!-- /p -->
+
+<h2>How to use</h2>
+
+<p>
+  Download the script and edit the global variables to your liking. Go to <a
+  href="https://www.tvmaze.com">https://www.tvmaze.com</a> and search the TV shows you want to
+  follow. Write down their IDs (the number in the URL) and then run the following:</p>
+<!-- /p -->
+
+<pre><code>tv2feed id1 id2 ...</code></pre>
+
+<p>Or run it multiple times to get one feed per TV show. The feeds are expected to go under:</p>
+
+<ul>
+  <li><code>https://&lt;domain&gt;/&lt;path&gt;/feed</code>: if multiple shows specified</li>
+  <li><code>https://&lt;domain&gt;/&lt;path&gt;/show/&lt;show_id&gt;</code>: if only one show specified</li>
+</ul>
+
+<p>
+  Were <code>&lt;domain&gt;</code> and <code>&lt;path&gt;</code> are the values specified on the
+  script variables. That is because the feed URIs will point there. Note that if only one show is
+  specified, TV2Feed will generate it assuming there is one feed per show (which will make the feed
+  title the same as the show's).</p>
+<!-- /p -->
+
+<p>The API where the data is gathered from caches results for one hour, so you can add cron jobs to run every hour:</p>
+
+<pre><code>0 * * * * /usr/local/bin/tv2feed 210 431 &gt; /srv/www/tv2feed/feed</code></pre>
+
+<p>or, alternatively (could also be scripted with just one cronjob):</p>
+
+<pre><code>0 * * * * /usr/local/bin/tv2feed 210 &gt; /srv/www/tv2feed/show/210
+<!--    -->0 * * * * /usr/local/bin/tv2feed 431 &gt; /srv/www/tv2feed/show/431</code></pre>
+
+<h2>Contact</h2>
+
+<p>If you have any questions or there is an edge case I did not account for, please <a href="/contact/">let me know</a>.</p>
+
+<h2>Other notes</h2>
+
+<p>
+  Each show will make two API requests, and there is a limit of 20 requests every 10 seconds (for
+  contents that are not cached). If you are following many shows, this script will sleep for 10
+  seconds and try again if an API call returns a 429 error code, if it fails again (or the error
+  code is not 429), it will raise an error and exit.</p>
+<!-- /p -->
+
+<p>
+  TV2Feed is licensed under the GNU Affero General Public License version 3 or later (available <a
+  href="https://www.gnu.org/licenses/agpl-3.0.html">here</a>).</p>
+<!-- /p -->
+
+<p>All data generated is gathered from <a href="https://www.tvmaze.com">TVmaze</a>'s API.</p>

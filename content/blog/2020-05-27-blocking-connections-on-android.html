@@ -1,0 +1,79 @@
+<!-- title: Blocking connections on Android -->
+<!-- slug: blocking-connections-on-android -->
+<!-- categories: Privacy -->
+<!-- date: 2020-05-27T19:01:00Z -->
+
+<p>
+  I have been a user of <a href="https://www.netguard.me/">NetGuard</a> for quite some time. It is a
+  great Android app that lets you control which apps get Internet access and which don't. The paid
+  version will allow you to block connection on a per-domain basis (for each app), as well as let
+  you see all the domains an app connects to (which are normally a lot!). Furthermore, you will be
+  able to block domains for the whole phone. This is useful because it can act as an add blocker (by
+  default it uses the list of domains gathered in <a href="https://github.com/StevenBlack/hosts">this repository</a>).
+  The Google Play version doesn't have this feature because Google doesn't allow add blocking on the
+  store, so make sure you get the app directly from GitHub!</p>
+<!-- /p -->
+
+<p>
+  A couple of months ago I decided to use a VPN, it felt like ISP's where very public about
+  everyone's data, and I decided to put my trust in a company whose business is protecting their
+  customers' privacy. The problem with VPNs is that you have to trust them. There is no way for you
+  to ensure they aren't selling your browsing habits to the best bidder, but I did my research on
+  the provider I chose and I trust them a lot more than an ISP. Now you may ask, how is this related
+  to NetGuard? Well, NetGuard uses the VPN functionality on Android to be able to block certain
+  connections without root access, and Android only allows one VPN at a time, so I had to choose
+  one<sup id="fnref1"><a href="#fn1">1</a></sup>.</p>
+<!-- /p -->
+
+<p>
+  Finally, I decided to go with my VPN. However, I really liked the domain blocking feature, so I
+  decided to investigate a little further. It turns out you can use the <code>/etc/hosts</code>
+  files to block certain domains just like in a GNU/Linux computer. It is an easy process and it
+  really makes a difference in your mobile browsing experience. I'll explain how I did it with my
+  phone in case it helps anyone else (although simply installing NetGuard is a simpler solution for
+  sure, and you get more features!).</p>
+<!-- /p -->
+
+<p>
+  First of all install Android Debug Bridge (ADB) on your computer. If you are using GNU/Linux, you
+  can use <code>pacman -S adb</code> on Arch based distributions or <code>apt install adb</code> on
+  Debian based distributions, look it up if you have other distributions or operative systems. Now
+  plug your phone into your computer and on your phone enable developer settings (look it up if you
+  don't know how to do it) and do the following:</p>
+<!-- /p -->
+
+<ol>
+   <li><code>Android debugging</code> &gt; <code>on</code></li>
+   <li><code>Root access</code> &gt; <code>ADB only</code></li>
+   <li>Make sure your computer has access to your phone by enabling <code>PTP</code> on your phone (instead of <code>No data transfer</code>).</li>
+   <li>On the computer run <code>$ adb root</code> to get root access.</li>
+   <li><code>$ adb remount</code>, which will allow you to modify the file on the phone.</li>
+   <li><code>$ adb push /path/to/hosts/on/computer /etc/hosts</code></li>
+   <li>Done! You can now unplug your phone (and disable the options you enabled previously if wanted).</li>
+</ol>
+
+<p>If you want to edit the file manually, do the following after step 5:</p>
+
+<ol>
+   <li><code>$ adb shell</code>, which will give you a terminal on the phone.</li>
+   <li><code># nano /etc/hosts</code> (<code>vim</code> also works on LineageOS).</li>
+   <li>Do your changes.</li>
+   <li><code># exit</code></li>
+</ol>
+
+<p>
+  Easy! However, I am using LineageOS and I am unsure if you can do step 2 on a stock ROM (if you
+  can't, you might need a rooted device). If you try it—whether on a stock ROM or another custom
+  ROM—, let me know if it works! You still won't be able to block certain apps' connections as with
+  NetGuard, but you won't have ads while keeping the VPN feature available for other uses.</p>
+<!-- /p -->
+
+<!-- footnotes -->
+<hr />
+
+<ol>
+  <li id="fn1">
+    NetGuard offers a way to do what I wanted, through proxies, but I didn't like the workaround.
+    <a href="#fnref1" title="Jump back to footnote 1 in the text">&#8617;</a></li>
+  <!-- /li -->
+</ol>

@@ -1,0 +1,57 @@
+<!-- title: Backing up my computer -->
+<!-- slug: backups -->
+<!-- categories: FOSS, Privacy -->
+<!-- date: 2019-11-24T00:00:00Z -->
+
+<p>
+  If you have important information on your computer, you probably back it up somehow. I used to
+  save all my important files on Google Drive, which was convenient not only because it would make
+  backups automatically, but because I could access my files from any computer, or even my phone
+  without much effort.</p>
+<!-- /p -->
+
+<p>
+  Since reducing my dependency on Google, that isn't an option anymore, so I had to find an
+  alternative. I have an account in a server running Nextcloud, so I could use it the way I used
+  Google Drive—and I could access it as easily from other computers or my phone—, but I am also
+  trying to reduce the amount of private information I put online (whether it is behind a password
+  or not), so I decided that I should have offline backups for my computer<sup id="fnref1"><a
+  href="#fn1">1</a></sup>.</p>
+<!-- /p -->
+
+<p>
+  The main problem with backups is the effort/time spent doing them, so the process had to be as
+  automated as possible, as well as fast and efficient. I decided to use the <code>rsync</code>
+  tool, as it efficiently copies files from one directory to another, skipping the ones that are
+  already up to date (it is also preinstalled and easy to run from the terminal). I use a bunch of
+  options that make the transfer behave as I want to, and I created an alias for the command, so I
+  only need to type <code>backup_all</code> to back up my computer.</p>
+<!-- /p -->
+
+<p>
+  On top of my ordinary backup, I do a secondary backup (just in case!), which is made on my
+  everyday USB drive. Having a backup of my <code>home</code> folder there is a little risky, as I
+  have private information on my computer, so that is why I encrypt the backups. The software I use
+  is <a href="https://www.veracrypt.fr/en/Home.html">VeraCrypt</a>, and this obviously makes the
+  backup process a little more complicated. However, I created another alias that mounts the
+  VeraCrypt volumes (there are two because I need more than 4GiB and the USB drive uses the FAT
+  format), synchronizes the files and unmounts the volumes. So the only remaining thing for me to do
+  is type in the passwords—although actually, KeePassXC does that for me. I might even automate that
+  part in the future, so I only have to type in my master password.</p>
+<!-- /p -->
+
+<p>
+  So backing up my files is a pretty smooth process again, plus I now know exactly what I am doing
+  when running the command and the backups are made to hardware that I have access to.</p>
+<!-- /p -->
+
+<!-- footnotes -->
+<hr />
+
+<ol>
+  <li id="fn1">
+    Regardless of the existence of an online backup, making an offline one is an interesting option,
+    as you have full control over it. <a class="footnote-backref" href="#fnref1" title="Jump
+    back to footnote 1 in the text">&#8617;</a>
+  </li>
+</ol>

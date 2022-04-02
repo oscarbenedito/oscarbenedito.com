@@ -1,0 +1,113 @@
+<!-- title: New home server -->
+<!-- slug: new-home-server -->
+<!-- categories: Decentralization, Self-hosting -->
+<!-- date: 2021-03-03T18:39:00Z -->
+
+<p>
+  During this past year, I have been coming up with a variety of services that I want to host from
+  home. The problem was that I didn't have a computer to host them on, so I decided to buy one
+  before my Christmas vacation, when I would have time to tinker with it. Because of the gifting
+  tradition, I was asked if there was anything that I wanted, so I ended up getting it for Christmas
+  instead. In case you are curious, the computer is a Raspberry Pi 4 Model B, I decided to go with a
+  Raspberry Pi because it's the only device I have experience with and it has worked great, on top
+  of having good specs at a good price. I already have a server running round-the-clock (the one
+  hosting this website), so why did I need another machine running nonstop? For two reasons: control
+  and proximity.</p>
+<!-- /p -->
+
+<p>
+  When I talk about "my server", I mean a virtual private server (VPS) that I rent. "My server" can
+  be more accurately described as a virtual machine that lives in someone else's computer and that I
+  can administer for a certain fee. This is great for many reasons which can be summarized in "I
+  don't have to deal with any infrastructure-related matter": the server's owner takes care of
+  maintenance, broken parts, refrigeration, etc. On top of that, the server has a very fast internet
+  connection and a static IP. So it's a machine that has all the needed features to start serving
+  content to the internet. However, because this is someone else's computer, they have complete
+  access to it. My guess is nobody is accessing my data—it probably takes some effort to automate
+  scraping virtual machines, and I think I'm not interesting enough to be a target—, but that is not
+  a reassuring argument, so I don't trust my VPS with my private data. With a computer at home, I
+  have full control of everything that is happening, and I am more comfortable saving personal data
+  there.</p>
+<!-- /p -->
+
+<p>
+  That was related to control, let's look at proximity. The VPS is hosted somewhere far away (I
+  believe in Germany), so the only feasible way to connect to it is through an internet connection.
+  This comes with limitations—you need internet, and internet connections are slower than local
+  ones. Moreover, I want to be able to unplug external hard drives and plug them into my computer to
+  have instant access to any data (for example to make a copy to give to someone), as well as the
+  other way around: I want to be able to grab a USB drive, connect it to my local server and have
+  all the data available from all the devices in the network. For obvious reasons, I can't do that
+  with my VPS. Finally, because my home server is not exposing any service to the internet, it is
+  much harder to hack it or for some data to get leaked.</p>
+<!-- /p -->
+
+<p>
+  More arguments come to mind of why some things are better hosted at home, but I think by now the
+  general feeling has gotten across, so let's jump into what I've done so far and what are some
+  ideas I have for the future.</p>
+<!-- /p -->
+
+<p>What I currently have:</p>
+
+<ul>
+  <li>
+    <strong>Media center</strong>: Well, something like it... I originally thought about
+    self-hosting Jellyfin or Plex, but the first time I wanted to use the media center I didn't have
+    much time to set it up, so I made a <em>very</em> minimal Apache site with an HTML file linking
+    to multiple videos and podcasts I had downloaded. Surprisingly, this setup has been working
+    great so far. I have created a script that autogenerates the page from a JSON with all the
+    metadata of the files I have and I have added some features (like marking media as "seen"). Now,
+    all I need to access the files is a web browser and, in some cases, <a href="https://mpv.io">mpv</a>
+    or <a href="https://www.videolan.org">VLC</a> if the format is not supported on the browser (did
+    you know you can stream videos with them?)</li>
+  <!-- /li -->
+  <li>
+    <strong>Git backup</strong>: It backs up all my Git repositories from different providers. It
+    does so with a <a href="https://git.oscarbenedito.com/git-backup/">Python script</a> I made some
+    time ago that given some authentication tokens, will mirror all my repositories (and any others
+    that I tell it to).</li>
+  <!-- /li -->
+  <li>
+    <strong>Syncthing</strong>: It runs Syncthing as another peer for all my folders. This way, all
+    my devices are always synchronized with the Raspberry Pi. Previously, two of them had to be on
+    and connected to have any synchronization. This also acts as a quick transparent backup for my
+    data, since the RPi is backed up daily.</li>
+  <!-- /li -->
+</ul>
+
+<p>My plans for the future are the following:</p>
+
+<ul>
+  <li>
+    <strong>Expanding the media center</strong>: Add more functionality to the scripts generating
+    the webpage, add functionality to the website to be able to do some basic operations without the
+    need to SSH into the Raspberry Pi, and add more types of content.</li>
+  <!-- /li -->
+  <li>
+    <strong>Backup center</strong>: I'm not sure if "backup center" means anything (or if I'm using
+    it correctly), but as my backup center, the Raspberry Pi would be in charge of backing up all my
+    devices. Syncthing already helps with my phone and some other small folders, but I'd like to
+    improve my backup system so that a lot more data can be automatically backed up. I think with my
+    home server it will be much easier to regularly pull data from the services I use as well as
+    have a centralized location to which send my files.</li>
+  <!-- /li -->
+  <li>
+    <strong>Calendar and contacts synchronization</strong>: Right now, I use my email provider to
+    synchronize my contacts, calendar and reminders using the CardDAV and CalDAV protocols. I would
+    like to stop sending that information online and just have it synchronize with my home server
+    (ideally with the same protocols).</li>
+  <!-- /li -->
+  <li>
+    <strong>Photo and video library</strong>: I want to centralize all the photos and videos I have
+    (and the rest of the family's as well) and have a good interface to access them. This will
+    include sorting them out and will probably take a lot of time, so I'm not sure if I'll end up
+    doing it.</li>
+  <!-- /li -->
+</ul>
+
+<p>
+  ... and anything else that comes to mind! I enjoy playing around with new software and I have been
+  enjoying every step of the move towards a more self-hosting setup, so I am sure that more things
+  will come up!</p>
+<!-- /p -->
