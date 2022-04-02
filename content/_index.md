@@ -3,12 +3,12 @@
 <!-- description: Hello and welcome to my website! I'm Oscar Benedito and this is my corner of the Internet. -->
 
 Hello and welcome to my website! My name is Oscar Benedito and I am a
-23-year-old from Barcelona. I enjoy tinkering with and customizing computers and
+24-year-old from Barcelona. I enjoy tinkering with and customizing computers and
 I often undertake small software projects for personal use. When away from a
 computer, I like to do sport (the particular sport varies depending on the
-season and year) and, since two years ago, I also juggle. This year I graduated
-in Mathematics and Computer Engineering from [UPC][upc] and I am currently
-working as an Assistant Software Engineer at Oracle.
+season and year) and I occasionally juggle. Last year I graduated in Mathematics
+and Computer Engineering from [UPC][upc] and I am currently working as an
+Associate Software Engineer at Oracle.
 
 I encourage you to check out some of my content: [my blog][blog], where I talk
 about privacy, software and other related topics, or [my Git repositories][git]
