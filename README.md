@@ -6,8 +6,7 @@ bare-bones static site generator).
 
 ## Dependencies
 
-To generate the site all you need is Python 3 and the markdown library (install
-with `pip3 install markdown`).
+To generate the site all you need is Python 3.
 
 ## Other notes
 

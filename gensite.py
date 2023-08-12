@@ -365,10 +365,10 @@ def main():
 
             # minify css
             if os.path.splitext(file)[1] == '.css':
-                content = re.sub('\s*/\*(?:.|\n)*?\*/\s*', '', content)
-                content = re.sub('\s+', ' ', content)
-                content = re.sub('\s*({|}|;|,)\s*', r'\1', content)
-                content = re.sub(':\s*', ':', content)
+                content = re.sub(r'\s*/\*(?:.|\n)*?\*/\s*', '', content)
+                content = re.sub(r'\s+', ' ', content)
+                content = re.sub(r'\s*({|}|;|,)\s*', r'\1', content)
+                content = re.sub(r':\s*', ':', content)
                 rfile = '{0}.min{1}'.format(*os.path.splitext(rfile))
 
             h = hashlib.sha256()

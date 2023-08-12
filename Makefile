@@ -1,6 +1,6 @@
 DST = /srv/oscarbenedito.com
 
-.PHONY: site server blogroll deploy loc clean
+.PHONY: site server blogroll deploy brokenlinks loc clean
 
 site:
 	python3 gensite.py
@@ -19,6 +19,9 @@ deploy:
 	git submodule foreach 'git fetch origin master; git reset --hard $$sha1'
 	python3 gensite.py
 	rsync --perms --recursive --checksum --delete _site/ $(DST)
+
+brokenlinks:
+	muffet -t 60 -c 10 http://oscarbenedito.com
 
 loc:
 	grep -vE '^[[:space:]]*#|^[[:space:]]*$$|^[[:space:]]*"""' gensite.py | wc -l
