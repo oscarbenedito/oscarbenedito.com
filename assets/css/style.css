@@ -192,8 +192,8 @@ header#page-header .content nav a {
 /* footer {{{ */
 
 footer#page-footer {
-    border-top: 2px solid var(--hr-color);
-    padding: calc(1.5 * var(--gap)) var(--gap);
+    padding: 0 var(--gap);
+    margin: calc(1.5 * var(--gap)) 0;
 }
 
 footer#page-footer .content {

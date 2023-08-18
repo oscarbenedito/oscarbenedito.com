@@ -134,6 +134,9 @@ def render(template, pre=False, **params):
         template = re.sub(r'{{\s*_if\s+([^}\s]+)\s*}}(.*?){{\s*_fi\s*}}',
                           lambda m: m.group(2) if m.group(1) in params else '',
                           template, flags=re.DOTALL)
+        template = re.sub(r'{{\s*_ife\s+([^}\s]+)\s*}}(.*?){{\s*_else\s*}}(.*?){{\s*_fi\s*}}',
+                          lambda m: m.group(2) if m.group(1) in params else m.group(3),
+                          template, flags=re.DOTALL)
     return re.sub(r'{{\s*([^}\s]+)\s*}}',
                   lambda m: str(params.get(m.group(1), m.group(0))),
                   template)
@@ -396,6 +399,8 @@ def main():
     make_pages('content/_index.html', '', l_page, **params)
     make_pages('content/[!_]*.*', '{{ slug }}/', l_page, **params)
     make_pages('content/projects/[!_]*.*', 'projects/{{ slug }}/', l_page, **params)
+    make_pages('content/en/_index.html', 'en/', l_page, **params)
+    make_pages('content/en/[!_]*.*', 'en/{{ slug }}/', l_page, **params)
     fwrite('404.html', render(fread('layouts/404.html'), **params))
 
     # create blog post pages
@@ -421,6 +426,8 @@ def main():
     set_redirect('licenses/gpl-v3/', 'licenses/gpl-3.0.txt')
     set_redirect('licenses/cc-by-4.0/', 'licenses/cc-by-4.0.txt')
     set_redirect('composer/', 'projects/composer/composer.html')
+    set_redirect('contact/', 'en/#contact-me')
+    set_redirect('about/', 'en/about/')
 
     fwrite('sitemap.xml', sitemap + '</urlset>')
 

@@ -15,14 +15,20 @@
   <body>
     <header id="page-header">
       <div class="content">
-        <a href="/" class="logo" title="Home">Oscar Benedito</a>
-        <nav><a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="https://git.oscarbenedito.com">Git</a></nav>
+        <a href="/{{ _ife en-url }}{{ _else }}en/{{ _fi }}" class="logo" title="{{ _ife en-url }}Inici{{ _else }}Home{{ _fi }}">Oscar Benedito</a>
+        <nav>
+          {{ _if ca-url }}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="stroke: none; vertical-align: middle; height: 0.9em;"><path d="M18.5 10l4.4 11h-2.155l-1.201-3h-4.09l-1.199 3h-2.154L16.5 10h2zM10 2v2h6v2h-1.968a18.222 18.222 0 0 1-3.62 6.301 14.864 14.864 0 0 0 2.336 1.707l-.751 1.878A17.015 17.015 0 0 1 9 13.725a16.676 16.676 0 0 1-6.201 3.548l-.536-1.929a14.7 14.7 0 0 0 5.327-3.042A18.078 18.078 0 0 1 4.767 8h2.24A16.032 16.032 0 0 0 9 10.877a16.165 16.165 0 0 0 2.91-4.876L2 6V4h6V2h2zm7.5 10.885L16.253 16h2.492L17.5 12.885z"/></svg> <a href="/{{ ca-url }}">Català</a> &middot;{{ _fi }}
+          {{ _if en-url }}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="stroke: none; vertical-align: middle; height: 0.9em;"><path d="M18.5 10l4.4 11h-2.155l-1.201-3h-4.09l-1.199 3h-2.154L16.5 10h2zM10 2v2h6v2h-1.968a18.222 18.222 0 0 1-3.62 6.301 14.864 14.864 0 0 0 2.336 1.707l-.751 1.878A17.015 17.015 0 0 1 9 13.725a16.676 16.676 0 0 1-6.201 3.548l-.536-1.929a14.7 14.7 0 0 0 5.327-3.042A18.078 18.078 0 0 1 4.767 8h2.24A16.032 16.032 0 0 0 9 10.877a16.165 16.165 0 0 0 2.91-4.876L2 6V4h6V2h2zm7.5 10.885L16.253 16h2.492L17.5 12.885z"/></svg> <a href="/{{ en-url }}">English</a> &middot;{{ _fi }}
+          <a href="/blog/">Blog{{ _if en-url }} (en anglès){{ _fi }}</a> &middot;
+          <a href="https://git.oscarbenedito.com">Git</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 0.7em; margin-bottom: 0.05em;"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+        </nav>
       </div>
     </header>
     {{ content }}
     <footer id="page-footer">
       <div class="content">
-        &copy; 2019-2023 Oscar Benedito &middot; <a href="https://git.oscarbenedito.com/oscarbenedito.com/">Source code</a> &middot; <a href="/about/">About this site</a>
+        &copy; 2019-2023 Oscar Benedito &middot;
+        {{ _ife en-url }}<a href="/sobre/">Sobre el web</a>{{ _else }}<a href="/en/about/">About this site</a>{{ _fi }}
       </div>
     </footer>{{ _if extrafooter }}
     {{ extrafooter }}{{ _fi }}
