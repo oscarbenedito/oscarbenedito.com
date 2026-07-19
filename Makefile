@@ -13,10 +13,10 @@ blogroll:
 	python3 misc/update-blogroll.py
 
 deploy:
-	git fetch origin master
-	git reset --hard origin/master
-	git verify-commit master
-	git submodule foreach 'git fetch origin master; git reset --hard $$sha1'
+	git fetch origin main
+	git reset --hard origin/main
+	git verify-commit main
+	git submodule foreach 'git fetch origin main; git reset --hard $$sha1'
 	python3 gensite.py
 	rsync --perms --recursive --checksum --delete _site/ $(DST)
 
